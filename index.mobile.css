@@ -1,0 +1,115 @@
+/* complete overlap between browsers that support css-mediaqueries, css3-colors,
+ * transforms2d, css-transitions except for Opera Mini (transforms2d,
+ * css-transitions) and IE9 (css-transitions), so no need for fallbacks */
+@media (max-width: 639px) {
+	.filler {
+		height: 52px;
+	}
+
+	.bacon {
+		min-width: 314px;
+		max-width: 314px;
+		min-height: 474px;
+		max-height: 474px;
+		padding: 3px;
+		margin-bottom: 4px;
+	}
+
+	.inspirational {
+		margin-top: 4px;
+		height: 211px;
+		width: 100%;
+		display: block;
+		background: rgba(0, 0, 0, 0.25);
+	}
+
+	.name {
+		margin: 0;
+		width: 100%;
+	}
+
+	.headline {
+		background: rgba(0, 0, 0, 0.25);
+		width: 100%;
+		margin-bottom: 4px;
+		height: 64px;
+	}
+
+	.subtitle {
+		display: block;
+		background: rgba(0, 0, 0, 0.25);
+		width: 100%;
+		margin-bottom: 4px;
+		padding: 5px;
+		box-sizing: border-box;
+		text-align: center;
+		height: 32px;
+	}
+
+	.subtitle .right {
+		float: none;
+	}
+
+	.mugshot {
+		position: static;
+		vertical-align: top;
+		display: inline-block;
+		background: rgba(0, 0, 0, 0.25);
+		width: 155px;
+		height: 155px;
+		margin-right: 2px;
+	}
+
+	.quicklinks {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		margin: 0;
+		width: 155px;
+		height: 155px;
+		margin: 0;
+		margin-left: 2px;
+	}
+
+	.captioned {
+		position: relative;
+		width: 100%;
+		margin: 0 0 4px 0;
+		height: 49px;
+		line-height: 49px;
+		text-align: left;
+		white-space: nowrap;
+	}
+
+	.captioned img {
+		vertical-align: middle;
+		border-radius: 0;
+		width: 32px;
+		height: 32px;
+		margin: 0 0 0 7px;
+		display: inline-block;
+	}
+
+	.captioned strong {
+		display: inline;
+		padding: 2px;
+	}
+
+	.captioned a {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		color: rgba(0, 0, 0, 0);
+		text-align: right;
+	}
+
+	.captioned a:hover {
+		color: inherit;
+	}
+
+	.captioned a:after {
+		content: '';
+	}
+}

@@ -1,0 +1,123 @@
+.filler {
+	height: 248px;
+}
+
+.bacon {
+	box-sizing: content-box;
+	min-width: 640px;
+	min-height: 392px;
+	text-align: center;
+	color: #fff;
+}
+
+.name {
+	display: inline-block;
+	margin: 0 auto 10px auto;
+	text-align: left;
+	font-style: italic;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.name .right {
+	float: right;
+}
+
+.headline {
+	display: block;
+	font-size: 36pt;
+	text-align: center;
+}
+
+.mugshot {
+	top: -170px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	width: 155px;
+	height: 155px;
+}
+
+.quicklinks {
+	margin: 32px 100px 0 100px;
+	padding: 0;
+	/* equispacing trick */
+	text-align: justify;
+	text-align-last: justify;
+}
+
+/* equispacing trick */
+/* Ensures there are at least 2 lines of text, so justification works */
+.quicklinks:after {
+	font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+.captioned {
+	display: inline-block;
+	width: 200px;
+	height: 128px;
+	background: rgba(0, 0, 0, 0.25);
+	text-align: center;
+	margin-top: 40px;
+}
+
+.ie8 .captioned {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+	height: 240px;
+	margin-top: 0;
+}
+
+.captioned:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.ie8 .captioned:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000')";
+}
+
+.captioned img {
+	width: 64px;
+	height: 64px;
+	margin: -40px auto 10px auto;
+	border: 1px solid #777;
+	background: #fff;
+	padding: 8px;
+	box-sizing: border-box;
+	display: block;
+	border-radius: 50%;
+}
+
+.ie8 .captioned img {
+	margin-top: 0;
+}
+
+.captioned:hover img {
+	background: #777 !important;
+}
+
+.captioned strong {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.captioned a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+}
+
+.captioned:hover a {
+	background: #777;
+	-webkit-transition: background 0.5s;
+	transition: background 0.5s;
+}
+
+.captioned a:after {
+	content: " \bb";
+}
