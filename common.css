@@ -63,6 +63,12 @@ body {
 	display: none;
 }
 
+.hwaccel {
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
 .topbun {
 	position: fixed;
 	background: rgba(0, 0, 0, 0.25);
@@ -118,8 +124,8 @@ body {
 }
 
 .ie8 .toppings {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
-    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
 }
 
 .sunglasses {
@@ -129,12 +135,13 @@ body {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.2);
+	background: #000;
+	opacity: 0.2;
 }
 
 .ie8 .sunglasses {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000',endColorstr='#33000000');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000',endColorstr='#33000000')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
 }
 
 .grease {

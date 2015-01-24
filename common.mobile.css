@@ -45,9 +45,10 @@
 		right: 0;
 		bottom: 0;
 		height: 0;
-		background: rgba(0, 0, 0, 0);
-		-webkit-transition: background-color 0.2s;
-		transition: background-color 0.2s;
+		background: #000;
+		opacity: 0;
+		-webkit-transition: opacity 0.2s;
+		transition: opacity 0.2s;
 	}
 
 	.ordersides {
@@ -67,8 +68,14 @@
 		transform: translate(170px,0);
 	}
 
+	#sidesordered:checked~.boxedin.hwaccel {
+		-webkit-transform: translate3d(170px,0,0);
+		-ms-transform: translate3d(170px,0,0);
+		transform: translate3d(170px,0,0);
+	}
+
 	#sidesordered:checked~.blinds {
 		height: auto;
-		background: rgba(0, 0, 0, 0.7);
+		opacity: 0.7;
 	}
 }

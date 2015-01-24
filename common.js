@@ -1,3 +1,41 @@
+var canUse3dTransforms = false;
+
+function initializeJqueryExtensions() {
+	canUse3dTransforms = (function() {
+		if (!window.getComputedStyle)
+			return false;
+
+		var el = document.createElement('p'), has3d, transforms = {
+			'webkitTransform':'-webkit-transform',
+			'OTransform':'-o-transform',
+			'msTransform':'-ms-transform',
+			'MozTransform':'-moz-transform',
+			'transform':'transform'
+		};
+
+		// Add it to the body to get the computed style.
+		document.body.insertBefore(el, null);
+
+		for (var t in transforms) {
+			if (el.style[t] === undefined)
+				continue;
+
+			el.style[t] = "translate3d(1px,1px,1px)";
+			has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
+		}
+
+		document.body.removeChild(el);
+
+		return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
+	})();
+
+	$.fn.extend({
+		transition: function (value) { return $(this).css('-webkit-transition', value).css('transition', value); },
+		transform: function (value) { return $(this).css('-webkit-transform', value).css('-ms-transform', value).css('transform', value); },
+		translate: canUse3dTransforms ? function(x, y) { return $(this).transform('translate3d(' + x + 'px,' + y + 'px,0)'); } : function(x, y) { return $(this).transform('translate(' + x + 'px,' + y + 'px)'); }
+	});
+}
+
 function deobfuscateEmail() {
 	//decoded from rot13
 	var address = 'xriva@xrivaw.va'.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
@@ -95,7 +133,7 @@ function enhanceSidebar() {
 	//TODO: "[-webkit-]filter: opacity(%)" seems to perform much better than rgba
 	//TODO: use left and rgba instead of translate and opacity in CSS to maximize compatibility,
 	//then determine hardware accelerated transition capabilities in JavaScript to maximize perf.
-	var initialPageX = null, finalPageX = null, initialT, finalT, finalPageY, currentTranslateX, lastBgUpdate, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
+	var initialPageX = null, finalPageX = null, initialT, finalT, finalPageY, currentTranslateX, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
 
 	//helper functions
 	var getCoordinates = function(e) {
@@ -127,8 +165,6 @@ function enhanceSidebar() {
 			sidebarTeaser = null;
 		}
 	};
-	var setTransition = function($self, value) { $self.css('-webkit-transition', value).css('transition', value); };
-	var setTransform = function($self, value) { $self.css('-webkit-transform', value).css('-ms-transform', value).css('transform', value); };
 
 	//cache frequently used values
 	var $blinds = $('.blinds');
@@ -140,6 +176,11 @@ function enhanceSidebar() {
 		else
 			sidebarWidth = $sidebar.width();
 	}).trigger('resize'); //call resize on page load
+
+	if (canUse3dTransforms) {
+		$sidebar.addClass('hwaccel');
+		$blinds.addClass('hwaccel');
+	}
 
 	//main logic
 	$(document).on('touchstart mousedown', function(e) {
@@ -183,12 +224,10 @@ function enhanceSidebar() {
 			currentTranslateX = sidebarWidth;
 		else
 			currentTranslateX = 0;
-		lastBgUpdate = finalT;
 
 		//animate
-		setTransition($sidebar, 'none');
-		$blinds.css('height', 'auto');
-		setTransition($blinds, 'background 0.25s');
+		$sidebar.transition('none');
+		$blinds.css('height', 'auto').transition('none');
 	}).on('touchmove mousemove', function(e) {
 		if (!isDragging()) return;
 
@@ -222,12 +261,8 @@ function enhanceSidebar() {
 		currentTranslateX = Math.max(0, Math.min(sidebarWidth, currentTranslateX + finalPageX - initialPageX));
 
 		//animate
-		setTransform($sidebar, 'translate(' + currentTranslateX + 'px,0)');
-		if (finalT - lastBgUpdate > 250) {
-			//limit the background updates due to slowdowns on mobile browsers
-			$blinds.css('background', 'rgba(0, 0, 0, ' + (0.7 * currentTranslateX / sidebarWidth) + ')');
-			lastBgUpdate = finalT;
-		}
+		$sidebar.translate(currentTranslateX, 0);
+		$blinds.css('opacity', (0.7 * currentTranslateX / sidebarWidth).toFixed(2));
 	}).on('touchend touchcancel mouseup', function(e) {
 		if (!isDragging()) return;
 
@@ -245,10 +280,28 @@ function enhanceSidebar() {
 		finalPageX = null;
 
 		//animate
-		setTransition($sidebar, '');
-		setTransform($sidebar, '');
-		$blinds.css('height', '').css('background', '');
-		setTransition($blinds, '');
+		$sidebar.transition('').transform('');
+		var blindsClickHandler = (function() {
+			//when fading away $blinds, it will still be a valid label for #sidesordered
+			//make sure that any subsequent clicks to $blinds don't toggle #sidesordered
+			var firstClick = true;
+			return function(e) {
+				if (firstClick) firstClick = false;
+				else e.preventDefault();
+			};
+		})();
+		var transitionEndHandler = (function() {
+			var triggered = false;
+			return function() {
+				//hide $blinds AFTER it's faded away to get a smooth transition
+				if (triggered) return;
+				triggered = true;
+				$blinds.css('height', '').off('click', blindsClickHandler);
+			};
+		})();
+		$blinds.css('opacity', '').transition('').show().one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', transitionEndHandler).on('click', blindsClickHandler);
+		if (currentTranslateX < HOT_EDGE_WIDTH) transitionEndHandler(); //transitionend sometimes not fired if transition is too short (or nonexistent)
+		else setTimeout(transitionEndHandler, 250); //just in case browser doesn't support transitionend event...
 		$('#sidesordered').prop('checked', shouldCheck).trigger('change');
 	}).on('click', function(e) {
 		if (!hasBeenMoved()) return;
@@ -258,6 +311,7 @@ function enhanceSidebar() {
 }
 
 $(document).ready(function() {
+	initializeJqueryExtensions();
 	deobfuscateEmail();
 	enableScaleMobile();
 	initialScrollMobile();
