@@ -45,78 +45,6 @@ function deobfuscateEmail() {
 	});
 }
 
-function enableScaleMobile() {
-	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	var maxS = w / $('.bacon').outerWidth();
-	$('meta[name=viewport]').attr('content', 'width=device-width, user-scalable=yes, maximum-scale=' + maxS);
-}
-
-function getOrientation() {
-	var orientation;
-
-	if (window.orientation === undefined) {
-		// No JavaScript orientation support. Work it out.
-		if (document.documentElement.clientWidth > document.documentElement.clientHeight)
-			orientation = 'landscape';
-		else
-			orientation = 'portrait';
-	} else if (window.orientation === 0 || window.orientation === 180) {
-		orientation = 'portrait';
-	} else {
-		orientation = 'landscape';
-	}
-
-	return orientation;
-}
-
-function getViewportScale() {
-	// Get viewport width
-	var viewportWidth = document.documentElement.clientWidth;
-
-	// Abort. Screen width is greater than the viewport width (not fullscreen).
-	if (screen.width > viewportWidth) {
-		//console.log('Aborted viewport scale measurement. Screen width > viewport width');
-		return;
-	}
-
-	// Get the orientation corrected screen width
-	var orientation = getOrientation();
-	var screenWidth = screen.width;
-
-	if (orientation === 'portrait') {
-		// Take smaller of the two dimensions
-		if (screen.width > screen.height)
-			screenWidth = screen.height;
-	} else {
-		// Take larger of the two dimensions
-		if (screen.width < screen.height)
-			screenWidth = screen.height;
-	}
-
-	// Calculate viewport scale
-	return screenWidth / window.innerWidth;
-}
-
-function initialScrollMobile() {
-	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	var s = getViewportScale();
-	w /= s;
-	h /= s;
-
-	if (!w || !h || w > 639 || h > 532)
-		return;
-
-	if (!location.hash) {
-		setTimeout(function () {
-			if (!pageYOffset) {
-				var offset = $('.bacon').offset();
-				window.scrollTo(offset.left, offset.top);
-			}
-		}, 1000);
-	}
-}
-
 function enhanceSidebar() {
 	//disable scrolling when sidebar is open
 	//TODO: show scrollbar even with overflow: hidden
@@ -130,10 +58,7 @@ function enhanceSidebar() {
 
 
 	//enable dragging the sidebar
-	//TODO: "[-webkit-]filter: opacity(%)" seems to perform much better than rgba
-	//TODO: use left and rgba instead of translate and opacity in CSS to maximize compatibility,
-	//then determine hardware accelerated transition capabilities in JavaScript to maximize perf.
-	var initialPageX = null, finalPageX = null, initialT, finalT, finalPageY, currentTranslateX, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
+	var initialPageX = null, finalPageX = null, initialT, finalT, finalPageY, currentTranslateX, removeTransition, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
 
 	//helper functions
 	var getCoordinates = function(e) {
@@ -194,9 +119,10 @@ function enhanceSidebar() {
 
 		//check for validity of dragging sidebar
 		var isClosing = isSidebarOpen();
-		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || sidebarWidth == null || $(e.target).hasClass('ordersides')) return;
+		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || sidebarWidth == null || $(e.target).parents('.ordersides').length) return;
 
 		//leaving finger on left edge should show tiny bit of sidebar after short while
+		removeTransition = 1;
 		if (!isClosing) {
 			sidebarTeaser = setTimeout(function() {
 				//ensure deltas are also equal to the final values
@@ -206,8 +132,9 @@ function enhanceSidebar() {
 				var newE = $.Event('mousemove');
 				newE.target = e.target;
 				newE.pageX = HOT_EDGE_WIDTH;
+				removeTransition = 0;
 				$(document).trigger(newE);
-			}, 100);
+			}, 200);
 
 			//prevent any long press actions
 			//FIXME: also prevents scroll action for (isScroll == 1) for !isClosing!
@@ -218,7 +145,9 @@ function enhanceSidebar() {
 		finalPageX = pointer.x;
 		finalPageY = pointer.y;
 		finalT = new Date().getTime();
-		if ($sidebar.css('translate'))
+		if ($sidebar.css('translate3d'))
+			currentTranslateX = $sidebar.css('translate3d')[0];
+		else if ($sidebar.css('translate'))
 			currentTranslateX = $sidebar.css('translate')[0];
 		else if (isClosing)
 			currentTranslateX = sidebarWidth;
@@ -226,12 +155,12 @@ function enhanceSidebar() {
 			currentTranslateX = 0;
 
 		//animate
-		$sidebar.transition('none');
-		$blinds.css('height', 'auto').transition('none');
+		$blinds.css('height', 'auto');
 	}).on('touchmove mousemove', function(e) {
 		if (!isDragging()) return;
 
 		var pointer = getCoordinates(e);
+		if (pointer.x == finalPageX) return;
 
 		//check if sidebar was initially open
 		if (isSidebarOpen()) {
@@ -261,6 +190,14 @@ function enhanceSidebar() {
 		currentTranslateX = Math.max(0, Math.min(sidebarWidth, currentTranslateX + finalPageX - initialPageX));
 
 		//animate
+		if (removeTransition == 1) {
+			//disables animations after teaser pops up
+			$sidebar.transition('none');
+			$blinds.transition('none');
+			removeTransition = 2;
+		} else if (removeTransition == 0) {
+			removeTransition = 1;
+		}
 		$sidebar.translate(currentTranslateX, 0);
 		$blinds.css('opacity', (0.7 * currentTranslateX / sidebarWidth).toFixed(2));
 	}).on('touchend touchcancel mouseup', function(e) {
@@ -280,6 +217,7 @@ function enhanceSidebar() {
 		finalPageX = null;
 
 		//animate
+		$('#sidesordered').prop('checked', shouldCheck).trigger('change');
 		$sidebar.transition('').transform('');
 		var blindsClickHandler = (function() {
 			//when fading away $blinds, it will still be a valid label for #sidesordered
@@ -302,7 +240,6 @@ function enhanceSidebar() {
 		$blinds.css('opacity', '').transition('').show().one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', transitionEndHandler).on('click', blindsClickHandler);
 		if (currentTranslateX < HOT_EDGE_WIDTH) transitionEndHandler(); //transitionend sometimes not fired if transition is too short (or nonexistent)
 		else setTimeout(transitionEndHandler, 250); //just in case browser doesn't support transitionend event...
-		$('#sidesordered').prop('checked', shouldCheck).trigger('change');
 	}).on('click', function(e) {
 		if (!hasBeenMoved()) return;
 		//prevent #sidesordered getting incorrectly toggled again after mouseup, causing wrong final position for sidebar
@@ -313,7 +250,5 @@ function enhanceSidebar() {
 $(document).ready(function() {
 	initializeJqueryExtensions();
 	deobfuscateEmail();
-	enableScaleMobile();
-	initialScrollMobile();
 	enhanceSidebar();
 });

@@ -117,8 +117,6 @@ body {
 }
 
 .toppings {
-	background: url('bg.jpg') no-repeat center top fixed;
-	background-size: cover;
 	position: relative;
 	padding-bottom: 8px;
 }

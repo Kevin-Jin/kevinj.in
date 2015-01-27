@@ -1,10 +1,9 @@
 /* complete overlap between browsers that support css-mediaqueries, css3-colors,
- * transforms2d, css-transitions except for Opera Mini (transforms2d,
+ * transforms2d, css-transitions, opacity except for Opera Mini (transforms2d,
  * css-transitions) and IE9 (css-transitions), so no need for fallbacks */
 @media (max-width: 639px) {
 	.topbun {
 		position: absolute;
-		position: -webkit-sticky;
 		background: #999;
 	}
 
@@ -17,8 +16,8 @@
 		left: -170px;
 		top: 0;
 		bottom: 0;
-		-webkit-transition: transform 0.2s;
-		transition: transform 0.2s;
+		-webkit-transition: -webkit-transform 0.2s, -ms-transform 0.2s, transform 0.2s;
+		transition: -webkit-transform 0.2s, -ms-transform 0.2s, transform 0.2s;
 	}
 
 	.topbun .product, .topbun .ingredients a {
@@ -52,14 +51,22 @@
 	}
 
 	.ordersides {
-		background: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-20.png) no-repeat center;
 		display: block;
 		width: 48px;
 		height: 48px;
+		line-height: 48px;
+	}
+
+	.ordersides .fa {
+		width: 100%;
+		line-height: inherit;
+		font-size: 24px;
+		vertical-align: middle;
+		text-align: center;
 	}
 
 	.ordersides:active {
-		background: #777 url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-20.png) no-repeat center;
+		background: #777;
 	}
 
 	#sidesordered:checked~.boxedin {

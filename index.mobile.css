@@ -1,7 +1,28 @@
 /* complete overlap between browsers that support css-mediaqueries, css3-colors,
- * transforms2d, css-transitions except for Opera Mini (transforms2d,
+ * transforms2d, css-transitions, opacity except for Opera Mini (transforms2d,
  * css-transitions) and IE9 (css-transitions), so no need for fallbacks */
 @media (max-width: 639px) {
+	.topbun .ingredients a:before {
+		font: normal normal normal 14px/1 FontAwesome; /* .fa */
+		font-size: inherit;
+		display: inline-block;
+		width: 22px;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	.topbun .portfolio:before {
+		content: "\f187"; /* .fa-archive */
+	}
+
+	.topbun .resume:before {
+		content: "\f15c"; /* .fa-file-text */
+	}
+
+	.topbun .contact:before {
+		content: "\f1d8"; /* .fa-paper-plane */
+	}
+
 	.filler {
 		height: 52px;
 	}
@@ -80,13 +101,15 @@
 		white-space: nowrap;
 	}
 
-	.captioned img {
+	.captioned .fa {
 		vertical-align: middle;
 		border-radius: 0;
 		width: 32px;
 		height: 32px;
+		line-height: 32px;
+		font-size: 22px;
 		margin: 0 0 0 7px;
-		display: inline-block;
+		padding: 0;
 	}
 
 	.captioned strong {
