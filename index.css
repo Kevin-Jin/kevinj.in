@@ -74,9 +74,9 @@
 }
 
 .ie8 .captioned {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
-	height: 240px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	padding-top: 40px;
 	margin-top: 0;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .ie8 .captioned:hover {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000')";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000');
 }
 
 .captioned .fa {

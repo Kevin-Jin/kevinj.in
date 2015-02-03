@@ -4,6 +4,7 @@
 @media (max-width: 639px) {
 	.topbun {
 		position: absolute;
+		min-width: 0;
 		background: #999;
 	}
 
@@ -50,14 +51,26 @@
 		transition: opacity 0.2s;
 	}
 
-	.ordersides {
-		display: block;
+	/* Workaround for webkit: translate3d on something that's not visible due to
+	 * overflow: hidden and margin-left: -xxx will not draw that element even
+	 * when it goes into view, causing sidebar to not be drawn if .topbun is
+	 * overflow: hidden.
+	 */
+	.mobiletopbun {
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		background: inherit;
+	}
+
+	.ordersides, .ordersearch {
+		display: inline-block;
 		width: 48px;
 		height: 48px;
 		line-height: 48px;
 	}
 
-	.ordersides .fa {
+	.ordersides .fa, .ordersearch .fa {
 		width: 100%;
 		line-height: inherit;
 		font-size: 24px;
@@ -65,7 +78,7 @@
 		text-align: center;
 	}
 
-	.ordersides:active {
+	.ordersides:active, .ordersearch:active {
 		background: #777;
 	}
 
@@ -84,5 +97,77 @@
 	#sidesordered:checked~.blinds {
 		height: auto;
 		opacity: 0.7;
+	}
+
+	.search {
+		top: 0;
+		right: 0;
+		-webkit-transform: translate(-48px,0);
+		-ms-transform: translate(-48px,0);
+		transform: translate(-48px,0);
+		left: 100%;
+		background: inherit;
+		-webkit-transition: -webkit-transform 0.2s, -ms-transform 0.2s, transform 0.2s;
+		transition: -webkit-transform 0.2s, -ms-transform 0.2s, transform 0.2s;
+		overflow: hidden;
+		width: 100%;
+		z-index: 0;
+	}
+
+	.search.hwaccel {
+		-webkit-transform: translate3d(-48px,0,0);
+		-ms-transform: translate3d(-48px,0,0);
+		transform: translate3d(-48px,0,0);
+	}
+
+	.ordersearch {
+		left: 0;
+		background: inherit;
+	}
+
+	.search .fa-arrow-left {
+		display: block;
+		position: absolute;
+		top: 0;
+		background: inherit;
+		z-index: 0;
+		opacity: 0;
+		-webkit-transition: opacity 0.2s;
+		transition: opacity 0.2s;
+	}
+
+	.searchbar {
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 48px;
+		display: block;
+		padding-right: 5px;
+	}
+
+	.searchbar input {
+		box-sizing: border-box;
+		padding: 10px;
+		padding-right: 24px;
+	}
+
+	.search .cleartext {
+		right: 10px;
+	}
+
+	#searchordered:checked~.search {
+		-webkit-transform: translate(-100%,0);
+		-ms-transform: translate(-100%,0);
+		transform: translate(-100%,0);
+	}
+
+	#searchordered:checked~.search.hwaccel {
+		-webkit-transform: translate3d(-100%,0,0);
+		-ms-transform: translate3d(-100%,0,0);
+		transform: translate3d(-100%,0,0);
+	}
+
+	#searchordered:checked~.search .fa-arrow-left {
+		opacity: 1;
 	}
 }

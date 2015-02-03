@@ -79,25 +79,122 @@ body {
 }
 
 .ie8 .topbun {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 }
 
-#sidesordered {
-	display: none;
+#sidesordered,#searchordered,#resetsearch {
+	/* display: none; doesn't work too well with IE8 */
+	position: absolute;
+	top: -100%;
 }
 
 .ordersides {
 	display: none;
 }
 
+.ordersearch {
+	position: absolute;
+	left: 5px;
+}
+
+.ie8 .ordersearch {
+	top: 0;
+}
+
+.ordersearch .fa-arrow-left {
+	display: none;
+}
+
+.search {
+	box-sizing: border-box;
+	position: absolute;
+	right: 50%;
+	height: 100%;
+	line-height: inherit;
+	vertical-align: middle;
+	margin-right: -100px;
+	width: 200px;
+	z-index: 2;
+}
+
+.ie8 .search {
+	padding: 5px 0;
+}
+
+.searchbar {
+	display: block;
+	height: 100%;
+	padding: 5px 0;
+	box-sizing: border-box;
+}
+
+.ie8 .searchbar {
+	padding: 0;
+	/*background: rgba(255, 255, 255, 0.75);*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFFFFFFF',endColorstr='#BFFFFFFF')";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFFFFFFF',endColorstr='#BFFFFFFF');
+	/*border-radius: 10px;*/
+	padding: 0 24px;
+}
+
+.searchbar input {
+	height: 100%;
+	width: 100%;
+	border: none;
+	padding: 5px 24px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.75);
+	display: block;
+}
+
+.ie8 .searchbar input {
+	box-sizing: content-box;
+	background: none;
+	/*border-radius: 0;*/
+	padding: 0;
+	line-height: 38px;
+}
+
+.searchbar input[type=submit] {
+	visibility: hidden;
+}
+
+.search .cleartext {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	padding: 0;
+	height: 100%;
+	display: block;
+}
+
+.searchquery:invalid~.cleartext {
+	display: none;
+}
+
+.search .cleartext label {
+	color: #000;
+}
+
+.search .cleartext label:hover, .search .cleartext label:active {
+	background: none;
+	color: #777;
+	cursor: pointer;
+}
+
+.topbun {
+	line-height: 48px;
+	min-width: 640px;
+}
+
 .topbun a {
 	height: 100%;
 	vertical-align: bottom;
-	line-height: 48px;
 	color: #fff;
 	text-decoration: none;
-	padding: 0 10px;
+	padding: 0 8px;
 	display: inline-block;
 }
 
@@ -122,8 +219,8 @@ body {
 }
 
 .ie8 .toppings {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
 	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
 }
 
 .sunglasses {
@@ -154,8 +251,8 @@ body {
 }
 
 .ie8 .grease {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 }
 
 .meat {
@@ -196,6 +293,6 @@ body {
 }
 
 .ie8 .bottombun .content {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
 }

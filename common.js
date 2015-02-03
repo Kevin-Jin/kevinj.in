@@ -119,7 +119,7 @@ function enhanceSidebar() {
 
 		//check for validity of dragging sidebar
 		var isClosing = isSidebarOpen();
-		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || sidebarWidth == null || $(e.target).parents('.ordersides').length) return;
+		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || sidebarWidth == null || $(e.target).parents('.mobiletopbun').length) return;
 
 		//leaving finger on left edge should show tiny bit of sidebar after short while
 		removeTransition = 1;
@@ -247,8 +247,25 @@ function enhanceSidebar() {
 	});
 }
 
+function enhanceSearchbar() {
+	if (canUse3dTransforms)
+		$('.search').addClass('hwaccel');
+
+	$('.search .cleartext label').on('click', function(e) {
+		$('.searchbar input[name=query]').val('').trigger('keyup');
+		e.preventDefault();
+	});
+	$('.searchbar input[name=query]').on('keyup', function(e) {
+		if ($(this).val().length != 0)
+			$('.search .cleartext').css('display', 'block');
+		else
+			$('.search .cleartext').css('display', 'none');
+	}).trigger('keyup');
+}
+
 $(document).ready(function() {
 	initializeJqueryExtensions();
 	deobfuscateEmail();
 	enhanceSidebar();
+	enhanceSearchbar();
 });
