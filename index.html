@@ -17,6 +17,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="common.js"></script>
 <script src="index.js"></script>
+<!--[if lte IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if (lte IE 8)]>
+<script>
+// https://github.com/FortAwesome/Font-Awesome/issues/354
+$(document).ready(function() {
+	var head = document.getElementsByTagName('head')[0], style = document.createElement('style');
+	style.type = 'text/css';
+	style.styleSheet.cssText = ':before,:after{content:none !important';
+	head.appendChild(style);
+	setTimeout(function(){
+		head.removeChild(style);
+	}, 0);
+});
+</script>
+<![endif]-->
 </head>
 <body>
 <div class="topbun">
@@ -49,7 +64,7 @@
 <div class="name">
 <span class="headline signature">Kevin Jin</span>
 <span class="subtitle">
-<span class="left">Software Developer.</span>
+<span class="left">Software Engineer.</span>
 <span class="right">Financial Analyst.</span>
 </span>
 </div>

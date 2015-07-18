@@ -71,6 +71,17 @@ function initialScrollMobile() {
 }
 
 function initialAnimation(onComplete) {
+	var style = document.documentElement.style;
+	if (typeof (style.webkitTransition) === "undefined"
+			&& typeof (style.MozTransition) === "undefined"
+			&& typeof (style.OTransition ) === "undefined"
+			&& typeof (style.MsTransition ) === "undefined"
+			&& typeof (style.transition ) === "undefined"
+	) {
+		onComplete();
+		return;
+	}
+
 	var $sunglasses = $('.sunglasses'), $topbun = $('.topbun'), $headline = $('.headline'), $subtitle = $('.subtitle'), $otherBacon = $('.mugshot,.quicklinks,.inspirational');
 	if (canUse3dTransforms) {
 		$sunglasses.addClass('hwaccel');

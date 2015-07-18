@@ -24,7 +24,7 @@
 	margin: 0 auto 10px auto;
 	text-align: left;
 	font-style: italic;
-	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .name .right {
@@ -45,6 +45,14 @@
 	position: absolute;
 	width: 155px;
 	height: 155px;
+	background: url('mugshot.jpg');
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px #000;
+}
+
+.ie8 .mugshot {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(color=black,strength=5)";
+	filter: progid:DXImageTransform.Microsoft.Glow(color=black,strength=5);
 }
 
 .quicklinks {
@@ -76,8 +84,7 @@
 .ie8 .captioned {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
-	padding-top: 40px;
-	margin-top: 0;
+	position: relative;
 }
 
 .captioned:hover {
@@ -104,17 +111,25 @@
 	border-radius: 50%;
 }
 
-.ie8 .captioned img {
+.ie8 .captioned .fa {
 	margin-top: 0;
+	position: absolute;
+	top: -40px;
+	left: 0;
+	right: 0;
 }
 
-.captioned:hover img {
+.captioned:hover .fa {
 	background: #777 !important;
 }
 
 .captioned strong {
 	display: block;
 	margin-bottom: 10px;
+}
+
+.ie8 .captioned strong {
+	margin-top: 40px;
 }
 
 .captioned a {
