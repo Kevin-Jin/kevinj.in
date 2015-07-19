@@ -10,3 +10,215 @@
 .bacon.boxedin {
 	min-height: 100px;
 }
+
+@page {
+	size: 8.5in 11in;
+	margin: .5in .5in .5in .5in;
+	mso-header-margin: .5in;
+	mso-footer-margin: .5in;
+	mso-paper-source: 0;
+}
+
+.page {
+	width: 7.5in;
+	height: 10in;
+	position: relative;
+}
+
+@media only screen and (min-device-width: 480px) {
+	.page {
+		background-color: white;
+		padding: 0.5in;
+		margin: 30px auto;
+		box-shadow: 0 0 100px #222, 0 0 10px #ffd;
+	}
+
+	.footer {
+		bottom: 0.25in;
+		margin-left: -0.5in;
+	}
+}
+
+@media print {
+	html, body, .meat, .boxedin {
+		width: auto;
+		box-sizing: content-box;
+		position: static;
+		margin: 0;
+		padding: 0;
+		background: none;
+		z-index: auto;
+		max-width: none;
+		display: block;
+	}
+
+	html body > * {
+		display: none;
+	}
+
+	.meat > * {
+		display: none;
+	}
+
+	.meat .page {
+		display: block;
+	}
+
+	.footer {
+		bottom: 0in;
+	}
+}
+
+.section {
+	border-bottom: 0.02in solid #000;
+	padding: 0 0.05in 0.02in 0.05in;
+	font-size: 11pt;
+	line-height: 14pt;
+}
+
+.section h2 {
+	margin: 0;
+	font-size: 13pt;
+	line-height: 17pt;
+	font-weight: normal;
+}
+
+.section p, ul {
+	margin: 0;
+	vertical-align: top;
+}
+
+.section .entry {
+	margin-bottom: 0.02in;
+}
+
+.section .spacetime {
+	width: 1in;
+	display: inline-block;
+	text-align: left;
+}
+
+.section .description {
+	display: inline-block;
+	width: 6.4in;
+}
+
+.section .organization {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.section .role {
+	border-left: 0.02in solid #000;
+	padding-left: 0.03in;
+
+	width: 3.3in;
+	float: right;
+}
+
+li.rightalign2col {
+	width: 3.3in;
+	float: right;
+
+	position: relative;
+	left: 0.08in;
+}
+
+li.leftalign2col {
+	float: left;
+}
+
+.leftalign3col {
+	float: left;
+	width: 2.65in;
+	padding-right: 0;
+}
+
+.centeralign3col {
+	float: left;
+	width: 1.875in;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.rightalign3col {
+	float: left;
+	width: 2.875in;
+	padding-left: 0;
+}
+
+.section ul {
+	margin: 0;
+	padding-left: 0.17in;
+}
+
+.section ul li {
+	text-indent: -0.05in;
+}
+
+.section.skills {
+	box-sizing: content-box;
+}
+
+.section sup {
+	vertical-align: text-top;
+	font-size: 75%;
+}
+
+.section.webtech, .section.analytech {
+	border-left: 0.02in solid #000;
+	padding-left: 0.05in;
+	margin-left: -0.07in;
+}
+
+.section.honors .entry {
+	margin-bottom: 0;
+}
+
+.heading h1 {
+	margin: 0;
+	font-size: 20pt;
+	line-height: 25pt;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 1.5in;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.heading p {
+	margin: 0 0 0 0.125in;
+	display: inline-block;
+	vertical-align: bottom;
+	text-align: left;
+}
+
+.heading a {
+	color: inherit;
+}
+
+.footer {
+	position: absolute;
+	font-style: italic;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+.section, .footer {
+	font-family: "Calibri";
+}
+
+.section h2, .section .spacetime, .section .organization, .section .role, .section .fancy, .heading h1 {
+	font-family: "Book Antiqua";
+}
+
+.section .spacetime, .footer {
+	font-size: 9pt;
+	line-height: 11.5pt;
+}
+
+.section .description ul, .small, .heading p {
+	font-size: 10pt;
+	line-height: 13pt;
+}
