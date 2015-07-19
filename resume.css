@@ -1,0 +1,12 @@
+.toppings {
+	background: url('bg.jpg') no-repeat center top fixed;
+	background-size: cover;
+}
+
+.filler {
+	height: 258px;
+}
+
+.bacon.boxedin {
+	min-height: 100px;
+}

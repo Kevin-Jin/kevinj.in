@@ -1,0 +1,10 @@
+<!--#set var="title" value="Kevin Jin - Resume" -->
+<!--#include virtual="common/1_begin_preamble_and_begin_css.shtml" -->
+<link rel="stylesheet" href="resume.css" />
+<link rel="stylesheet" href="resume.mobile.css" />
+<!--#include virtual="common/2_end_css_and_begin_js.shtml" -->
+<script src="resume.js"></script>
+<!--#include virtual="common/3_end_js_and_begin_cover.shtml" -->
+<!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
+<h3 style="color: #386185">Interactive resume is coming soon!</h3>
+<!--#include virtual="common/5_end_body_and_end_footer.shtml" -->
