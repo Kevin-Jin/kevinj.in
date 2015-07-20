@@ -1,5 +1,94 @@
-@media (max-width: 639px) {
+@media only screen and (max-width: 639px) {
 	.filler {
 		height: 52px;
+	}
+
+	.page {
+		width: auto;
+		height: auto;
+		max-width: none;
+		padding: 0;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	#resume {
+		width: auto;
+		height: auto;
+	}
+
+	.heading p {
+		display: block;
+	}
+
+	.footer {
+		position: static;
+	}
+
+	.section .spacetime {
+		width: auto;
+		display: block;
+	}
+
+	.section .spacetime .space {
+		float: right;
+		text-align: right;
+	}
+
+	.section .description {
+		width: auto;
+		display: block;
+	}
+
+	.section .organization {
+		width: auto;
+/*		display: block;*/
+
+		display: inline-block;
+	}
+
+	.section .role {
+		width: auto;
+		display: block;
+		border: none;
+/*		float: none;*/
+
+		float: right;
+		text-align: right;
+	}
+
+	.section .entry {
+		margin-bottom: 10px;
+	}
+
+	.skills, .section.rightalign3col {
+		float: none;
+		width: auto;
+	}
+
+	.section.centeralign3col, .section.rightalign3col {
+		padding-left: 0.05in;
+		margin-left: inherit;
+		border-left: none;
+	}
+
+	li.leftalign3col, li.centeralign3col, li.rightalign3col {
+		width: auto;
+		margin-right: 40px;
+		float: none;
+	}
+
+	li.rightalign2col {
+		width: auto;
+		float: none;
+		position: static;
+	}
+
+	li.leftalign2col {
+		float: none;
+	}
+
+	.footer {
+		margin-left: 0;
 	}
 }

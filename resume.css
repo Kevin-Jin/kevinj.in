@@ -25,12 +25,24 @@
 	position: relative;
 }
 
-@media only screen and (min-device-width: 480px) {
+@media only screen {
 	.page {
 		background-color: white;
 		padding: 0.5in;
 		margin: 30px auto;
 		box-shadow: 0 0 100px #222, 0 0 10px #ffd;
+
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 8.5in;
+		height: 11in;
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+
+	#resume {
+		width: 7.5in;
+		height: 10in;
 	}
 
 	.footer {
@@ -98,6 +110,10 @@
 	text-align: left;
 }
 
+.section .spacetime .space, .section .spacetime .date {
+	display: block;
+}
+
 .section .description {
 	display: inline-block;
 	width: 6.4in;
@@ -112,12 +128,12 @@
 	border-left: 0.02in solid #000;
 	padding-left: 0.03in;
 
-	width: 3.3in;
+	width: 3.4in;
 	float: right;
 }
 
 li.rightalign2col {
-	width: 3.3in;
+	width: 3.4in;
 	float: right;
 
 	position: relative;
@@ -136,15 +152,24 @@ li.leftalign2col {
 
 .centeralign3col {
 	float: left;
-	width: 1.875in;
+	width: 1.9in;
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .rightalign3col {
 	float: left;
-	width: 2.875in;
 	padding-left: 0;
+}
+
+.section.rightalign3col {
+	width: 2.85in;
+}
+
+.section.centeralign3col, .section.rightalign3col {
+	border-left: 0.02in solid #000;
+	padding-left: 0.05in;
+	margin-left: -0.07in;
 }
 
 .section ul {
@@ -156,22 +181,12 @@ li.leftalign2col {
 	text-indent: -0.05in;
 }
 
-.section.skills {
-	box-sizing: content-box;
-}
-
 .section sup {
 	vertical-align: text-top;
 	font-size: 75%;
 }
 
-.section.webtech, .section.analytech {
-	border-left: 0.02in solid #000;
-	padding-left: 0.05in;
-	margin-left: -0.07in;
-}
-
-.section.honors .entry {
+.honors .entry {
 	margin-bottom: 0;
 }
 
@@ -206,11 +221,11 @@ li.leftalign2col {
 }
 
 .section, .footer {
-	font-family: "Calibri";
+	font-family: 'Calibri','Carlito','sans-serif';
 }
 
 .section h2, .section .spacetime, .section .organization, .section .role, .section .fancy, .heading h1 {
-	font-family: "Book Antiqua";
+	font-family: 'Book Antiqua','Palatino Linotype','Palatino','URW Palladio L',serif;
 }
 
 .section .spacetime, .footer {
@@ -221,4 +236,12 @@ li.leftalign2col {
 .section .description ul, .small, .heading p {
 	font-size: 10pt;
 	line-height: 13pt;
+}
+
+.endline:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
 }

@@ -7,51 +7,51 @@
 <!--#include virtual="common/3_end_js_and_begin_cover.shtml" -->
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="page">
-	<div class="resume">
+	<div class="endline" id="resume">
 		<div class="heading section">
 			<h1>Kevin Jin</h1>
 			<!--#include virtual="resume/password.shtml" -->
 			<p><!--#echo var="address"--><br />Hoboken, NJ 07030</p>
 			<p><!--#echo var="phone"--><br /><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></p>
-			<p><a href="www.kevinj.in">www.kevinj.in</a></p>
-			<p><a href="www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a><br /><a href="github.com/Kevin-Jin">github.com/Kevin-Jin</a></p>
+			<p><a href="http://www.kevinj.in">www.kevinj.in</a></p>
+			<p><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a><br /><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></p>
 		</div>
 		<div class="summary section">
 			<h2>Summary</h2>
 			<p>
-				Developer, sysadmin, and aspiring quantitative analyst with 4 years industry and side project experience.<br />
+				Developer, sysadmin, and aspiring quantitative analyst with 6 years of industry and side project experience.<br />
 				Interested in quantitative analysis, data science, and equity research related part-time (or seasonal full-time) roles.
 			</p>
 		</div>
 		<div class="education section">
 			<h2>Education</h2>
 			<div class="entry">
-				<p class="spacetime">8/2013-Present<br />New York, NY</p><div class="description">
+				<p class="spacetime"><span class="time">8/2013-Present</span><span class="space">New York, NY</span></p><div class="description">
 					<p class="organization">New York University</p>
 					<p class="role">
 						B.S. <strong>Finance</strong>, <strong>Statistics</strong>, <em>Stern School of Business</em><br />
 						B.A. <strong>Computer Science</strong> honors, <em>Courant Institute</em>
 					</p>
 					<ul>
-						<li>GPA: 3.61/4.0<br style="clear: both" /></li>
+						<li class="endline">GPA: 3.61/4.0</li>
 						<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime">8/2014-12/2014<br />Shanghai, CN</p><div class="description">
+				<p class="spacetime"><span class="time">8/2014-12/2014</span><span class="space">Shanghai, CN</span></p><div class="description">
 					<p class="organization">NYU Shanghai</p>
 					<p class="role">Study abroad program</p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 				</div>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime">9/2009-6/2013<br />Freehold, NJ</p><div class="description">
+				<p class="spacetime"><span class="time">9/2009-6/2013</span><span class="space">Freehold, NJ</span></p><div class="description">
 					<p class="organization">Freehold High School</p>
 					<p class="role">High School Diploma, <em>Computer Science Academy</em></p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 					<ul>
 						<li class="leftalign2col">GPA: 3.9/4.0 (4.82/4.3 weighted) - top 2%</li>
 						<li class="rightalign2col">SAT: 2300 (770 Reading, 780 Math, 750 Writing)</li>
@@ -62,10 +62,10 @@
 		<div class="experience section">
 			<h2>Experience</h2>
 			<div class="entry">
-				<p class="spacetime">5/2015-Present<br />Red Bank, NJ</p><div class="description">
+				<p class="spacetime"><span class="time">5/2015-Present</span><span class="space">Red Bank, NJ</span></p><div class="description">
 					<p class="organization">ZAIS Group, LLC</p>
 					<p class="role"><em>Quant Analyst Intern, Portfolio Management Team</em></p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 					<ul>
 						<li>Worked with data analytics department, operations department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS and MBS trading strategies (e.g. involving econometrics, technical analysis) for hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R with time series and big data news analytics.</li>
 						<li>Studied academic papers on news sentiment analytics, time series forecasting, time series lead-lag structures, and cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgages.</li>
@@ -74,10 +74,10 @@
 			</div>
 
 			<div class="entry">
-				<p class="spacetime">3/2015-Present<br />New York, NY</p><div class="description">
+				<p class="spacetime"><span class="time">3/2015-Present</span><span class="space">New York, NY</span></p><div class="description">
 					<p class="organization">Quantitative Finance Society <span style="font-weight: normal">NYU Stern</span></p>
 					<p class="role"><em>Analyst, Quant Portfolio Team</em></p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 					<ul>
 						<li>Developed and pitched systematic trading strategies.</li>
 						<li>Backtested and paper traded these models using services such as the Bloomberg Java API.</li>
@@ -86,10 +86,10 @@
 			</div>
 
 			<div class="entry">
-				<p class="spacetime">5/2013-5/2015<br />Hoboken, NJ</p><div class="description">
+				<p class="spacetime"><span class="time">5/2013-5/2015</span><span class="space">Hoboken, NJ</span></p><div class="description">
 					<p class="organization">Bad Rabbit Consulting</p>
 					<p class="role"><em>Software Engineer/System Administrator</em></p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 					<ul>
 						<li>
 							Developer and Huron-Click® Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
@@ -105,10 +105,10 @@
 			</div>
 
 			<div class="entry">
-				<p class="spacetime">10/2008-5/2013<br />Marlboro, NJ</p><div class="description">
+				<p class="spacetime"><span class="time">10/2008-5/2013</span><span class="space">Marlboro, NJ</span></p><div class="description">
 					<p class="organization">ArgonMS</p>
 					<p class="role"><em>Project Maintainer</em></p>
-					<br style="clear: both" />
+					<div class="endline"></div>
 					<ul><li>
 						Developed a MMORPG server emulator. Launched testing server at pjtb.net.
 						<ul>
@@ -122,39 +122,28 @@
 		<div class="honors section">
 			<h2>Honors</h2>
 			<div class="entry">
-				<p class="spacetime">4/2015</p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>UChicago</strong></span> Midwest Trading Competition, Options market maker case</div>
+				<p class="spacetime"><span class="time">4/2015</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>UChicago</strong></span> Midwest Trading Competition, Options market maker case</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime">5/2013, 5/2012</p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> Northern Division, 5 person Senior Division (regional, regular season) [2x winner]</div>
+				<p class="spacetime"><span class="time">5/2013, 5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> Northern Division, 5 person Senior Division (regional, regular season) [2x winner]</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime">5/2012</p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> All Star Competition, 5 person Senior Division (international, postseason)</div>
+				<p class="spacetime"><span class="time">5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> All Star Competition, 5 person Senior Division (international, postseason)</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime">3/2012, 3/2011</p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [2x winner]</div>
+				<p class="spacetime"><span class="time">3/2012, 3/2011</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [2x winner]</div>
 			</div>
 		</div>
-		<div class="affiliations section">
+		<div class="affiliations section endline">
 			<h2>Affiliations, interests, and hobbies</h2>
-			<div class="leftalign3col">
 				<ul>
-					<li class="">Association for Computing Machinery</li>
-					<li class="">Quantitative Finance Society</li>
+					<li class="leftalign3col">Association for Computing Machinery</li>
+					<li class="centeralign3col">Tech@NYU</li>
+					<li class="rightalign3col">Hackathon competitions</li>
+					<li class="leftalign3col">Quantitative Finance Society</li>
+					<li class="centeralign3col">Investment Analysts Group</li>
+					<li class="rightalign3col">Case competitions</li>
 				</ul>
-			</div>
-			<div class="centeralign3col">
-				<ul>
-					<li class="">Tech@NYU</li>
-					<li class="">Investment Analysts Group</li>
-				</ul>
-			</div>
-			<div class="rightalign3col">
-				<ul>
-					<li class="">Hackathon competitions</li>
-					<li class="">Case competitions</li>
-				</ul>
-			</div>
-			<br style="clear: both" />
 		</div>
 		<div class="servertech skills section leftalign3col">
 			<h2>Server application technologies</h2>
@@ -186,8 +175,7 @@
 				<li>Facebook, Twitter: data mining, integration</li>
 			</ul>
 		</div>
-		<br style="clear: both" />
-		<span class="footer">References available upon request.</span>
 	</div>
+	<span class="footer">References available upon request.</span>
 </div>
 <!--#include virtual="common/5_end_body_and_end_footer.shtml" -->
