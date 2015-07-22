@@ -11,24 +11,16 @@
 	min-height: 100px;
 }
 
-@page {
-	size: 8.5in 11in;
-	margin: .5in .5in .5in .5in;
-	mso-header-margin: .5in;
-	mso-footer-margin: .5in;
-	mso-paper-source: 0;
-}
-
 .page {
 	width: 7.5in;
 	height: 10in;
+	padding: 0.5in;
 	position: relative;
 }
 
-@media only screen {
+@media screen {
 	.page {
 		background-color: white;
-		padding: 0.5in;
 		margin: 30px auto;
 		box-shadow: 0 0 100px #222, 0 0 10px #ffd;
 
@@ -46,6 +38,7 @@
 	}
 
 	.footer {
+		display: block;
 		bottom: 0.25in;
 		margin-left: -0.5in;
 	}
@@ -72,20 +65,29 @@
 		display: none;
 	}
 
+	@page {
+		size: 8.5in 11in;
+		margin: .5in;
+		mso-header-margin: .5in;
+		mso-footer-margin: .5in;
+		mso-paper-source: 0;
+	}
+
 	.meat .page {
 		display: block;
+		padding: 0;
 	}
 
 	.footer {
-		bottom: 0in;
+		display: none;
 	}
 }
 
 .section {
-	border-bottom: 0.02in solid #000;
-	padding: 0 0.05in 0.02in 0.05in;
+	border-bottom: 1pt solid #000;
+	padding: 0 3pt 1pt 3pt;
 	font-size: 11pt;
-	line-height: 14pt;
+	line-height: 13pt;
 }
 
 .section h2 {
@@ -101,7 +103,7 @@
 }
 
 .section .entry {
-	margin-bottom: 0.02in;
+	margin-bottom: 1pt;
 }
 
 .section .spacetime {
@@ -125,8 +127,8 @@
 }
 
 .section .role {
-	border-left: 0.02in solid #000;
-	padding-left: 0.03in;
+	border-left: 1pt solid #000;
+	padding-left: 2pt;
 
 	width: 3.4in;
 	float: right;
@@ -137,7 +139,7 @@ li.rightalign2col {
 	float: right;
 
 	position: relative;
-	left: 0.08in;
+	left: 2pt;
 }
 
 li.leftalign2col {
@@ -167,23 +169,46 @@ li.leftalign2col {
 }
 
 .section.centeralign3col, .section.rightalign3col {
-	border-left: 0.02in solid #000;
-	padding-left: 0.05in;
-	margin-left: -0.07in;
+	border-left: 1pt solid #000;
+	padding-left: 3pt;
+	margin-left: -4pt;
 }
 
 .section ul {
 	margin: 0;
-	padding-left: 0.17in;
+	padding: 0;
+	padding-left: 7pt;
 }
 
 .section ul li {
-	text-indent: -0.05in;
+	list-style-type: none;
+	position: relative;
+}
+
+.section ul li:before {
+	content: "\25CF";	/* escaped unicode character, alt: \2022 */
+/*	font-size: 1em;		/* the default unicode bullet size is very small */
+	position: absolute;	/* position bullet relative to list item */
+/*	left: -.75em;		/* position the bullet L- R relative to list item */
+
+	font-size: 6pt;
+	left: -6pt;
+}
+
+.section ul li ul li:before {
+	content: "\25CB";    /* escaped unicode character, alt: \25E6 */
+/*	font-size: 1.25em;
+	left: -.5em;*/
 }
 
 .section sup {
 	vertical-align: text-top;
 	font-size: 75%;
+	line-height: 100%;
+}
+
+.section .fancy, .section em {
+	line-height: 100%;
 }
 
 .honors .entry {
@@ -216,12 +241,11 @@ li.leftalign2col {
 	position: absolute;
 	font-style: italic;
 	text-align: center;
-	display: block;
 	width: 100%;
 }
 
 .section, .footer {
-	font-family: 'Calibri','Carlito','sans-serif';
+	font-family: 'Calibri','Carlito',sans-serif;
 }
 
 .section h2, .section .spacetime, .section .organization, .section .role, .section .fancy, .heading h1 {
@@ -235,7 +259,7 @@ li.leftalign2col {
 
 .section .description ul, .small, .heading p {
 	font-size: 10pt;
-	line-height: 13pt;
+	line-height: 12pt;
 }
 
 .endline:after {

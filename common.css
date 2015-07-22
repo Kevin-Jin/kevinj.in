@@ -34,7 +34,7 @@ html {
 }
 
 body {
-	font: 12pt 'Calibri','Carlito','sans-serif';
+	font: 12pt 'Calibri','Carlito',sans-serif;
 	position: relative;
 	min-height: 100%;
 }

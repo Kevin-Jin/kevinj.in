@@ -19,7 +19,7 @@
 		<div class="summary section">
 			<h2>Summary</h2>
 			<p>
-				Developer, sysadmin, and aspiring quantitative analyst with 6 years of industry and side project experience.<br />
+				Developer, sysadmin, and quantitative analyst with 6 years of industry and side project experience.<br />
 				Interested in quantitative analysis, data science, and equity research related part-time (or seasonal full-time) roles.
 			</p>
 		</div>
@@ -92,7 +92,7 @@
 					<div class="endline"></div>
 					<ul>
 						<li>
-							Developer and Huron-Click® Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
+							Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
 							<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em>.</li></ul>
 						</li>
 						<li>
@@ -113,7 +113,7 @@
 						Developed a MMORPG server emulator. Launched testing server at pjtb.net.
 						<ul>
 							<li><em>30 days of uptime with 20 concurrent players, sub-30ms latency, and sub 100mb memory usage.</em></li>
-							<li>Maintained and moderated an enthusiastic community (>100 members) that assisted in identifying bugs.</li>
+							<li>Maintained and moderated an enthusiastic community (&gt;100 members) that assisted in identifying bugs.</li>
 						</ul>
 					</li></ul>
 				</div>
@@ -172,7 +172,7 @@
 				<li>R platform (Strong)</li>
 				<li>Bloomberg Terminal (Working)</li>
 				<li>Cloud computing, distributed websites</li>
-				<li>Facebook, Twitter: data mining, integration</li>
+				<li style="visibility: hidden">&nbsp;</li>
 			</ul>
 		</div>
 	</div>
