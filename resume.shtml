@@ -33,7 +33,9 @@
 						B.A. <strong>Computer Science</strong> honors, <em>Courant Institute</em>
 					</p>
 					<ul>
-						<li class="endline">GPA: 3.61/4.0</li>
+						<li class="leftalign2col">GPA: 3.61/4.0</li>
+						<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
+						<div class="endline"></div>
 						<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
 					</ul>
 				</div>
@@ -53,7 +55,9 @@
 					<p class="role">High School Diploma, <em>Computer Science Academy</em></p>
 					<div class="endline"></div>
 					<ul>
-						<li class="leftalign2col">GPA: 3.9/4.0 (4.82/4.3 weighted) - top 2%</li>
+						<li class="leftalign2col">GPA: 3.9/4.0</li>
+						<li class="leftalign2col">4.82/4.3 weighted</li>
+						<li class="leftalign2col">Top 2%</li>
 						<li class="rightalign2col">SAT: 2300 (770 Reading, 780 Math, 750 Writing)</li>
 					</ul>
 				</div>

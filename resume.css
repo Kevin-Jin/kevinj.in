@@ -144,6 +144,7 @@ li.rightalign2col {
 
 li.leftalign2col {
 	float: left;
+	margin-right: 10pt;
 }
 
 .leftalign3col {
@@ -191,7 +192,7 @@ li.leftalign2col {
 	position: absolute;	/* position bullet relative to list item */
 /*	left: -.75em;		/* position the bullet L- R relative to list item */
 
-	font-size: 6pt;
+	font-size: 5pt;
 	left: -6pt;
 }
 

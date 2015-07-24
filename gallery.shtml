@@ -7,16 +7,16 @@
 <!--#include virtual="common/3_end_js_and_begin_cover.shtml" -->
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="immersive"><div>
-	<ul class="thumbnails">
-		<li><a href="#1"><img src="http://lorempixel.com/400/300/" /></a></li>
-		<li><a href="#2"><img src="http://lorempixel.com/404/303/" /></a></li>
-		<li><a href="#3"><img src="http://lorempixel.com/408/306/" /></a></li>
-		<li><a href="#4"><img src="http://lorempixel.com/412/309/" /></a></li>
-		<li><a href="#5"><img src="http://lorempixel.com/416/312/" /></a></li>
-		<li><a href="#6"><img src="http://lorempixel.com/420/315/" /></a></li>
-		<li><a href="#7"><img src="http://lorempixel.com/424/318/" /></a></li>
-		<li><a href="#8"><img src="http://lorempixel.com/428/321/" /></a></li>
-	</ul>
+	<div class="thumbnails">
+		<a href="#1"><img src="http://lorempixel.com/400/300/" /></a>
+		<a href="#2"><img src="http://lorempixel.com/404/303/" /></a>
+		<a href="#3"><img src="http://lorempixel.com/408/306/" /></a>
+		<a href="#4"><img src="http://lorempixel.com/412/309/" /></a>
+		<a href="#5"><img src="http://lorempixel.com/416/312/" /></a>
+		<a href="#6"><img src="http://lorempixel.com/420/315/" /></a>
+		<a href="#7"><img src="http://lorempixel.com/424/318/" /></a>
+		<a href="#8"><img src="http://lorempixel.com/428/321/" /></a>
+	</div>
 	<div class="preview">
 		<div id="1"><img src="http://lorempixel.com/800/300/" /><p>Allan please add details</p></div>
 		<div id="2"><img src="http://lorempixel.com/800/401/" /><p>Allan please add details</p></div>

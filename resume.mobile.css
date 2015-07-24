@@ -87,6 +87,7 @@
 
 	li.leftalign2col {
 		float: none;
+		display: inline-block;
 	}
 
 	.footer {

@@ -29,7 +29,6 @@ body, .meat {
 	padding-bottom: 32px;
 	box-sizing: border-box;
 
-	min-height: 600px;
 	max-width: 1600px;
 	max-height: 900px;
 	margin: 0 auto;
@@ -89,26 +88,24 @@ body, .meat {
 	font-size: .01pt;
 }
 
-.thumbnails li {
+.thumbnails a {
+	position: relative;
 	display: inline-block;
 	height: 100%;
 
 	font-size: initial;
 	margin: 0 1px;
+
+	/* FIXME: need workaround for width problems with Firefox: see https://bugzilla.mozilla.org/show_bug.cgi?id=1187172 */
+	text-align: center;
 }
 
-.thumbnails li a {
-	height: 100%;
-	display: block;
-	position: relative;
-}
-
-.thumbnails li a, .thumbnails li a:hover, .thumbnails li a:active, .thumbnails li a:focus, img {
+.thumbnails a, .thumbnails a:hover, .thumbnails a:active, .thumbnails a:focus, img {
 	outline: none;
 	border: none;
 }
 
-.thumbnails li a:after {
+.thumbnails a:after {
 	display: block;
 	content: ".";
 	position: absolute;
@@ -120,24 +117,27 @@ body, .meat {
 	transition: background 0.1s linear;
 }
 
-.thumbnails li a:hover:after {
+.thumbnails a:hover:after {
 	background: rgba(200, 100, 0, 0.8);
 	content: " ";
 }
 
-.thumbnails li a img {
+.thumbnails a img {
 	height: 100%;
 	position: relative;
-	z-index: -1;
 	box-sizing: border-box;
 	vertical-align: bottom;
 }
 
-.ie8 .thumbnails li, .ie8 .thumbnails li a {
+.ie8 .thumbnails a {
 	display: inline;
 	font-size: 48px;
 }
 
-.ie8 .thumbnails li a:hover img {
+.ie8 .thumbnails a img {
+	z-index: -1;
+}
+
+.ie8 .thumbnails a:hover img {
 	border: 5px solid #C86400;
 }
