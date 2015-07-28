@@ -8,19 +8,19 @@
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="page">
 	<div class="endline" id="resume">
-		<div class="heading section">
+		<div class="heading entryless section">
 			<h1>Kevin Jin</h1>
 			<!--#include virtual="resume/password.shtml" -->
-			<p><!--#echo var="address"--><br />Hoboken, NJ 07030</p>
-			<p><!--#echo var="phone"--><br /><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></p>
+			<p><span><!--#echo var="address"--></span><span>Hoboken, NJ 07030</span></p>
+			<p><span><!--#echo var="phone"--></span><span><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></span></p>
 			<p><a href="http://www.kevinj.in">www.kevinj.in</a></p>
-			<p><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a><br /><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></p>
+			<p><span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span><span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span></p>
 		</div>
-		<div class="summary section">
+		<div class="summary entryless section">
 			<h2>Summary</h2>
 			<p>
-				Developer, sysadmin, and quantitative analyst with 6 years of industry and side project experience.<br />
-				Interested in quantitative analysis, data science, and equity research related part-time (or seasonal full-time) roles.
+				Full stack developer, system admin, and quantitative analyst with 6 years of industry and side project experience.<br />
+				Interested in investment banking and private equity related roles.
 			</p>
 		</div>
 		<div class="education section">
@@ -28,10 +28,10 @@
 			<div class="entry">
 				<p class="spacetime"><span class="time">8/2013-Present</span><span class="space">New York, NY</span></p><div class="description">
 					<p class="organization">New York University</p>
-					<p class="role">
-						B.S. <strong>Finance</strong>, <strong>Statistics</strong>, <em>Stern School of Business</em><br />
-						B.A. <strong>Computer Science</strong> honors, <em>Courant Institute</em>
-					</p>
+					<p class="role"><em>
+						<span>B.S. <strong>Finance</strong>, <strong>Statistics</strong>, Stern School of Business</span>
+						<span class="last">B.A. <strong>Computer Science</strong> honors, Courant Institute</span>
+					</em></p>
 					<ul>
 						<li class="leftalign2col">GPA: 3.61/4.0</li>
 						<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
@@ -44,7 +44,7 @@
 			<div class="entry">
 				<p class="spacetime"><span class="time">8/2014-12/2014</span><span class="space">Shanghai, CN</span></p><div class="description">
 					<p class="organization">NYU Shanghai</p>
-					<p class="role">Study abroad program</p>
+					<p class="role"><em>Study abroad program</em></p>
 					<div class="endline"></div>
 				</div>
 			</div>
@@ -52,7 +52,7 @@
 			<div class="entry">
 				<p class="spacetime"><span class="time">9/2009-6/2013</span><span class="space">Freehold, NJ</span></p><div class="description">
 					<p class="organization">Freehold High School</p>
-					<p class="role">High School Diploma, <em>Computer Science Academy</em></p>
+					<p class="role"><em>High School Diploma, Computer Science Academy</em></p>
 					<div class="endline"></div>
 					<ul>
 						<li class="leftalign2col">GPA: 3.9/4.0</li>
@@ -71,7 +71,7 @@
 					<p class="role"><em>Quant Analyst Intern, Portfolio Management Team</em></p>
 					<div class="endline"></div>
 					<ul>
-						<li>Worked with data analytics department, operations department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS and MBS trading strategies (e.g. involving econometrics, technical analysis) for hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R with time series and big data news analytics.</li>
+						<li>Worked with data analytics department, operations department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies (e.g. involving econometrics, technical analysis) for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R with time series and big data news analytics.</li>
 						<li>Studied academic papers on news sentiment analytics, time series forecasting, time series lead-lag structures, and cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgages.</li>
 					</ul>
 				</div>
@@ -79,7 +79,7 @@
 
 			<div class="entry">
 				<p class="spacetime"><span class="time">3/2015-Present</span><span class="space">New York, NY</span></p><div class="description">
-					<p class="organization">Quantitative Finance Society <span style="font-weight: normal">NYU Stern</span></p>
+					<p class="organization">Quantitative Finance Society</p>
 					<p class="role"><em>Analyst, Quant Portfolio Team</em></p>
 					<div class="endline"></div>
 					<ul>
@@ -92,7 +92,7 @@
 			<div class="entry">
 				<p class="spacetime"><span class="time">5/2013-5/2015</span><span class="space">Hoboken, NJ</span></p><div class="description">
 					<p class="organization">Bad Rabbit Consulting</p>
-					<p class="role"><em>Software Engineer/System Administrator</em></p>
+					<p class="role"><em>Software Engineer; System Administrator</em></p>
 					<div class="endline"></div>
 					<ul>
 						<li>
@@ -138,7 +138,7 @@
 				<p class="spacetime"><span class="time">3/2012, 3/2011</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [2x winner]</div>
 			</div>
 		</div>
-		<div class="affiliations section endline">
+		<div class="affiliations entryless section endline">
 			<h2>Affiliations, interests, and hobbies</h2>
 				<ul>
 					<li class="leftalign3col">Association for Computing Machinery</li>
@@ -146,37 +146,37 @@
 					<li class="rightalign3col">Hackathon competitions</li>
 					<li class="leftalign3col">Quantitative Finance Society</li>
 					<li class="centeralign3col">Investment Analysts Group</li>
-					<li class="rightalign3col">Case competitions</li>
+					<li class="rightalign3col last">Case competitions</li>
 				</ul>
 		</div>
-		<div class="servertech skills section leftalign3col">
+		<div class="servertech skills entryless section leftalign3col">
 			<h2>Server application technologies</h2>
 			<ul>
 				<li>Java (Expert)</li>
 				<li>C#, Visual Basic .NET (Expert)</li>
 				<li>C++ (Strong)</li>
 				<li>Unix shell scripting (Strong)</li>
-				<li>Windows batch, PowerShell (Strong)</li>
+				<li class="last">Windows batch, PowerShell (Strong)</li>
 			</ul>
 		</div>
-		<div class="webtech skills section centeralign3col">
+		<div class="webtech skills entryless section centeralign3col">
 			<h2>Web technologies</h2>
 			<ul>
 				<li>JavaScript (Expert)</li>
 				<li>MySQL (Expert)</li>
 				<li>HTML (Expert)</li>
 				<li>CSS (Expert)</li>
-				<li>PHP (Expert)</li>
+				<li class="last">PHP (Expert)</li>
 			</ul>
 		</div>
-		<div class="analytech skills section rightalign3col">
+		<div class="analytech skills entryless section rightalign3col">
 			<h2>Analytic technologies</h2>
 			<ul>
 				<li>Microsoft Office <span class="small">VBA</span> macros (Expert)</li>
 				<li>R platform (Strong)</li>
 				<li>Bloomberg Terminal (Working)</li>
 				<li>Cloud computing, distributed websites</li>
-				<li style="visibility: hidden">&nbsp;</li>
+				<li class="last">Facebook graph API data mining</li><!-- ElasticSearch, Hadoop, CapitalIQ/FactSet -->
 			</ul>
 		</div>
 	</div>

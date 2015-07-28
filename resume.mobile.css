@@ -17,8 +17,24 @@
 		height: auto;
 	}
 
-	.heading p {
+	.heading {
+		text-align: center;
+	}
+
+	.heading h1 {
+		margin: 0 auto;
 		display: block;
+	}
+
+	.heading p {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.heading p span {
+		display: inline;
+		margin-right: 10px;
+		white-space: nowrap;
 	}
 
 	.footer {
@@ -27,12 +43,49 @@
 
 	.section .spacetime {
 		width: auto;
-		display: block;
+		float: right;
+		width: 1in;
+		font-size: 10pt;
+		line-height: 13pt;
+
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+
+		-moz-box-align: end;
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
 	}
 
 	.section .spacetime .space {
-		float: right;
 		text-align: right;
+		float: none;
+
+		-moz-box-ordinal-group: 1;
+		-webkit-box-ordinal-group: 1;
+		-ms-flex-order: 1;
+		-webkit-order: 1;
+		order: 1;
+	}
+
+	.section .spacetime .time {
+		display: block;
+
+		-moz-box-ordinal-group: 2;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
 	}
 
 	.section .description {
@@ -42,9 +95,8 @@
 
 	.section .organization {
 		width: auto;
-/*		display: block;*/
 
-		float: left;
+		float: none;
 		display: inline-block;
 	}
 
@@ -53,12 +105,21 @@
 		display: block;
 		border: none;
 		float: none;
+		padding-left: 0;
 
-		text-align: right;
+		text-align: left;
 	}
 
-	.section .entry {
-		margin-bottom: 10px;
+	.section .role span {
+		display: inline;
+	}
+
+	.section .role span:after {
+		content: "; ";
+	}
+
+	.section .role .last:after {
+		content: "";
 	}
 
 	.skills, .section.rightalign3col {
@@ -88,6 +149,45 @@
 	li.leftalign2col {
 		float: none;
 		display: inline-block;
+	}
+
+	.section .entry, .entryless {
+		margin-bottom: 0;
+		padding-bottom: 5px;
+	}
+
+	.entryless h2 {
+		display: inline-block;
+	}
+
+	.entryless h2:after {
+		content: ":";
+	}
+
+	.entryless p, .entryless ul { 
+		display: inline;
+		vertical-align: baseline;
+		line-height: normal;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.entryless li {
+		display: inline;
+		margin-right: 0;
+	}
+
+	.entryless li:before {
+		display: none;
+		content: "";
+	}
+
+	.entryless li:after {
+		content: ", ";
+	}
+
+	.entryless .last:after {
+		content: "";
 	}
 
 	.footer {

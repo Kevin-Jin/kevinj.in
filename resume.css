@@ -134,6 +134,10 @@
 	float: right;
 }
 
+.section .role span {
+	display: block;
+}
+
 li.rightalign2col {
 	width: 3.4in;
 	float: right;
@@ -187,28 +191,20 @@ li.leftalign2col {
 }
 
 .section ul li:before {
-	content: "\25CF";	/* escaped unicode character, alt: \2022 */
-/*	font-size: 1em;		/* the default unicode bullet size is very small */
+	content: "\25CF";	/* escaped unicode character */
 	position: absolute;	/* position bullet relative to list item */
-/*	left: -.75em;		/* position the bullet L- R relative to list item */
 
 	font-size: 5pt;
 	left: -6pt;
 }
 
 .section ul li ul li:before {
-	content: "\25CB";    /* escaped unicode character, alt: \25E6 */
-/*	font-size: 1.25em;
-	left: -.5em;*/
+	content: "\25CB";    /* escaped unicode character */
 }
 
 .section sup {
 	vertical-align: text-top;
 	font-size: 75%;
-	line-height: 100%;
-}
-
-.section .fancy, .section em {
 	line-height: 100%;
 }
 
@@ -232,6 +228,10 @@ li.leftalign2col {
 	display: inline-block;
 	vertical-align: bottom;
 	text-align: left;
+}
+
+.heading p span {
+	display: block;
 }
 
 .heading a {
