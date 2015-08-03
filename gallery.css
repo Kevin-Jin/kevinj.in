@@ -42,6 +42,7 @@ body, .meat {
 	height: 75%;
 	overflow: hidden;
 	white-space: nowrap;
+	position: relative;
 }
 
 .preview > div {
@@ -107,7 +108,9 @@ body, .meat {
 
 .thumbnails a:after {
 	display: block;
-	content: ".";
+	content: " ";
+	color: transparent;
+	font-size: 0;
 	position: absolute;
 	top: 0;
 	left: 0;

@@ -3,11 +3,12 @@
 <link rel="stylesheet" href="gallery.css" />
 <link rel="stylesheet" href="gallery.mobile.css" />
 <!--#include virtual="common/2_end_css_and_begin_js.shtml" -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="gallery.js"></script>
 <!--#include virtual="common/3_end_js_and_begin_cover.shtml" -->
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="immersive"><div>
-	<div class="thumbnails">
+	<div class="thumbnails nosidebar">
 		<a href="#1"><img src="http://lorempixel.com/400/300/" /></a>
 		<a href="#2"><img src="http://lorempixel.com/404/303/" /></a>
 		<a href="#3"><img src="http://lorempixel.com/408/306/" /></a>
