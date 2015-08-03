@@ -16,12 +16,19 @@ $(document).ready(function() {
 		}
 	});
 
-	var $sunglasses = $('.sunglasses'), $topbun = $('.topbun'), $headline = $('.headline'), $subtitle = $('.subtitle'), $otherBacon = $('.mugshot,.quicklinks,.inspirational');
-	if (canUse3dTransforms)
-		$sunglasses.addClass('hwaccel');
+	if (!sameDomain) {
+		var $sunglasses = $('.sunglasses'), $topbun = $('.topbun'), $headline = $('.headline'), $subtitle = $('.subtitle'), $otherBacon = $('.mugshot,.quicklinks,.inspirational');
+		if (canUse3dTransforms)
+			$sunglasses.addClass('hwaccel');
 
-	$sunglasses.css('opacity', '1');
-	$('.toppings').bgLoaded(function() {
-		$sunglasses.transition('opacity 1s').css('opacity', '');
-	}, 2000);
+		$sunglasses.css('opacity', '1');
+		$('.toppings').bgLoaded(function() {
+			$sunglasses.transition('opacity 1s').css('opacity', '');
+		}, 2000);
+	}
+
+	initializeAnimationImplementations('.preview');
+	disableHorizontalScrollAction();
+	disableReflowOnResize();
+	enhanceJump();
 });

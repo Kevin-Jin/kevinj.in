@@ -29,7 +29,7 @@
 				<p class="spacetime"><span class="time">8/2013-Present</span><span class="space">New York, NY</span></p><div class="description">
 					<p class="organization">New York University</p>
 					<p class="role"><em>
-						<span>B.S. <strong>Finance</strong>, <strong>Statistics</strong>, Stern School of Business</span>
+						<span>B.S. <strong>Finance</strong> & <strong>Statistics</strong>, Stern School of Business</span>
 						<span class="last">B.A. <strong>Computer Science</strong> honors, Courant Institute</span>
 					</em></p>
 					<ul>
@@ -72,7 +72,7 @@
 					<div class="endline"></div>
 					<ul>
 						<li>Worked with data analytics department, operations department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies (e.g. involving econometrics, technical analysis) for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R with time series and big data news analytics.</li>
-						<li>Studied academic papers on news sentiment analytics, time series forecasting, time series lead-lag structures, and cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgages.</li>
+						<li>Studied academic papers on sentiment analysis, time series forecasting, time series lead-lag structures, and cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgages.</li>
 					</ul>
 				</div>
 			</div>
@@ -162,7 +162,7 @@
 		<div class="webtech skills entryless section centeralign3col">
 			<h2>Web technologies</h2>
 			<ul>
-				<li>JavaScript (Expert)</li>
+				<li>JavaScript, jQuery (Expert)</li><!-- node.js -->
 				<li>MySQL (Expert)</li>
 				<li>HTML (Expert)</li>
 				<li>CSS (Expert)</li>
