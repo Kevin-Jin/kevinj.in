@@ -1,12 +1,60 @@
 //these functions must be implemented before being used!
 var getCurrentLeft, translateImmediately, translateOverTime, skipTransition;
 
-function matrixToArray(str) {
-	return str.match(/(-?[0-9\.]+)/g);
+function setUpDomMatrix() {
+	if (window.DOMMatrix) {
+		return;
+	} else if (window.MSCSSMatrix) {
+		window.DOMMatrix = window.MSCSSMatrix;
+	} else if (window.WebKitCSSMatrix) {
+		window.DOMMatrix = window.WebKitCSSMatrix;
+	} else {
+		window.DOMMatrix = function(str) {
+			// e.g.: "-.12e-34px ,  5.2,+1"
+			var paramMatchLast = '[+-]?\\d*\\.?\\d+(?:e[+-]?\\d+)?[a-zA-Z]*\\s*', paramMatchMidd;
+			paramMatchMidd = '(?:' + paramMatchLast + ',\\s*)*';
+			paramMatchLast = '(?:' + paramMatchLast + ')';
+			var match = new RegExp('^\\s*(matrix(?:3d)?)\\s*\\((' + paramMatchMidd + paramMatchLast + ')\\)\\s*$').exec(str);
+			var errorMsg = 'Failed to construct \'DOMMatrix\': Failed to parse \'' + str + '\''
+			if (!match)
+				throw errorMsg;
+
+			for (var i = 1; i <= 4; i++)
+				for (var j = 1; j <= 4; j++)
+					this['m' + i + j] = (i == j) ? 1 : 0; // kronecker delta
+			var cssFunc = match[1];
+			var args = match[2].split(/\s*,\s*/);
+			if (cssFunc.toLowerCase() == 'matrix3d') {
+				if (args.length != 16)
+					throw errorMsg;
+				for (var i = 0; i < 16; i = (i == 11) ? 15 : i + 1) {
+					if (isNaN(args[i]))
+						throw errorMsg;
+					this['m' + Math.floor(i / 4 + 1) + (i % 4 + 1)] = parseFloat(args[i]);
+				}
+				for (var i = 12; i < 15; i++) {
+					if (isNaN(args[i]) && /[a-zA-Z]+$/.exec(args[i])[0].toLowerCase() != "px")
+						throw 'Length unit not supported';
+					this['m' + Math.floor(i / 4 + 1) + (i % 4 + 1)] = parseFloat(args[i]);
+				}
+			} else if (cssFunc.toLowerCase() == 'matrix') {
+				if (args.length != 6)
+					throw errorMsg;
+				for (var i = 0; i < 4; i++) {
+					if (isNaN(args[i]))
+						throw errorMsg;
+					this['m' + Math.floor(i / 2 + 1) + (i % 2 + 1)] = parseFloat(args[i]);
+				}
+				for (var i = 4; i < 6; i++) {
+					if (isNaN(args[i]) && /[a-zA-Z]+$/.exec(args[i])[0].toLowerCase() != "px")
+						throw 'Length unit not supported';
+					this['m4' + (i % 4 + 1)] = parseFloat(args[i]);
+				}
+			}
+		}
+	}
 }
 
-//IE 11 uses absolute translate rather than relative?
-//IE 8 and 9 die from a script error
 function initializeAnimationImplementations(selector) {
 	//IE 9 dies here for some reason. Just make it use the lowest common denominator implementations
 	$selector = $(selector);
@@ -26,6 +74,7 @@ function initializeAnimationImplementations(selector) {
 	// using CSS rule rather than mid-transition rendered value that getComputedStyle()
 	// should return. 
 	if (window.Modernizr.csstransitions && window.Modernizr.csstransforms3d) {
+		setUpDomMatrix();
 		transitionProp = window.Modernizr.cssprefixed('transition');
 		transformProp = window.Modernizr.cssprefixed('transform');
 
@@ -33,7 +82,7 @@ function initializeAnimationImplementations(selector) {
 		$selector.css(transformProp, 'translate3d(0,0,0)');
 
 		getCurrentLeft = function() {
-			return matrixToArray($selector.css(transformProp))[4];
+			return new DOMMatrix($selector.css(transformProp)).m41;
 		};
 
 		translateImmediately = function(newLeft) {
@@ -48,6 +97,7 @@ function initializeAnimationImplementations(selector) {
 			$selector.css(transitionProp, '')
 		};
 	} else if (window.Modernizr.csstransitions && window.Modernizr.csstransforms) {
+		setUpDomMatrix();
 		transitionProp = window.Modernizr.cssprefixed('transition');
 		transformProp = window.Modernizr.cssprefixed('transform');
 
@@ -55,7 +105,7 @@ function initializeAnimationImplementations(selector) {
 		$selector.css(transformProp, 'translate(0,0)');
 
 		getCurrentLeft = function() {
-			return matrixToArray($selector.css(transformProp))[4];
+			return new DOMMatrix($selector.css(transformProp)).m41;
 		};
 
 		translateImmediately = function(newLeft) {
