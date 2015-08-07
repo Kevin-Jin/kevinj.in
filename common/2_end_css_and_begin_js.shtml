@@ -1,4 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script>sameDomain = <!--#if expr="v('HTTP_REFERER') =~ m#^https?://(www\.)?kevinj\.in(/.*)?$#i" -->true<!--#else -->false<!--#endif -->;</script>
 <script src="common.js"></script>
 <!--[if lte IE 8 ]><html lang="en" class="ie8"><![endif]-->

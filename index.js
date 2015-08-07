@@ -72,7 +72,8 @@ function initialScrollMobile() {
 
 function initialAnimation(onComplete) {
 	var style = document.documentElement.style;
-	if (sameDomain || typeof (style.webkitTransition) === "undefined"
+	if (typeof (sameDomain) !== 'undefined' && sameDomain
+			|| typeof (style.webkitTransition) === "undefined"
 			&& typeof (style.MozTransition) === "undefined"
 			&& typeof (style.OTransition ) === "undefined"
 			&& typeof (style.MsTransition ) === "undefined"

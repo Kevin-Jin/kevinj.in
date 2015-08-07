@@ -78,7 +78,7 @@
 		text-align: center;
 	}
 
-	.ordersides:active, .ordersearch:active {
+	.ordersides:active i, .ordersearch:active i {
 		background: #777;
 	}
 
@@ -100,7 +100,6 @@
 	}
 
 	.search {
-		top: 0;
 		right: 0;
 		-webkit-transform: translate(-48px,0);
 		-ms-transform: translate(-48px,0);

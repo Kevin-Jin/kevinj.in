@@ -58,7 +58,7 @@ function enhanceSidebar() {
 
 
 	//enable dragging the sidebar
-	var initialPageX = null, finalPageX = null, initialT, finalT, finalPageY, currentTranslateX, removeTransition, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
+	var initialPageX = null, finalPageX = null, initialT, finalT, velX, finalPageY, currentTranslateX, removeTransition, sidebarTeaser = null, isScroll = -1, HOT_EDGE_WIDTH = 16;
 
 	//helper functions
 	var getCoordinates = function(e) {
@@ -94,12 +94,21 @@ function enhanceSidebar() {
 	//cache frequently used values
 	var $blinds = $('.blinds');
 	var $sidebar = $('#sidesordered~.boxedin');
-	var sidebarWidth;
+	//TODO: inertia
+	var sidebarWidth, defaultVel;
 	$(window).on('resize', function(e) {
 		if ($('.ordersides').css('display') == 'none')
 			sidebarWidth = null;
 		else
 			sidebarWidth = $sidebar.width();
+		/*var cssTransDur = $('.topbun .boxedin').css('transition-duration');
+		if (cssTransDur.indexOf("ms") != -1)
+			defaultVel = sidebarWidth / parseFloat(cssTransDur);
+		else if (cssTransDur.indexOf("s") != -1)
+			defaultVel = sidebarWidth / (parseFloat(cssTransDur) * 1000);
+		else
+			defaultVel = null;
+		console.log(defaultVel);*/
 	}).trigger('resize'); //call resize on page load
 
 	if (canUse3dTransforms) {
@@ -119,7 +128,8 @@ function enhanceSidebar() {
 
 		//check for validity of dragging sidebar
 		var isClosing = isSidebarOpen();
-		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || sidebarWidth == null || $(e.target).parents('.mobiletopbun').length) return;
+		var isNoDragging = $.grep($.map($(e.target).parents(), function(x) { return $(x).hasClass('nosidebar'); }), function(a) { return a; }).length > 0
+		if (pointer.x > HOT_EDGE_WIDTH && !isClosing || isNoDragging || sidebarWidth == null || $(e.target).parents('.mobiletopbun').length) return;
 
 		//leaving finger on left edge should show tiny bit of sidebar after short while
 		removeTransition = 1;
@@ -263,9 +273,42 @@ function enhanceSearchbar() {
 	}).trigger('keyup');
 }
 
+function enhanceTopBar() {
+	if (typeof window.Modernizr === 'undefined') {
+		window.Modernizr = new Object();
+		window.Modernizr.csstransitions = false;
+		window.Modernizr.csstransforms = false;
+		window.Modernizr.csstransforms3d = false;
+	}
+
+	if (!window.Modernizr.csstransitions)
+		return;
+
+	originalAlpha = 0.25;
+	animationHeight = 100;
+
+	toggled = false;
+	$('.topbun, .topbun .search').css('transition', 'none');
+	$(window).on('resize scroll', function() {
+		if ($('.ordersides').css('display') == 'none' && $(window).scrollTop() <= animationHeight) {
+			toggled = true;
+			$('.topbun').addClass('clean');
+			$('.topbun').css('backgroundColor', $.Color($('.topbun').css('backgroundColor')).alpha(originalAlpha * Math.min(1, $('body').scrollTop() / animationHeight)));
+		} else {
+			if (toggled) {
+				toggled = false;
+				$('.topbun').removeClass('clean');
+				$('.topbun').css('background', '');
+			}
+		}
+	}).trigger('resize');
+	$('.topbun, .topbun .search').css('transition', '');
+}
+
 $(document).ready(function() {
 	initializeJqueryExtensions();
 	deobfuscateEmail();
 	enhanceSidebar();
 	enhanceSearchbar();
+	enhanceTopBar();
 });

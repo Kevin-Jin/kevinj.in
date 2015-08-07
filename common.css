@@ -52,6 +52,7 @@ body {
 	max-width: 900px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 .obfuscated .show {
@@ -75,7 +76,18 @@ body {
 	width: 100%;
 	height: 48px;
 	z-index: 2;
-	box-shadow: 0 -1px 10px rgba(0, 0, 0, 1);
+	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+	-webkit-transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+.topbun.clean {
+	box-shadow: none;
+	background: none;
+}
+
+.topbun.clean, .topbun.clean .search {
+	padding: 10px 0;
 }
 
 .ie8 .topbun {
@@ -109,6 +121,7 @@ body {
 .search {
 	box-sizing: border-box;
 	position: absolute;
+	top: 0;
 	right: 50%;
 	height: 100%;
 	line-height: inherit;
@@ -116,6 +129,8 @@ body {
 	margin-right: -100px;
 	width: 200px;
 	z-index: 2;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
 }
 
 .ie8 .search {
@@ -196,12 +211,23 @@ body {
 	text-decoration: none;
 	padding: 0 8px;
 	display: inline-block;
+	box-sizing: border-box;
 }
 
 .topbun a:hover {
 	background: #777;
-	-webkit-transition: background 0.3s;
-	transition: background 0.3s;
+	-webkit-transition: background 0.3s, border-bottom 0.3s, text-shadow 0.3s;
+	transition: background 0.3s, border-bottom 0.3s, text-shadow 0.3s;
+}
+
+.topbun.clean a {
+	text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+	background: none;
+	border-bottom: 0 solid white;
+}
+
+.topbun.clean a:hover {
+	border-bottom: 3px solid white;
 }
 
 .topbun .product {
@@ -211,6 +237,7 @@ body {
 
 .topbun .ingredients {
 	float: right;
+	height: 100%;
 }
 
 .toppings {
@@ -290,6 +317,11 @@ body {
 .bottombun .boxedin {
 	text-align: left;
 	padding: 0 10px;
+}
+
+.bottombun .boxedin a {
+	text-decoration: none;
+	color: inherit;
 }
 
 .ie8 .bottombun .content {
