@@ -133,15 +133,11 @@
 		float: none;
 	}
 
-	li.rightalign2col {
+	li.leftalign2col, li.rightalign2col {
 		width: auto;
 		float: none;
 		position: static;
 		left: 0;
-	}
-
-	li.leftalign2col {
-		float: none;
 		display: inline-block;
 	}
 

@@ -2,27 +2,6 @@
  * transforms2d, css-transitions, opacity except for Opera Mini (transforms2d,
  * css-transitions) and IE9 (css-transitions), so no need for fallbacks */
 @media (max-width: 639px) {
-	.topbun .ingredients a:before {
-		font: normal normal normal 14px/1 FontAwesome; /* .fa */
-		font-size: inherit;
-		display: inline-block;
-		width: 22px;
-		text-align: left;
-		vertical-align: middle;
-	}
-
-	.topbun .portfolio:before {
-		content: "\f187"; /* .fa-archive */
-	}
-
-	.topbun .resume:before {
-		content: "\f15c"; /* .fa-file-text */
-	}
-
-	.topbun .contact:before {
-		content: "\f1d8"; /* .fa-paper-plane */
-	}
-
 	.filler {
 		height: 52px;
 	}

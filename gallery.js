@@ -249,7 +249,7 @@ $(document).ready(function() {
 		}
 	});
 
-	if (!sameDomain) {
+	if (typeof (sameDomain) === 'undefined' || !sameDomain) {
 		var $sunglasses = $('.sunglasses'), $topbun = $('.topbun'), $headline = $('.headline'), $subtitle = $('.subtitle'), $otherBacon = $('.mugshot,.quicklinks,.inspirational');
 		if (canUse3dTransforms)
 			$sunglasses.addClass('hwaccel');

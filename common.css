@@ -91,8 +91,7 @@ body {
 }
 
 .ie8 .topbun {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	background: url('000000-0.25.png');
 }
 
 #sidesordered,#searchordered,#resetsearch {
@@ -212,22 +211,72 @@ body {
 	padding: 0 8px;
 	display: inline-block;
 	box-sizing: border-box;
-}
-
-.topbun a:hover {
-	background: #777;
 	-webkit-transition: background 0.3s, border-bottom 0.3s, text-shadow 0.3s;
 	transition: background 0.3s, border-bottom 0.3s, text-shadow 0.3s;
 }
 
-.topbun.clean a {
-	text-shadow: rgb(0, 0, 0) 0px 0px 10px;
-	background: none;
-	border-bottom: 0 solid white;
+.topbun a:hover, .topbun li:hover a {
+	background: #777;
 }
 
-.topbun.clean a:hover {
+.topbun.clean a, .topbun.clean li a {
+	text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+	background: none;
+	border-bottom: 0 solid transparent;
+}
+
+.topbun.clean a:hover, .topbun.clean .ingredients li:hover a {
 	border-bottom: 3px solid white;
+}
+
+.topbun .ingredients li a:hover ~ ul, .topbun .ingredients li:hover ul {
+/*	display: block;*/
+	padding: 0 32px 32px 32px;
+	left: -32px;
+	max-height: 80px; /* (line-height: 20px + padding-bottom: 10px + padding-top: 10px) * 2 */
+}
+
+.topbun .ingredients li ul {
+/*	display: none;*/
+/*	padding: 0 32px 32px 32px;*/
+/*	left: -32px;*/
+	position: absolute;
+	margin: 0;
+	min-width: 100%;
+	line-height: normal;
+	
+	display: block;
+	padding: 0;
+	left: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	-webkit-transition: max-height 0.3s, padding-bottom 0.3s;
+	transition: max-height 0.3s, padding-bottom 0.3s;
+}
+
+.topbun .ingredients li ul li {
+	width: 100%;
+	height: auto;
+	background: #777;
+	color: #fff;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+
+.topbun .ingredients li ul li a, .topbun.clean .ingredients li ul li a {
+	text-shadow: none;
+	line-height: 20px;
+	-webkit-transition: text-shadow 0.2s;
+	transition: text-shadow 0.2s;
+}
+
+.topbun .ingredients li ul li a:hover, .topbun.clean .ingredients li ul li a:hover {
+	text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+}
+
+.topbun .ingredients li:hover ul li a, .topbun.clean .ingredients li:hover ul li a {
+	border-bottom: none;
 }
 
 .topbun .product {
@@ -238,6 +287,15 @@ body {
 .topbun .ingredients {
 	float: right;
 	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.topbun .ingredients li {
+	display: inline-block;
+	height: 100%;
+	position: relative;
 }
 
 .toppings {

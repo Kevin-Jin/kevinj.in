@@ -21,17 +21,75 @@
 		transition: -webkit-transform 0.2s, -ms-transform 0.2s, transform 0.2s;
 	}
 
-	.topbun .product, .topbun .ingredients a {
+	.topbun .product, .topbun .ingredients a, .topbun .ingredients li {
 		height: auto;
 		display: block;
+		-webkit-transition: text-shadow 0.2s;
+		transition: text-shadow 0.2s;
 	}
 
-	.topbun .ingredients a {
+	.topbun a:hover {
+		text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+	}
+
+	.topbun .ingredients li ul, .topbun .ingredients li a:hover ~ ul, .topbun .ingredients li:hover ul {
+		display: block;
+		position: static;
+		margin: 0;
+		padding: 0 0 0 20px;
+		left: 0;
+		box-sizing: border-box;
+		max-height: none;
+	}
+
+	.topbun .ingredients li ul li {
+		padding: 0;
+	}
+
+	.topbun .ingredients a, .topbun .ingredients li ul li a {
 		line-height: 36px;
 	}
 
 	.topbun .ingredients {
 		float: none;
+		width: 100%;
+	}
+
+	.topbun .ingredients a:before {
+		font: normal normal normal 14px/1 FontAwesome; /* .fa */
+		font-size: inherit;
+		display: inline-block;
+		width: 22px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.topbun .portfolio:before {
+		content: "\f187"; /* .fa-archive */
+	}
+
+	.topbun .gallery:before {
+		content: "\f121"; /* .fa-code */
+	}
+
+	.topbun .github:before {
+		content: "\f09b"; /* .fa-github */
+	}
+
+	.topbun .experience:before {
+		content: "\f15c"; /* .fa-file-text */
+	}
+
+	.topbun .resume:before {
+		content: "\f14a"; /* .fa-check-square */
+	}
+
+	.topbun .linkedin:before {
+		content: "\f0e1"; /* .fa-linkedin */
+	}
+
+	.topbun .contact:before {
+		content: "\f1d8"; /* .fa-paper-plane */
 	}
 
 	.topbun .product, .topbun .product:hover {

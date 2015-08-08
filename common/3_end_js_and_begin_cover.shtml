@@ -17,9 +17,28 @@
 <label for="sidesordered" class="blinds"></label>
 <div class="boxedin">
 <a href="index.shtml" class="product signature">Kevin Jin</a>
-<span class="ingredients">
-<a href="https://github.com/Kevin-Jin" class="portfolio">Portfolio</a><a href="https://www.linkedin.com/in/kevjin" class="resume">Résumé</a><a class="contact email" href="#">Contact</a>
-</span>
+<ul class="ingredients">
+<li><a href="gallery.shtml" class="portfolio">Portfolio</a>
+	<ul>
+		<li>
+			<a href="gallery.shtml" class="gallery">Gallery</a>
+		</li><li>
+			<a href="https://github.com/Kevin-Jin" class="github">GitHub</a>
+		</li>
+	</ul>
+</li><li>
+	<a href="resume.shtml" class="experience">Experience</a>
+	<ul>
+		<li>
+			<a href="resume.shtml" class="resume">Résumé</a>
+		</li><li>
+			<a href="https://www.linkedin.com/in/kevjin" class="linkedin">LinkedIn</a>
+		</li>
+	</ul>
+</li><li>
+	<a class="contact email" href="#">Contact</a>
+</li>
+</ul>
 </div>
 </div>
 <div class="toppings">
