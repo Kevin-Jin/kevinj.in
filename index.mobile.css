@@ -118,4 +118,8 @@
 	.captioned a:after {
 		content: '';
 	}
+
+	.coverletter {
+		margin: 10px;
+	}
 }

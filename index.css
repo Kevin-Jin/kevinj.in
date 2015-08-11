@@ -1,3 +1,60 @@
+body {
+	height: 100%;
+}
+
+.toppings {
+	min-height: 100%;
+}
+
+.meat, .bacon, .bottombun {
+	height: auto;
+}
+
+.meat {
+	min-height: 100%;
+}
+
+.coverletter {
+	margin-top: 48px;
+	color: #333;
+	line-height: 32px;
+}
+
+.coverletter h1 {
+	text-transform: lowercase;
+	font-size: 32pt;
+	color: #aaa;
+	margin: 0;
+}
+
+.coverletter .closing {
+	text-align: right;
+}
+
+.coverletter .closing a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.coverletter em {
+	font-size: 85%;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+.coverletter strong {
+	font-size: 200%;
+	font-weight: normal;
+}
+
+.bottombun, .bottombun .content {
+	position: static;
+}
+
+.skipcover {
+	display: block;
+}
+
 .toppings {
 	background: url('bg.jpg') no-repeat center top fixed;
 	background-size: cover;
@@ -82,8 +139,7 @@
 }
 
 .ie8 .captioned {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	background: url('000000-0.25.png');
 	position: relative;
 }
 
@@ -92,8 +148,7 @@
 }
 
 .ie8 .captioned:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f000000',endColorstr='#7f000000');
+	background: url('000000-0.5.png');
 }
 
 .captioned .fa {
@@ -137,12 +192,26 @@
 	text-decoration: none;
 	padding: 10px;
 	display: inline-block;
+	
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	font-size: 10pt;
+	padding: 8px;
 }
 
 .captioned:hover a {
-	background: #777;
-	-webkit-transition: background 0.5s;
-	transition: background 0.5s;
+	-webkit-transition: background 0.3s, color 0.3s;
+	transition: background 0.3s, color 0.3s;
+}
+
+.ingredients {
+	-webkit-transition: max-height 0.3s, padding-bottom 0.3s;
+	transition: max-height 0.3s, padding-bottom 0.3s;
+}
+
+.captioned a:hover {
+	background: #fff;
+	color: #000;
 }
 
 .captioned a:after {

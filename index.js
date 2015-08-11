@@ -70,6 +70,13 @@ function initialScrollMobile() {
 	}
 }
 
+function appendTo(prefix, value) {
+	if (prefix === '')
+		return value;
+	else
+		return prefix + ', ' + value;
+}
+
 function initialAnimation(onComplete) {
 	var style = document.documentElement.style;
 	if (typeof (sameDomain) !== 'undefined' && sameDomain
@@ -100,10 +107,10 @@ function initialAnimation(onComplete) {
 	$('.toppings').bgLoaded(function() {
 		$sunglasses.transition('opacity 1s').css('opacity', '');
 		setTimeout(function() {
-			$topbun.translate(0, -100).show().transition('opacity 1s, transform 1s').css('opacity' ,'').transform('');
-			$headline.translate(100, 0).show().transition('opacity 1s, transform 1s').css('opacity' ,'').transform('');
-			$subtitle.translate(-100, 0).show().transition('opacity 1s, transform 1s').css('opacity' ,'').transform('');
-			$otherBacon.translate(0, 100).show().transition('opacity 1s, transform 1s').css('opacity' ,'').transform('');
+			$topbun.translate(0, -100).show().transition(appendTo($topbun.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$headline.translate(100, 0).show().transition(appendTo($headline.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$subtitle.translate(-100, 0).show().transition(appendTo($subtitle.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$otherBacon.translate(0, 100).show().transition(appendTo($otherBacon.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
 			onComplete();
 		}, 400);
 	}, 2000);

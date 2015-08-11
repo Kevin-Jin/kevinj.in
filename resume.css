@@ -32,6 +32,11 @@
 		overflow-x: auto;
 	}
 
+	.ie8 .page {
+		/* IE8 implements border-box and max-width completely wrong, but content-box breaks overflow... */
+		max-width: 7.5in;
+	}
+
 	#resume {
 		width: 7.5in;
 		height: 10in;

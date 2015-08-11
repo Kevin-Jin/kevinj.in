@@ -1,6 +1,7 @@
 </head>
 <body>
 <div class="topbun">
+<script>enhanceTopBar();</script>
 <input type="checkbox" id="sidesordered">
 <div class="mobiletopbun">
 <label for="sidesordered" class="ordersides"><i class="fa fa-bars"></i></label>

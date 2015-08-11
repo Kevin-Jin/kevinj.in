@@ -208,29 +208,6 @@ function disableReflowOnResize() {
 	}).trigger('resize');
 }
 
-function enhanceJump() {
-	$page = $('html, body');
-	$preview = $('.preview');
-	$('.thumbnails a').click(function(){
-		oldSlideId = $('.preview').data('slideId');
-		$('.preview').data('slideId', newSlideId = $.attr(this, 'href'));
-		$slide = $(newSlideId);
-
-		$page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
-			$page.stop();
-		});
-		$page.stop().animate({
-			scrollTop: $slide.offset().top
-		}, 300, "swing", function() {
-			$page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-		});
-		//Chrome for Android has problems with clicking the same link while animation is still running
-		if (oldSlideId != newSlideId)
-			translateOverTime($slide.position().left, 300);
-		return false;
-	});
-}
-
 $(document).ready(function() {
 	$.fn.extend({
 		bgLoaded: function (callback, timeout) {
@@ -263,5 +240,12 @@ $(document).ready(function() {
 	initializeAnimationImplementations('.preview');
 	disableHorizontalScrollAction();
 	disableReflowOnResize();
-	enhanceJump();
+	enhanceJump($('.thumbnails a'), 300, function(newSlideId) {
+		$preview = $('.preview');
+		oldSlideId = $preview.data('slideId');
+		$preview.data('slideId', newSlideId);
+		//Chrome for Android has problems with clicking the same link while animation is still running
+		if (oldSlideId != newSlideId)
+			translateOverTime($slide.position().left, 300);
+	});
 });

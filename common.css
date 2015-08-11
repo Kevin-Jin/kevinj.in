@@ -145,9 +145,7 @@ body {
 
 .ie8 .searchbar {
 	padding: 0;
-	/*background: rgba(255, 255, 255, 0.75);*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFFFFFFF',endColorstr='#BFFFFFFF')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFFFFFFF',endColorstr='#BFFFFFFF');
+	background: url('FFFFFF-0.75.png');
 	/*border-radius: 10px;*/
 	padding: 0 24px;
 }
@@ -230,16 +228,12 @@ body {
 }
 
 .topbun .ingredients li a:hover ~ ul, .topbun .ingredients li:hover ul {
-/*	display: block;*/
 	padding: 0 32px 32px 32px;
 	left: -32px;
 	max-height: 80px; /* (line-height: 20px + padding-bottom: 10px + padding-top: 10px) * 2 */
 }
 
 .topbun .ingredients li ul {
-/*	display: none;*/
-/*	padding: 0 32px 32px 32px;*/
-/*	left: -32px;*/
 	position: absolute;
 	margin: 0;
 	min-width: 100%;
@@ -301,6 +295,7 @@ body {
 .toppings {
 	position: relative;
 	padding-bottom: 8px;
+	z-index: 1;
 }
 
 .ie8 .toppings {
@@ -324,6 +319,35 @@ body {
 	filter: alpha(opacity=20);
 }
 
+.skipcover {
+	height: 100px;
+	display: none;
+}
+
+.skipcover a {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-size: 100px;
+	line-height: 100px;
+	vertical-align: bottom;
+
+	color: #000;
+	text-shadow: #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px;
+	-webkit-transition: color 0.5s, text-shadow 0.5s;
+	transition: color 0.5s, text-shadow 0.5s;
+}
+
+.skipcover a:hover {
+	color: #fff;
+	text-shadow: none;
+}
+
 .grease {
 	position: absolute;
 	display: block;
@@ -336,8 +360,7 @@ body {
 }
 
 .ie8 .grease {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	background: url('000000-0.25.png');
 }
 
 .meat {
@@ -383,6 +406,5 @@ body {
 }
 
 .ie8 .bottombun .content {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');
+	background: url('000000-0.25.png');
 }

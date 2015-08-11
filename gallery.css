@@ -73,8 +73,8 @@ body, .meat {
 }
 
 .ie8 .preview > div p {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3FFD700',endColorstr='#B3FFD700')";
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3FFD700',endColorstr='#B3FFD700');
+	/* 1x1 PNG pixel for rgba(255, 215, 0, 0.7); */
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4f51hEwAHOAKJ/MdPHQAAAABJRU5ErkJggg==');
 }
 
 .thumbnails {

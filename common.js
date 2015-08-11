@@ -37,12 +37,51 @@ function initializeJqueryExtensions() {
 }
 
 function deobfuscateEmail() {
-	//decoded from rot13
-	var address = 'xriva@xrivaw.va'.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
-	$('.email').attr('href', 'mailto:' + address).each(function() {
-		if ($(this).find('.show').length != 0)
-			$(this).text(address);
+	var resultingEmail = $('<a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a>');
+
+	//TODO: call a proper unicode BiDi algorithm
+	var reverse = function(s) {
+		var o = '';
+		for (var i = s.length - 1; i >= 0; i--) {
+			switch (s[i]) {
+				case '(':
+					o += ')';
+					break;
+				case ')':
+					o += '(';
+					break;
+				default:
+					o += s[i];
+					break;
+			}
+		}
+		return o;
+	};
+
+	// deobfuscate our email string as well as any DOM elements with the obfuscated class
+	resultingEmail.add('.obfuscated').each(function(i) {
+		var allText = '';
+		$(this).children().each(function(j) {
+			$this = $(this);
+			if ($this.hasClass('show'))
+				allText += $this.text();
+		});
+		allText = reverse(allText);
+		allText = allText.replace(/\s?\((AT|DOT)\)\s?/g, function(match, cap) {
+			switch (cap) {
+				case 'AT':
+					return '@';
+				case 'DOT':
+					return '.';
+				default:
+					throw '';
+			}
+		});
+		$(this).text(allText);
 	});
+
+	// replace any links with the email class with our deobfuscated email
+	$('a.email').attr('href', 'mailto:' + resultingEmail.text());
 }
 
 function enhanceSidebar() {
@@ -290,7 +329,8 @@ function enhanceTopBar() {
 	toggled = false;
 	$('.topbun, .topbun .search').css('transition', 'none');
 	$(window).on('resize scroll', function() {
-		if ($('.ordersides').css('display') == 'none' && $(window).scrollTop() <= animationHeight) {
+		// $('.topbun').css('min-width') gives insight about our CSS mobile media query
+		if ($('.topbun').css('min-width') !== '0px' && $(window).scrollTop() <= animationHeight) {
 			toggled = true;
 			$('.topbun').addClass('clean');
 			$('.topbun').css('backgroundColor', $.Color($('.topbun').css('backgroundColor')).alpha(originalAlpha * Math.min(1, $('body').scrollTop() / animationHeight)));
@@ -305,10 +345,30 @@ function enhanceTopBar() {
 	$('.topbun, .topbun .search').css('transition', '');
 }
 
+function enhanceJump($enhanceLinks, milliseconds, extra) {
+	$page = $('html, body');
+	$enhanceLinks.click(function(){
+		$slide = $(newSlideId = $.attr(this, 'href'));
+
+		$page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+			$page.stop();
+		});
+		$page.stop().animate({
+			scrollTop: $slide.offset().top
+		}, milliseconds, "swing", function() {
+			$page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+		});
+
+		if (extra)
+			extra(newSlideId);
+		return false;
+	});
+}
+
 $(document).ready(function() {
 	initializeJqueryExtensions();
 	deobfuscateEmail();
 	enhanceSidebar();
 	enhanceSearchbar();
-	enhanceTopBar();
+	enhanceJump($('.skipcover a'), 1000);
 });

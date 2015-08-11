@@ -1,4 +1,5 @@
 </div>
+<div class="skipcover"><a href="#meat">﹀</a></div>
 <div class="grease"></div>
 </div>
-<div class="meat boxedin">
+<div class="meat boxedin" id="meat">
