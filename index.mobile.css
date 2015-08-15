@@ -111,10 +111,6 @@
 		text-align: right;
 	}
 
-	.captioned a:hover {
-		color: inherit;
-	}
-
 	.captioned a:after {
 		content: '';
 	}

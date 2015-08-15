@@ -164,7 +164,7 @@ li.leftalign2col {
 
 .centeralign3col {
 	float: left;
-	width: 1.9in;
+	width: 2in;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -175,7 +175,7 @@ li.leftalign2col {
 }
 
 .section.rightalign3col {
-	width: 2.85in;
+	width: 2.75in;
 }
 
 .section.centeralign3col, .section.rightalign3col {

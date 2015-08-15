@@ -37,6 +37,10 @@
 		white-space: nowrap;
 	}
 
+	.heading .externallinks {
+		display: none;
+	}
+
 	.footer {
 		position: static;
 	}
@@ -154,13 +158,34 @@
 		border-bottom: 1pt solid #000;
 	}
 
-	.section .entry, .entryless, .entryless.skills.last {
+	.honors, .section .entry, .entryless, .entryless.skills.last {
 		margin-bottom: 0;
-		padding-bottom: 3pt;
+		padding-bottom: 2pt;
+	}
+
+	.honors .entry {
+		padding-bottom: 0;
+		font-size: 10pt;
+		line-height: 12pt;
+		clear: both;
+	}
+
+	.section .description, .section .spacetime {
+		line-height: 12pt;
+	}
+
+	.entryless.first {
+		padding-top: 2pt;
+	}
+
+	.affiliations ul, .skills ul {
+		font-size: 10pt;
 	}
 
 	.entryless h2 {
 		display: inline-block;
+		font-size: 12pt;
+		line-height: 13pt;
 	}
 
 	.entryless h2:after {
@@ -170,7 +195,6 @@
 	.entryless p, .entryless ul { 
 		display: inline;
 		vertical-align: baseline;
-		line-height: normal;
 		list-style: none;
 		padding-left: 0;
 	}

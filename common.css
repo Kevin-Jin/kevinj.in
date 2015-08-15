@@ -90,6 +90,10 @@ body {
 	padding: 10px 0;
 }
 
+.topbun.clean .cleartext {
+	line-height: 68px;
+}
+
 .ie8 .topbun {
 	background: url('000000-0.25.png');
 }
@@ -180,6 +184,8 @@ body {
 	padding: 0;
 	height: 100%;
 	display: block;
+	-webkit-transition: line-height 0.3s;
+	transition: line-height 0.3s;
 }
 
 .searchquery:invalid~.cleartext {
@@ -295,7 +301,6 @@ body {
 .toppings {
 	position: relative;
 	padding-bottom: 8px;
-	z-index: 1;
 }
 
 .ie8 .toppings {

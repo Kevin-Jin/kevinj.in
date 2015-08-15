@@ -14,28 +14,28 @@
 			<p><span><!--#echo var="address"--></span><span>Hoboken, NJ 07030</span></p>
 			<p><span><!--#echo var="phone"--></span><span><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></span></p>
 			<p><a href="http://www.kevinj.in">www.kevinj.in</a></p>
-			<p><span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span><span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span></p>
+			<p class="externallinks"><span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span><span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span></p>
 		</div>
-		<div class="summary entryless section">
+		<!--<div class="summary entryless section">
 			<h2>Summary</h2>
 			<p>
 				Full stack developer, system admin, and quantitative analyst with 6 years of industry and side project experience.<br />
-				Interested in investment banking and private equity related roles.
+				Interested in investment banking, venture capital, and private equity related roles.
 			</p>
-		</div>
+		</div>-->
 		<div class="education section">
 			<h2>Education</h2>
 			<div class="entry">
 				<p class="spacetime"><span class="time">8/2013-Present</span><span class="space">New York, NY</span></p><div class="description">
 					<p class="organization">New York University</p>
 					<p class="role"><em>
-						<span>B.S. <strong>Finance</strong> & <strong>Statistics</strong>, Stern School of Business</span>
+						<span>B.S. <strong>Finance</strong> & <strong>Statistics</strong>, Stern School</span>
 						<span class="last">B.A. <strong>Computer Science</strong> honors, Courant Institute</span>
 					</em></p>
 					<ul>
 						<li class="leftalign2col">GPA: 3.61/4.0</li>
 						<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
-						<div class="endline"></div>
+						<li class="endline"></li>
 						<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
 					</ul>
 				</div>
@@ -56,7 +56,7 @@
 					<div class="endline"></div>
 					<ul>
 						<li class="leftalign2col">GPA: 3.9/4.0</li>
-						<li class="leftalign2col">4.82/4.3 weighted</li>
+						<li class="leftalign2col">Weighted: 4.82/4.3</li>
 						<li class="leftalign2col">Top 2%</li>
 						<li class="rightalign2col">SAT: 2300 (770 Reading, 780 Math, 750 Writing)</li>
 					</ul>
@@ -103,7 +103,7 @@
 							Lead developer and designer of a web service to automate patching between development and QA systems.
 							<ul><li>Liaised with admins to implement the full procedure. <em>Saved clients ~10 billable hours per week</em>.</li></ul>
 						</li>
-						<li>Led a team working on a version control tool that enabled developers to be productive off-RDP/VPN.</li>
+						<li>Led a team working on a version control tool that enabled developer productivity off-RDP/VPN.</li>
 					</ul>
 				</div>
 			</div>
@@ -114,7 +114,7 @@
 					<p class="role"><em>Project Maintainer</em></p>
 					<div class="endline"></div>
 					<ul><li>
-						Developed a MMORPG server emulator. Launched testing server at pjtb.net.
+						Developed a MMORPG server emulator and launched a testing server.
 						<ul>
 							<li><em>30 days of uptime with 20 concurrent players, sub-30ms latency, and sub 100mb memory usage.</em></li>
 							<li>Maintained and moderated an enthusiastic community (&gt;100 members) that assisted in identifying bugs.</li>
@@ -129,16 +129,16 @@
 				<p class="spacetime"><span class="time">4/2015</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>UChicago</strong></span> Midwest Trading Competition, Options market maker case</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime"><span class="time">5/2013, 5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> Northern Division, 5 person Senior Division (regional, regular season) [2x winner]</div>
+				<p class="spacetime"><span class="time">5/2013, 5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> Northern Division, 5 person Senior Division (regional, regular season) [x2]</div>
 			</div>
 			<div class="entry">
 				<p class="spacetime"><span class="time">5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> All Star Competition, 5 person Senior Division (international, postseason)</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime"><span class="time">3/2012, 3/2011</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [2x winner]</div>
+				<p class="spacetime"><span class="time">3/2012, 3/2011</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [x2]</div>
 			</div>
 		</div>
-		<div class="affiliations entryless section endline">
+		<div class="affiliations entryless section endline first">
 			<h2>Affiliations, interests, and hobbies</h2>
 				<ul>
 					<li class="leftalign3col">Association for Computing Machinery</li>
@@ -153,16 +153,16 @@
 			<h2>Server application technologies</h2>
 			<ul>
 				<li>Java (Expert)</li>
-				<li>C#, Visual Basic .NET (Expert)</li>
+				<li>C# & Visual Basic .NET (Expert)</li>
 				<li>C++ (Strong)</li>
 				<li>Unix shell scripting (Strong)</li>
-				<li class="last">Windows batch, PowerShell (Strong)</li>
+				<li class="last">Windows batch & PowerShell (Strong)</li>
 			</ul>
 		</div>
 		<div class="webtech skills entryless section centeralign3col">
 			<h2>Web technologies</h2>
 			<ul>
-				<li>JavaScript, jQuery (Expert)</li><!-- node.js -->
+				<li>JavaScript & jQuery (Expert)</li><!-- node.js -->
 				<li>MySQL (Expert)</li>
 				<li>HTML (Expert)</li>
 				<li>CSS (Expert)</li>
@@ -175,7 +175,7 @@
 				<li>Microsoft Office <span class="small">VBA</span> macros (Expert)</li>
 				<li>R platform (Strong)</li>
 				<li>Bloomberg Terminal (Working)</li>
-				<li>Cloud computing, distributed websites</li>
+				<li>Distributed computing</li>
 				<li class="last">Facebook graph API data mining</li><!-- ElasticSearch, Hadoop, CapitalIQ/FactSet -->
 			</ul>
 		</div>

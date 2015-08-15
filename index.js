@@ -77,6 +77,99 @@ function appendTo(prefix, value) {
 		return prefix + ', ' + value;
 }
 
+// Inspired by the R function paste(), without any recycling functionality.
+// The collapse functionality can be accomplished with Array.join().
+function paste() {
+	if (!Array.isArray) {
+		Array.isArray = function(arg) {
+			return Object.prototype.toString.call(arg) === '[object Array]';
+		};
+	}
+
+	var simplify = function(array) {
+		if (array.length == 1)
+			return array[0];
+		else
+			return array;
+	}
+
+	var concated = [ ];
+	if (arguments.length === 1 && Array.isArray(arguments[i]))
+		arguments = arguments[0];
+	var sep = arguments[0];
+	for (var i = 1; i < arguments.length; i++) {
+		if (Array.isArray(arguments[i])) {
+			for (var j = 0; j < arguments[i].length; j++)
+				concated[j] = (concated[j] ? concated[j] + sep : '') + arguments[i][j];
+		} else {
+			concated[0] = (concated[0] ? concated[0] + sep : '') + arguments[i];
+		}
+	}
+	return concated;
+}
+
+function robustSplit(str, split) {
+	var allZero = function(obj) {
+		for (var key in obj)
+			if (obj.hasOwnProperty(key) && obj[key] != 0)
+				return false;
+		return true;
+	}
+
+	if (typeof String.prototype.trim !== 'function') {
+		String.prototype.trim = function() {
+			return this.replace(/^\s+|\s+$/g, ''); 
+		};
+	}
+
+	if (split.length != 1 || split == '\\' || split == '\"' || split == '\''
+			|| split == '(' || split == '[' || split == '{'
+			|| split == ')' || split == ']' || split == '}')
+		throw 'invalid split string';
+
+	var open = { };
+	var start = 0;
+	var result = [ ];
+	for (var i = 0; i < str.length; i++) {
+		switch (str[i]) {
+			case '\\':
+				if (open['\''] == 1 || open['\"'] == 1)
+					i++;
+				break;
+			case '(':
+				open[')'] = (open[')'] || 0) + 1;
+				break;
+			case '[':
+				open[']'] = (open[']'] || 0) + 1;
+				break;
+			case '{':
+				open['}'] = (open['}'] || 0) + 1;
+				break;
+			case ')':
+			case ']':
+			case '}':
+				open[str[i]]--;
+				break;
+			case '\"':
+			case '\'':
+				open[str[i]] = open[str[i]] == 1 ? 0 : 1;
+				break;
+			default:
+				if (str[i] == split && allZero(open)) {
+					result.push(str.substring(start, i).trim());
+					start = i + 1;
+				}
+				break;
+		}
+	}
+	result.push(str.substring(start, str.length).trim());
+	return result;
+}
+
+function getTransition($selector) {
+	return paste(' ', robustSplit($selector.css('transition-property'), ','), robustSplit($selector.css('transition-duration'), ','), robustSplit($selector.css('transition-timing-function'), ','), robustSplit($selector.css('transition-delay'), ',')).join(',');
+}
+
 function initialAnimation(onComplete) {
 	var style = document.documentElement.style;
 	if (typeof (sameDomain) !== 'undefined' && sameDomain
@@ -107,10 +200,10 @@ function initialAnimation(onComplete) {
 	$('.toppings').bgLoaded(function() {
 		$sunglasses.transition('opacity 1s').css('opacity', '');
 		setTimeout(function() {
-			$topbun.translate(0, -100).show().transition(appendTo($topbun.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
-			$headline.translate(100, 0).show().transition(appendTo($headline.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
-			$subtitle.translate(-100, 0).show().transition(appendTo($subtitle.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
-			$otherBacon.translate(0, 100).show().transition(appendTo($otherBacon.css('transition'), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$topbun.translate(0, -100).show().transition(appendTo(getTransition($topbun), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$headline.translate(100, 0).show().transition(appendTo(getTransition($headline), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$subtitle.translate(-100, 0).show().transition(appendTo(getTransition($subtitle), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
+			$otherBacon.translate(0, 100).show().transition(appendTo(getTransition($otherBacon), 'opacity 1s, transform 1s')).css('opacity', '').transform('');
 			onComplete();
 		}, 400);
 	}, 2000);
