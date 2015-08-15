@@ -137,22 +137,30 @@ function robustSplit(str, split) {
 					i++;
 				break;
 			case '(':
-				open[')'] = (open[')'] || 0) + 1;
+				if (!open['\''] && !open['\"'])
+					open[')'] = (open[')'] || 0) + 1;
 				break;
 			case '[':
-				open[']'] = (open[']'] || 0) + 1;
+				if (!open['\''] && !open['\"'])
+					open[']'] = (open[']'] || 0) + 1;
 				break;
 			case '{':
-				open['}'] = (open['}'] || 0) + 1;
+				if (!open['\''] && !open['\"'])
+					open['}'] = (open['}'] || 0) + 1;
 				break;
 			case ')':
 			case ']':
 			case '}':
-				open[str[i]]--;
+				if (!open['\''] && !open['\"'])
+					open[str[i]]--;
 				break;
 			case '\"':
+				if (!open['\''])
+					open[str[i]] = !open[str[i]] ? 1 : 0;
+				break;
 			case '\'':
-				open[str[i]] = open[str[i]] == 1 ? 0 : 1;
+				if (!open['\"'])
+					open[str[i]] = !open[str[i]] ? 1 : 0;
 				break;
 			default:
 				if (str[i] == split && allZero(open)) {

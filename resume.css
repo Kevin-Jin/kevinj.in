@@ -135,7 +135,7 @@
 	border-left: 1pt solid #000;
 	padding-left: 2pt;
 
-	width: 3.4in;
+	width: 3.5in;
 	float: right;
 }
 
@@ -144,7 +144,7 @@
 }
 
 li.rightalign2col {
-	width: 3.4in;
+	width: 3.5in;
 	float: right;
 
 	position: relative;
@@ -255,7 +255,7 @@ li.leftalign2col {
 }
 
 .section h2, .section .spacetime, .section .organization, .section .role, .section .fancy, .heading h1 {
-	font-family: 'Book Antiqua','Palatino Linotype','Palatino','URW Palladio L',serif;
+	font-family: 'Book Antiqua','URW Palladio L',serif;
 }
 
 .section .spacetime, .footer {

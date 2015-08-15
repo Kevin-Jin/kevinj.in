@@ -23,6 +23,31 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'URW Palladio L';
+	font-style: normal;
+	src: local('URW Palladio L'), url('URWPalladioL-Roma.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'URW Palladio L';
+	src: url('URWPalladioL-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'URW Palladio L';
+	src: url('URWPalladioL-Ital.ttf') format('truetype');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'URW Palladio L';
+	src: url('URWPalladioL-BoldItal.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
 html,body {
 	margin: 0;
 	padding: 0;
@@ -41,7 +66,7 @@ body {
 
 .signature {
 	text-transform: uppercase;
-	font-family: 'Book Antiqua','Palatino Linotype','Palatino','URW Palladio L',serif;
+	font-family: 'Book Antiqua','URW Palladio L',serif;
 	font-weight: bold;
 	font-style: normal;
 }
