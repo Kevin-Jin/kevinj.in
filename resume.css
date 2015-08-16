@@ -109,25 +109,26 @@
 
 .section .entry {
 	margin-bottom: 1pt;
+	position: relative;
+	padding-left: 1in;
+	width: 6.4in;
 }
 
 .section .spacetime {
 	width: 1in;
 	display: inline-block;
 	text-align: left;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .section .spacetime .space, .section .spacetime .time {
 	display: block;
 }
 
-.section .description {
-	display: inline-block;
-	width: 6.4in;
-}
-
 .section .organization {
-	display: inline-block;
+	display: inline-block; /* CAUSES ISSUES WITH WEBKIT https://bugs.webkit.org/show_bug.cgi?id=53166 */
 	font-weight: bold;
 }
 
@@ -136,11 +137,23 @@
 	padding-left: 2pt;
 
 	width: 3.5in;
-	float: right;
+	float: right; /* CAUSES ISSUES WITH WEBKIT https://bugs.webkit.org/show_bug.cgi?id=53166 */
+	font-style: italic;
 }
 
 .section .role span {
 	display: block;
+}
+
+.honors .role {
+	border-left: none;
+	padding: 0;
+	width: auto;
+	float: none;
+}
+
+.honors .organization {
+	display: inherit;
 }
 
 li.rightalign2col {
@@ -182,6 +195,10 @@ li.leftalign2col {
 	border-left: 1pt solid #000;
 	padding-left: 3pt;
 	margin-left: -4pt;
+}
+
+.section .placeholder {
+	visibility: hidden;
 }
 
 .section ul {
@@ -254,7 +271,7 @@ li.leftalign2col {
 	font-family: 'Calibri','Carlito',sans-serif;
 }
 
-.section h2, .section .spacetime, .section .organization, .section .role, .section .fancy, .heading h1 {
+.section h2, .section .spacetime, .section .contribution, .heading h1 {
 	font-family: 'Book Antiqua','URW Palladio L',serif;
 }
 
@@ -263,7 +280,7 @@ li.leftalign2col {
 	line-height: 11.5pt;
 }
 
-.section .description ul, .small, .heading p {
+.section .entry ul, .small, .heading p {
 	font-size: 10pt;
 	line-height: 12pt;
 }

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 639px) {
+@media (max-width: 639px) {
 	.filler {
 		height: 52px;
 	}
@@ -45,10 +45,33 @@
 		position: static;
 	}
 
+	.section .entry {
+		width: auto;
+		padding-left: 0;
+	}
+
+	.section .contribution {
+		margin-right: 1in;
+	}
+
+	.honors .contribution {
+		margin: 0;
+	}
+
+	.honors .entry {
+		padding-right: 1in;
+		box-sizing: border-box;
+	}
+
+	.section .placeholder {
+		display: none;
+	}
+
 	.section .spacetime {
-		float: right;
+		position: absolute;
+		right: 0;
+		left: auto;
 		font-size: 10pt;
-		line-height: 13pt;
 		margin-left: 5px;
 
 		display: -moz-box;
@@ -86,11 +109,6 @@
 		order: 2;
 	}
 
-	.section .description {
-		width: auto;
-		display: block;
-	}
-
 	.section .organization {
 		width: auto;
 
@@ -102,10 +120,14 @@
 		width: auto;
 		display: block;
 		border: none;
-		float: none;
+		float: none; /* CAUSES ISSUES WITH WEBKIT https://bugs.webkit.org/show_bug.cgi?id=53166 */
 		padding-left: 0;
 
 		text-align: left;
+	}
+
+	.honors .role {
+		display: inherit;
 	}
 
 	.section .role span {
@@ -170,7 +192,7 @@
 		clear: both;
 	}
 
-	.section .description, .section .spacetime {
+	.entry, .section .spacetime {
 		line-height: 12pt;
 	}
 

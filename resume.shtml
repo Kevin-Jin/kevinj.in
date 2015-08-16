@@ -26,116 +26,169 @@
 		<div class="education section">
 			<h2>Education</h2>
 			<div class="entry">
-				<p class="spacetime"><span class="time">8/2013-Present</span><span class="space">New York, NY</span></p><div class="description">
+				<div class="contribution">
 					<p class="organization">New York University</p>
-					<p class="role"><em>
+					<p class="role">
 						<span>B.S. <strong>Finance</strong> &amp; <strong>Statistics</strong>, Stern School</span>
 						<span class="last">B.A. <strong>Computer Science</strong> honors, Courant Institute</span>
-					</em></p>
-					<ul>
-						<li class="leftalign2col">GPA: 3.61/4.0</li>
-						<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
-						<li class="endline"></li>
-						<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
-					</ul>
+					</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">8/2013-Present</p>
+					<p class="space">New York, NY</p>
+				</div>
+				<ul>
+					<li class="leftalign2col">GPA: 3.61/4.0</li>
+					<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
+					<li class="endline"></li>
+					<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
+				</ul>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime"><span class="time">8/2014-12/2014</span><span class="space">Shanghai, CN</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">NYU Shanghai</p>
-					<p class="role"><em>Study abroad program</em></p>
-					<div class="endline"></div>
+					<p class="role">Study abroad program</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">8/2014-12/2014</p>
+					<p class="space">Shanghai, CN</p>
+				</div>
+				<ul>
+					<li class="placeholder">&nbsp;</li>
+				</ul>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime"><span class="time">9/2009-6/2013</span><span class="space">Freehold, NJ</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">Freehold High School</p>
-					<p class="role"><em>High School Diploma, Computer Science Academy</em></p>
-					<div class="endline"></div>
-					<ul>
-						<li class="leftalign2col">GPA: 3.9/4.0</li>
-						<li class="leftalign2col">Weighted: 4.82/4.3</li>
-						<li class="leftalign2col">Top 2%</li>
-						<li class="rightalign2col">SAT: 2300 (770 Reading, 780 Math, 750 Writing)</li>
-					</ul>
+					<p class="role">High School Diploma, Computer Science Academy</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">9/2009-6/2013</p>
+					<p class="space">Freehold, NJ</p>
+				</div>
+				<ul class="endline">
+					<li class="leftalign2col">GPA: 3.9/4.0</li>
+					<li class="leftalign2col">Weighted: 4.82/4.3</li>
+					<li class="leftalign2col">Top 2%</li>
+					<li class="rightalign2col">SAT: 2300 (770 Reading, 780 Math, 750 Writing)</li>
+				</ul>
 			</div>
 		</div>
 		<div class="experience section">
 			<h2>Experience</h2>
 			<div class="entry">
-				<p class="spacetime"><span class="time">5/2015-Present</span><span class="space">Red Bank, NJ</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">ZAIS Group, LLC</p>
-					<p class="role"><em>Quant Analyst Intern, Portfolio Management Team</em></p>
-					<div class="endline"></div>
-					<ul>
-						<li>Worked with data analytics department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R on time series and big data news analytics.</li>
-						<li>Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments.</li>
-					</ul>
+					<p class="role">Quant Analyst Intern, Portfolio Management Team</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">5/2015-Present</p>
+					<p class="space">Red Bank, NJ</p>
+				</div>
+				<ul>
+					<li>Worked with data analytics department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R on time series and big data news analytics.</li>
+					<li>Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments.</li>
+				</ul>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime"><span class="time">3/2015-Present</span><span class="space">New York, NY</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">Quantitative Finance Society</p>
-					<p class="role"><em>Analyst, Quant Portfolio Team</em></p>
-					<div class="endline"></div>
-					<ul>
-						<li>Developed and pitched systematic trading strategies.</li>
-						<li>Backtested and paper traded these models using services such as the Bloomberg Java API.</li>
-					</ul>
+					<p class="role">Analyst, Quant Portfolio Team</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">3/2015-Present</p>
+					<p class="space">New York, NY</p>
+				</div>
+				<ul>
+					<li>Developed and pitched systematic trading strategies.</li>
+					<li>Backtested and paper traded these models using services such as the Bloomberg Java API.</li>
+				</ul>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime"><span class="time">5/2013-5/2015</span><span class="space">Hoboken, NJ</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">Bad Rabbit Consulting</p>
-					<p class="role"><em>Software Engineer; System Administrator</em></p>
-					<div class="endline"></div>
-					<ul>
-						<li>
-							Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
-							<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em>.</li></ul>
-						</li>
-						<li>
-							Lead developer and designer of a web service to automate patching between development and QA systems.
-							<ul><li>Liaised with admins to implement the full procedure. <em>Saved clients ~10 billable hours per week</em>.</li></ul>
-						</li>
-						<li>Led a team working on a version control tool that enabled developer productivity off-RDP/VPN.</li>
-					</ul>
+					<p class="role">Software Engineer; System Administrator</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">5/2013-5/2015</p>
+					<p class="space">Hoboken, NJ</p>
+				</div>
+				<ul>
+					<li>
+						Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
+						<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em>.</li></ul>
+					</li>
+					<li>
+						Lead developer and designer of a web service to automate patching between development and QA systems.
+						<ul><li>Liaised with admins to implement the full procedure. <em>Saved clients ~10 billable hours per week</em>.</li></ul>
+					</li>
+					<li>Led a team working on a version control tool that enabled developer productivity off-RDP/VPN.</li>
+				</ul>
 			</div>
 
 			<div class="entry">
-				<p class="spacetime"><span class="time">10/2008-5/2013</span><span class="space">Marlboro, NJ</span></p><div class="description">
+				<div class="contribution endline">
 					<p class="organization">ArgonMS</p>
-					<p class="role"><em>Project Maintainer</em></p>
-					<div class="endline"></div>
-					<ul><li>
-						Developed a MMORPG server emulator and launched a testing server.
-						<ul>
-							<li><em>30 days of uptime with 20 concurrent players, sub-30ms latency, and sub 100mb memory usage.</em></li>
-							<li>Maintained and moderated an enthusiastic community (&gt;100 members) that assisted in identifying bugs.</li>
-						</ul>
-					</li></ul>
+					<p class="role">Project Maintainer</p>
 				</div>
+				<div class="spacetime">
+					<p class="time">10/2008-5/2013</p>
+					<p class="space">Marlboro, NJ</p>
+				</div>
+				<ul><li>
+					Developed a MMORPG server emulator and launched a testing server.
+					<ul>
+						<li><em>30 days of uptime with 20 concurrent players, sub-30ms latency, and sub 100mb memory usage.</em></li>
+						<li>Maintained and moderated an enthusiastic community (&gt;100 members) that assisted in identifying bugs.</li>
+					</ul>
+				</li></ul>
 			</div>
 		</div>
 		<div class="honors section">
 			<h2>Honors</h2>
 			<div class="entry">
-				<p class="spacetime"><span class="time">4/2015</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>UChicago</strong></span> Midwest Trading Competition, Options market maker case</div>
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">UChicago</span>
+				</span>
+				Midwest Trading Competition, Options market maker case
+				<div class="spacetime">
+					<p class="time">4/2015</p>
+				</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime"><span class="time">5/2013, 5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> Northern Division, 5 person Senior Division (regional, regular season) [x2]</div>
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">ACSL</span>
+				</span>
+				Northern Division, 5 person Senior Division (regional, regular season) [x2]
+				<div class="spacetime">
+					<p class="time">5/2013, 5/2012</p>
+				</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime"><span class="time">5/2012</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>ACSL</strong></span> All Star Competition, 5 person Senior Division (international, postseason)</div>
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">ACSL</span>
+				</span>
+				All Star Competition, 5 person Senior Division (international, postseason)
+				<div class="spacetime">
+					<p class="time">5/2012</p>
+				</div>
 			</div>
 			<div class="entry">
-				<p class="spacetime"><span class="time">3/2012, 3/2011</span></p><div class="description"><span class="fancy"><em>1<sup>st</sup> place</em> <strong>NJIT</strong></span> High School Programming Contest (regional) [x2]</div>
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">NJIT</span>
+				</span>
+				High School Programming Contest (regional) [x2]
+				<div class="spacetime">
+					<p class="time">3/2012, 3/2011</p>
+				</div>
 			</div>
 		</div>
 		<div class="affiliations entryless section endline first">
@@ -150,7 +203,7 @@
 				</ul>
 		</div>
 		<div class="servertech skills entryless section leftalign3col">
-			<h2>Server application tech</h2>
+			<h2>Server application skills</h2>
 			<ul>
 				<li>Java (Expert)</li>
 				<li>C# &amp; Visual Basic .NET (Expert)</li>
@@ -160,7 +213,7 @@
 			</ul>
 		</div>
 		<div class="webtech skills entryless section centeralign3col">
-			<h2>Web design tech</h2>
+			<h2>Web design skills</h2>
 			<ul>
 				<li>JavaScript &amp; jQuery (Expert)</li><!-- node.js -->
 				<li>MySQL (Expert)</li>
@@ -170,7 +223,7 @@
 			</ul>
 		</div>
 		<div class="analytech skills entryless section rightalign3col last">
-			<h2>Analytic &amp; presentational tech</h2>
+			<h2>Analytic &amp; presentational skills</h2>
 			<ul>
 				<li>Microsoft Office &amp; VBA macros (Expert)</li>
 				<li>R platform (Strong)</li>
