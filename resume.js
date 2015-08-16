@@ -1,3 +1,13 @@
+// Chrome's print to PDF is targeted because of PhantomJS
+function enhanceReadingOrder() {
+	// in print to PDF on Chrome, this ensures bullet marks are placed before
+	// the bullet text when bullet text spans multiple lines. you can test this
+	// by opening the generated PDF in Adobe Reader -> Save As -> Text (Accessible).
+	$('.entry li:not(.placeholder):not(.endline):not(.leftalign2col):not(.rightalign2col)').before($('<li style="display: inline"></li>'));
+	// TODO: figure out something that makes Chrome add blank lines to PDF text
+	//$('.section h2, .entry').before($('<pre>&nbsp;</pre><br />'));
+}
+
 $(document).ready(function() {
 	$.fn.extend({
 		bgLoaded: function (callback, timeout) {
@@ -26,4 +36,6 @@ $(document).ready(function() {
 			$sunglasses.transition('opacity 1s').css('opacity', '');
 		}, 2000);
 	}
+
+	enhanceReadingOrder();
 });

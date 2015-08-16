@@ -107,6 +107,10 @@
 	vertical-align: top;
 }
 
+.section h2 {
+	position: relative;
+}
+
 .section .entry {
 	margin-bottom: 1pt;
 	position: relative;

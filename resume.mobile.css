@@ -1,4 +1,4 @@
-@media (max-width: 639px) {
+@media only screen and (max-width: 639px) {
 	.filler {
 		height: 52px;
 	}
@@ -16,7 +16,9 @@
 		width: auto;
 		height: auto;
 	}
+}
 
+@media (max-width: 639px) {
 	.heading {
 		text-align: center;
 	}
@@ -51,7 +53,7 @@
 	}
 
 	.section .contribution {
-		margin-right: 1in;
+		margin-right: 1.2in;
 	}
 
 	.honors .contribution {
@@ -59,7 +61,7 @@
 	}
 
 	.honors .entry {
-		padding-right: 1in;
+		padding-right: 1.2in;
 		box-sizing: border-box;
 	}
 
@@ -72,7 +74,7 @@
 		right: 0;
 		left: auto;
 		font-size: 10pt;
-		margin-left: 5px;
+		width: 1.1in;
 
 		display: -moz-box;
 		display: -webkit-box;
