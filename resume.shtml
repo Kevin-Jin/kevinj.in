@@ -11,10 +11,19 @@
 		<div class="heading entryless section">
 			<h1>Kevin Jin</h1>
 			<!--#include virtual="resume/password.shtml" -->
-			<p><span><!--#echo var="address"--></span><span>Hoboken, NJ 07030</span></p>
-			<p><span><!--#echo var="phone"--></span><span><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span><span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></span></p>
-			<p><a href="http://www.kevinj.in">www.kevinj.in</a></p>
-			<p class="externallinks"><span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span><span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span></p>
+			<p>
+				<!--#if expr="v('address') =~ /.+/"--><span><!--#echo var="address"--></span><!--#endif-->
+				<span>Hoboken, NJ 07030</span>
+			</p><p>
+				<!--#if expr="v('phone') =~ /.+/"--><span><!--#echo var="phone"--></span><!--#endif-->
+				<span><a class="obfuscated email" href="#"><span class="show">ni (TOD) jnivek</span>
+				<span class="hide">moc (TOD) elgoog</span><span class="show"> (TA) nivek</span></a></span>
+			</p><p>
+				<span class="last"><a href="http://www.kevinj.in">www.kevinj.in</a></span>
+			</p><p class="externallinks">
+				<span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span>
+				<span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span>
+			</p>
 		</div>
 		<!--<div class="summary entryless section">
 			<h2>Summary</h2>
@@ -42,7 +51,7 @@
 					<li class="leftalign2col">GPA: 3.61/4.0</li>
 					<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
 					<li class="endline"></li>
-					<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
+					<!--<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>-->
 				</ul>
 			</div>
 
@@ -89,8 +98,14 @@
 					<p class="space">Red Bank, NJ</p>
 				</div>
 				<ul>
-					<li>Worked with data analytics department, portfolio manager, quantitative investment strategists, and traders to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R on time series and big data news analytics.</li>
-					<li>Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, cluster analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments.</li>
+					<li>Worked with portfolio manager, investment strategists, traders, and data analysts to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R on time series and news analytics data sets</li>
+					<li>
+						Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, network analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments
+						<ul>
+							<li>Demoed a process that successfully detected sets of companies in the same GICS sector as communities when given only a set of CDS points upfront time series; now adapted to discover unknown relationships</li>
+							<li>Discovered a state-of-the-art time series comparison algorithm that detects to what extent and how consistently one series historically leads or lags the other by matching peaks and troughs; now in the process of being applied to housing statistics</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
@@ -104,8 +119,7 @@
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-					<li>Developed and pitched systematic trading strategies.</li>
-					<li>Backtested and paper traded these models using services such as the Bloomberg Java API.</li>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using services such as the Bloomberg Java API</li>
 				</ul>
 			</div>
 
@@ -120,14 +134,14 @@
 				</div>
 				<ul>
 					<li>
-						Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains. Liaised with research experts and implemented best solutions in software for their needs.
-						<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em>.</li></ul>
+						Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains; liaised with research experts to implement best software solutions for their needs
+						<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em></li></ul>
 					</li>
 					<li>
-						Lead developer and designer of a web service to automate patching between development and QA systems.
-						<ul><li>Liaised with admins to implement the full procedure. <em>Saved clients ~10 billable hours per week</em>.</li></ul>
+						Lead developer and designer of a web service to automate patching between development and QA systems
+						<ul><li>Liaised with admins to implement the full procedure; <em>saves clients ~10 billable hours per week</em></li></ul>
 					</li>
-					<li>Led a team working on a version control tool that enabled developer productivity off-RDP/VPN.</li>
+					<li>Led a team working on a file sync and version control tool that enables developer productivity off-RDP/VPN</li>
 				</ul>
 			</div>
 
@@ -141,10 +155,10 @@
 					<p class="space">Marlboro, NJ</p>
 				</div>
 				<ul><li>
-					Developed a MMORPG server emulator and launched a testing server.
+					Developed a MMORPG server emulator and launched a testing server
 					<ul>
-						<li><em>30 days of uptime with 20 concurrent players, sub-30ms latency, and sub 100mb memory usage.</em></li>
-						<li>Maintained and moderated an enthusiastic community (&gt;100 members) that assisted in identifying bugs.</li>
+						<li><em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub-30ms latency</em>, and <em>sub 100mb memory usage</em></li>
+						<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
 					</ul>
 				</li></ul>
 			</div>
@@ -193,7 +207,7 @@
 			</div>
 		</div>
 		<div class="affiliations entryless section endline first">
-			<h2>Affiliations, interests, and hobbies</h2>
+			<h2>Interests &amp; affiliations</h2>
 				<ul>
 					<li class="leftalign3col">Association for Computing Machinery</li>
 					<li class="centeralign3col">Tech@NYU</li>
@@ -204,7 +218,7 @@
 				</ul>
 		</div>
 		<div class="servertech skills entryless section leftalign3col">
-			<h2>Skills - server applications</h2>
+			<h2>Skills &ndash; server applications</h2>
 			<ul>
 				<li>Java (Expert)</li>
 				<li>C# &amp; Visual Basic .NET (Expert)</li>
@@ -214,7 +228,7 @@
 			</ul>
 		</div>
 		<div class="webtech skills entryless section centeralign3col">
-			<h2>Skills - web design</h2>
+			<h2>Skills &ndash; web design</h2>
 			<ul>
 				<li>JavaScript &amp; jQuery (Expert)</li><!-- node.js -->
 				<li>MySQL (Expert)</li>
@@ -224,7 +238,7 @@
 			</ul>
 		</div>
 		<div class="analytech skills entryless section rightalign3col last">
-			<h2>Skills - analytic &amp; presentational</h2>
+			<h2>Skills &ndash; analytic &amp; presentational</h2>
 			<ul>
 				<li>Microsoft Office &amp; VBA macros (Expert)</li>
 				<li>R platform (Strong)</li>

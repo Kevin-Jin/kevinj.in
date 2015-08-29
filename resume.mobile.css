@@ -31,12 +31,28 @@
 	.heading p {
 		display: inline-block;
 		margin: 0;
+		font-size: 0.001px;
+		line-height: 1pt;
 	}
 
-	.heading p span {
+	.heading p > span {
 		display: inline;
-		margin-right: 10px;
+		margin-right: 9pt;
 		white-space: nowrap;
+		position: relative;
+	}
+
+	.heading p > span:after {
+		content: "\25CF";	/* escaped unicode character */
+		position: absolute;	/* position bullet relative to list item */
+
+		font-size: 5pt;
+		right: -6pt;
+	}
+
+	.heading p > span.last:after {
+		content: "";
+		display: none;
 	}
 
 	.heading .externallinks {
@@ -75,6 +91,7 @@
 		left: auto;
 		font-size: 10pt;
 		width: 1.05in;
+		text-align: right;
 
 		display: -moz-box;
 		display: -webkit-box;
@@ -88,11 +105,11 @@
 		-webkit-flex-direction: column;
 		flex-direction: column;
 
-		-moz-box-align: start;
-		-webkit-box-align: start;
-		-ms-flex-align: start;
-		-webkit-align-items: flex-start;
-		align-items: flex-start;
+		-moz-box-align: end;
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
 	}
 
 	.section .spacetime .space {
@@ -213,6 +230,8 @@
 		display: inline-block;
 		font-size: 11pt;
 		line-height: 13pt;
+		font-variant: normal;
+		font-weight: bold;
 	}
 
 	.entryless h2:after {

@@ -259,7 +259,7 @@ li.leftalign2col {
 	text-align: left;
 }
 
-.heading p span {
+.heading p > span {
 	display: block;
 }
 
@@ -291,9 +291,13 @@ li.leftalign2col {
 	line-height: 11.5pt;
 }
 
-.section .entry ul, .small, .heading p {
+.section .entry ul, .small, .heading p > span {
 	font-size: 10pt;
 	line-height: 12pt;
+}
+
+li.endline:before {
+	display: none;
 }
 
 .endline:after {
