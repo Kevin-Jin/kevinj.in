@@ -37,6 +37,7 @@
 					<p class="time">8/2013&ndash;Present</p>
 					<p class="space">New York, NY</p>
 				</div>
+				<br class="nextline" /><!-- workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=53166 -->
 				<ul>
 					<li class="leftalign2col">GPA: 3.61/4.0</li>
 					<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
@@ -77,7 +78,7 @@
 			</div>
 		</div>
 		<div class="experience section">
-			<h2>Experience</h2>
+			<h2>Work Experience</h2>
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">ZAIS Group, LLC</p>
@@ -203,7 +204,7 @@
 				</ul>
 		</div>
 		<div class="servertech skills entryless section leftalign3col">
-			<h2>Server application skills</h2>
+			<h2>Skills - server applications</h2>
 			<ul>
 				<li>Java (Expert)</li>
 				<li>C# &amp; Visual Basic .NET (Expert)</li>
@@ -213,7 +214,7 @@
 			</ul>
 		</div>
 		<div class="webtech skills entryless section centeralign3col">
-			<h2>Web design skills</h2>
+			<h2>Skills - web design</h2>
 			<ul>
 				<li>JavaScript &amp; jQuery (Expert)</li><!-- node.js -->
 				<li>MySQL (Expert)</li>
@@ -223,7 +224,7 @@
 			</ul>
 		</div>
 		<div class="analytech skills entryless section rightalign3col last">
-			<h2>Analytic &amp; presentational skills</h2>
+			<h2>Skills - analytic &amp; presentational</h2>
 			<ul>
 				<li>Microsoft Office &amp; VBA macros (Expert)</li>
 				<li>R platform (Strong)</li>
