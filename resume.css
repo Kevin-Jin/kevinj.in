@@ -42,6 +42,12 @@
 		height: 10in;
 	}
 
+	.page .print {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+
 	.footer {
 		display: block;
 		bottom: 0.25in;
@@ -83,6 +89,10 @@
 		padding: 0;
 	}
 
+	.page .print {
+		display: none;
+	}
+
 	.footer {
 		display: none;
 	}
@@ -97,9 +107,15 @@
 
 .section h2 {
 	margin: 0;
-	font-size: 13pt;
+	font-size: 11pt;
 	line-height: 17pt;
 	font-weight: normal;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+	.section h2 {
+		font-size: 13pt;
+	}
 }
 
 .section p, ul {

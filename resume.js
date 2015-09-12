@@ -8,6 +8,13 @@ function enhanceReadingOrder() {
 	//$('.section h2, .entry').before($('<pre>&nbsp;</pre><br />'));
 }
 
+function enhancePrint() {
+	$('.print').on('click', function(e) {
+		window.print();
+		e.preventDefault();
+	});
+}
+
 $(document).ready(function() {
 	$.fn.extend({
 		bgLoaded: function (callback, timeout) {
@@ -38,4 +45,5 @@ $(document).ready(function() {
 	}
 
 	enhanceReadingOrder();
+	enhancePrint();
 });

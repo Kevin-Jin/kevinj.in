@@ -7,6 +7,7 @@
 <!--#include virtual="common/3_end_js_and_begin_cover.shtml" -->
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="page">
+	<a class="print" href="resume/rendered.pdf">Print</a>
 	<div class="endline" id="resume">
 		<div class="heading entryless section">
 			<h1>Kevin Jin</h1>
@@ -51,7 +52,9 @@
 					<li class="leftalign2col">GPA: 3.61/4.0</li>
 					<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
 					<li class="endline"></li>
-					<!--<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Algorithms, Linear Algebra, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>-->
+					<!--#if expr="! v('QUERY_STRING') =~ /condensed=1/" -->
+					<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Data Structures (exam), Algorithms, Linear Algebra, <em>Natural Language Processing</em>, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
+					<!--#endif-->
 				</ul>
 			</div>
 
@@ -223,8 +226,8 @@
 				<li>Java (Expert)</li>
 				<li>C# &amp; Visual Basic .NET (Expert)</li>
 				<li>C++ (Strong)</li>
-				<li>Unix shell scripting (Strong)</li>
-				<li class="last">Windows batch &amp; PowerShell (Strong)</li>
+				<li>Unix shell scripting (Working)</li>
+				<li class="last">Windows PowerShell (Working)</li>
 			</ul>
 		</div>
 		<div class="webtech skills entryless section centeralign3col">
@@ -234,7 +237,7 @@
 				<li>MySQL (Expert)</li>
 				<li>HTML (Expert)</li>
 				<li>CSS (Expert)</li>
-				<li class="last">PHP (Expert)</li>
+				<li class="last">PHP (Strong)</li>
 			</ul>
 		</div>
 		<div class="analytech skills entryless section rightalign3col last">
@@ -243,8 +246,8 @@
 				<li>Microsoft Office &amp; VBA macros (Expert)</li>
 				<li>R platform (Strong)</li>
 				<li>Bloomberg Terminal (Working)</li>
-				<li>Distributed computing</li>
-				<li class="last">Facebook graph API data mining</li><!-- ElasticSearch, Hadoop, CapitalIQ/FactSet -->
+				<li>Distributed computing (Working)</li>
+				<li class="last">ElasticSearch (Working)</li><!-- Data mining, Hadoop, CapitalIQ/FactSet -->
 			</ul>
 		</div>
 	</div>
