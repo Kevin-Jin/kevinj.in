@@ -8,7 +8,7 @@
 <!--#include virtual="common/4_end_cover_and_begin_body.shtml" -->
 <div class="page">
 	<a class="print" href="resume/rendered.pdf">Print</a>
-	<div class="endline" id="resume">
+	<!--#if expr="v('QUERY_STRING') =~ /condensed=1/" --><div class="endline condensed" id="resume"><!--#else --><div class="endline" id="resume"><!--#endif-->
 		<div class="heading entryless section">
 			<h1>Kevin Jin</h1>
 			<!--#include virtual="resume/password.shtml" -->
@@ -38,13 +38,13 @@
 			<div class="entry">
 				<div class="contribution">
 					<p class="organization">New York University</p>
-					<p class="role">
+					<p class="role last">
 						<span>B.S. <strong>Finance</strong> &amp; <strong>Statistics</strong>, Stern School</span>
 						<span class="last">B.A. <strong>Computer Science</strong> honors, Courant Institute</span>
 					</p>
 				</div>
 				<div class="spacetime">
-					<p class="time">8/2013&ndash;Present</p>
+					<p class="time">8/2013&ndash;<em>5/2017</em></p>
 					<p class="space">New York, NY</p>
 				</div>
 				<br class="nextline" /><!-- workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=53166 -->
@@ -52,16 +52,14 @@
 					<li class="leftalign2col">GPA: 3.61/4.0</li>
 					<li class="leftalign2col">3.9/4.0 in FINC, STAT, CSCI</li>
 					<li class="endline"></li>
-					<!--#if expr="! v('QUERY_STRING') =~ /condensed=1/" -->
-					<li>Courses taken (<em>will take</em>): Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Data Structures (exam), Algorithms, Linear Algebra, <em>Natural Language Processing</em>, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
-					<!--#endif-->
+					<li class="coursework">Courses taken, <em>will take</em>: Macroeconomics, Financial Accounting, Intro to Finance, Intro to Statistics, Computer Systems, Data Structures (exam), Algorithms, Linear Algebra, <em>Natural Language Processing</em>, <em>Time Series</em>, <em>Stochastic Processes</em>, <em>Machine Learning</em></li>
 				</ul>
 			</div>
 
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">NYU Shanghai</p>
-					<p class="role">Study abroad program</p>
+					<p class="role last">Study abroad program</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">8/2014&ndash;12/2014</p>
@@ -75,7 +73,7 @@
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">Freehold High School</p>
-					<p class="role">High School Diploma, Computer Science Academy</p>
+					<p class="role last">High School Diploma, Computer Science Academy</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">9/2009&ndash;6/2013</p>
@@ -94,14 +92,14 @@
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">ZAIS Group, LLC</p>
-					<p class="role">Quant Analyst Intern, Portfolio Management Team</p>
+					<p class="role last">Quant Analyst Intern, Portfolio Management Team</p>
 				</div>
 				<div class="spacetime">
-					<p class="time">5/2015&ndash;Present</p>
+					<p class="time">5/2015&ndash;8/2015</p>
 					<p class="space">Red Bank, NJ</p>
 				</div>
 				<ul>
-					<li>Worked with portfolio manager, investment strategists, traders, and data analysts to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using Bloomberg Terminal, Excel/VBA, Vertica/SQL, and R on time series and news analytics data sets</li>
+					<li>Worked with portfolio manager, investment strategists, traders, and data analysts to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using R, Vertica/SQL, Bloomberg Terminal, and Excel/VBA on time series and news analytics data sets</li>
 					<li>
 						Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, network analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments
 						<ul>
@@ -112,24 +110,24 @@
 				</ul>
 			</div>
 
-			<div class="entry">
+			<div class="entry qfs">
 				<div class="contribution endline">
 					<p class="organization">Quantitative Finance Society</p>
-					<p class="role">Analyst, Quant Portfolio Team</p>
+					<p class="role last">Analyst, Quant Portfolio Team</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">3/2015&ndash;Present</p>
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using services such as the Bloomberg Java API</li>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using thinkorswim, Bloomberg APIs</li>
 				</ul>
 			</div>
 
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">Bad Rabbit Consulting</p>
-					<p class="role">Software Engineer; System Administrator</p>
+					<p class="role last">Software Engineer; System Administrator</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">5/2013&ndash;5/2015</p>
@@ -137,7 +135,7 @@
 				</div>
 				<ul>
 					<li>
-						Developer and Huron-Click&reg; Portal consultant for the Children’s Hospital of Philadelphia in eResearch domains; liaised with research experts to implement best software solutions for their needs
+						Developer and Huron-Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with research experts to implement best software solutions for their needs
 						<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em></li></ul>
 					</li>
 					<li>
@@ -151,7 +149,7 @@
 			<div class="entry">
 				<div class="contribution endline">
 					<p class="organization">ArgonMS</p>
-					<p class="role">Project Maintainer</p>
+					<p class="role last">Project Maintainer</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">10/2008&ndash;5/2013</p>
@@ -171,7 +169,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">UChicago</span>
+					<span class="organization">University of Chicago</span>
 				</span>
 				Midwest Trading Competition, Options market maker case
 				<div class="spacetime">
@@ -181,9 +179,9 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">ACSL</span>
+					<span class="organization">American Comp. Sci. League</span>
 				</span>
-				Northern Division, 5 person Senior Division (regional, regular season) [x2]
+				Northern Division, 5 person Senior Division (regional) [x2]
 				<div class="spacetime">
 					<p class="time">5/2013, 5/2012</p>
 				</div>
@@ -191,9 +189,9 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">ACSL</span>
+					<span class="organization">American Comp. Sci. League</span>
 				</span>
-				All Star Competition, 5 person Senior Division (international, postseason)
+				All Star Competition, 5 person Senior Division (international)
 				<div class="spacetime">
 					<p class="time">5/2012</p>
 				</div>
@@ -201,10 +199,86 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">NJIT</span>
+					<span class="organization">New Jersey Institute of Technology</span>
 				</span>
 				High School Programming Contest (regional) [x2]
 				<div class="spacetime">
+					<p class="time">3/2012, 3/2011</p>
+				</div>
+			</div>
+		</div>
+		<div class="extracurriculars section hascsstitle">
+			<h2>Extracurricular Activities</h2>
+			<div class="entry qfs">
+				<div class="contribution endline">
+					<p class="organization">Quantitative Finance Society</p>
+					<p class="role last">Analyst, Quant Portfolio Team</p>
+				</div>
+				<div class="spacetime">
+					<p class="time">3/2015&ndash;Present</p>
+					<p class="space">New York, NY</p>
+				</div>
+				<ul>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using thinkorswim, Bloomberg APIs</li>
+				</ul>
+			</div>
+
+			<div class="entry">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">University of Chicago Midwest Trading Competition</span>
+					<span class="role last">Options market maker case</span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Chicago, IL</p>
+					<p class="time">4/2015</p>
+				</div>
+			</div>
+
+			<div class="entry">
+				<span class="contribution">
+					<span class="role">2<sup>nd</sup> place</span>
+					<span class="organization">JPMorgan Chase & Co. Code For Good Challenge</span>
+					<span class="role last">NYC 2015, best technology</span>
+				</span>
+				<div class="spacetime">
+					<p class="space">New York, NY</p>
+					<p class="time">10/2015</p>
+				</div>
+			</div>
+
+			<div class="entry twin">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">American Computer Science League</span>
+					<span class="role last">All Star Competition, 5 person Senior Division (international, postseason)</span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Freehold, NJ</p>
+					<p class="time">5/2012</p>
+				</div>
+			</div>
+
+			<div class="entry">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">American Computer Science League</span>
+					<span class="role last">Northern Division, 5 person Senior Division (regional, regular season) [x2]</span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Freehold, NJ</p>
+					<p class="time">5/2013, 5/2012</p>
+				</div>
+			</div>
+
+			<div class="entry">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<span class="organization">New Jersey Institute of Technology High School Programming Contest</span>
+					<span class="role last">(regional) [x2]</span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Newark, NJ</p>
 					<p class="time">3/2012, 3/2011</p>
 				</div>
 			</div>
@@ -216,7 +290,7 @@
 					<li class="centeralign3col">Tech@NYU</li>
 					<li class="rightalign3col">Hackathon competitions</li>
 					<li class="leftalign3col">Quantitative Finance Society</li>
-					<li class="centeralign3col">Investment Analysts Group</li>
+					<li class="centeralign3col">Business Analytics Club</li>
 					<li class="rightalign3col last">Case competitions</li>
 				</ul>
 		</div>
@@ -249,6 +323,37 @@
 				<li>Distributed computing (Working)</li>
 				<li class="last">ElasticSearch (Working)</li><!-- Data mining, Hadoop, CapitalIQ/FactSet -->
 			</ul>
+		</div>
+		<div class="skillsandinterests section">
+			<h2>Skills and Interests</h2>
+			<div class="entryless">
+				<h2>Skills</h2>
+				<ul>
+					<li>Java</li>
+					<li>C#</li>
+					<li>Unix shell</li>
+					<li>SQL</li>
+					<li>HTML</li>
+					<li>JS</li>
+					<li>CSS</li>
+					<li>Microsoft Office</li>
+					<li>VBA macros</li>
+					<li>R</li>
+					<li class="last">Bloomberg Terminal</li>
+				</ul>
+			</div>
+			<div class="entryless">
+				<h2>Interests</h2>
+				<ul>
+					<li>Startups</li>
+					<li>Tech@NYU</li>
+					<li>ACM</li>
+					<li>Hackathon competitions</li>
+					<li>Web design</li>
+					<li>Distributed computing</li>
+					<li class="last">Cycling</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<span class="footer">References available upon request.</span>

@@ -16,6 +16,10 @@
 		width: auto;
 		height: auto;
 	}
+
+	.heading .externallinks {
+		display: none;
+	}
 }
 
 @media (max-width: 639px) {
@@ -56,6 +60,18 @@
 	}
 
 	.heading .externallinks {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.heading .externallinks > span {
+		display: block;
+		text-align: right;
+	}
+
+	.heading .externallinks > span:after {
+		content: "";
 		display: none;
 	}
 
@@ -226,7 +242,7 @@
 		font-size: 10pt;
 	}
 
-	.entryless h2 {
+	.entryless h2, .entryless.hascsstitle:before {
 		display: inline-block;
 		font-size: 11pt;
 		line-height: 13pt;
@@ -234,7 +250,7 @@
 		font-weight: bold;
 	}
 
-	.entryless h2:after {
+	.entryless h2:after, .entryless.hascsstitle:before:after {
 		content: ":";
 	}
 
@@ -265,5 +281,80 @@
 
 	.footer {
 		margin-left: 0;
+	}
+
+	.condensed .contribution {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.condensed .organization {
+		order: 1;
+		min-width: 100%;
+	}
+
+	.condensed .role {
+		order: 2;
+	}
+
+	.condensed .role:after {
+		content: ", ";
+		margin-right: 3px;
+	}
+
+	.condensed .role.last:after {
+		content: "";
+		margin-right: inherit;
+	}
+
+	.condensed .experience .qfs {
+		display: none;
+	}
+
+	.condensed .honors {
+		display: none;
+	}
+
+	.condensed .extracurriculars {
+		display: block;
+	}
+
+	.condensed .skills, .condensed .affiliations {
+		display: none;
+	}
+
+	.condensed .spacetime .space {
+		font-size: 11pt;
+		font-weight: bold;
+	}
+
+	.condensed .spacetime .time {
+		font-size: 11pt;
+		font-style: italic;
+	}
+
+	.condensed .twin {
+		padding-bottom: 0;
+	}
+
+	.condensed .twin + .entry .contribution .organization, .condensed .twin + .entry .spacetime .space {
+		display: none;
+	}
+
+	.condensed .section {
+		border-bottom: none;
+	}
+
+	.condensed .section > h2, .condensed .hascsstitle:before {
+		border-bottom: 1pt solid #000;
+	}
+
+	.condensed .section, .condensed .footer {
+		font-family: 'Book Antiqua','URW Palladio L',serif;
+	}
+
+	.condensed .skillsandinterests {
+		display: block;
 	}
 }
