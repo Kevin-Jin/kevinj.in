@@ -91,7 +91,7 @@
 			<h2>Work Experience</h2>
 			<div class="entry">
 				<div class="contribution endline">
-					<p class="organization">ZAIS Group, LLC</p>
+					<a href="http://www.zaisgroupholdings.com/InvestmentStrategies/Index?keyGenPage=1073749991" class="organization">ZAIS Group, LLC</a>
 					<p class="role last">Quant Analyst Intern, Portfolio Management Team</p>
 				</div>
 				<div class="spacetime">
@@ -99,20 +99,16 @@
 					<p class="space">Red Bank, NJ</p>
 				</div>
 				<ul>
-					<li>Worked with portfolio manager, investment strategists, traders, and data analysts to explore and implement medium frequency mean-reverting and trend-following CDS trading strategies for a hedge fund managed by Zais using R, Vertica/SQL, Bloomberg Terminal, and Excel/VBA on time series and news analytics data sets</li>
-					<li>
-						Studied research papers on sentiment analysis, time series forecasting, time series lead-lag structures, network analysis to generate novel models for CDX HY index constituents and interest rates/mortgage prepayments
-						<ul>
-							<li>Demoed a process that successfully detected sets of companies in the same GICS sector as communities when given only a set of CDS points upfront time series; now adapted to discover unknown relationships</li>
-							<li>Discovered a state-of-the-art time series comparison algorithm that detects to what extent and how consistently one series historically leads or lags the other by matching peaks and troughs; now in the process of being applied to housing statistics</li>
-						</ul>
-					</li>
+					<li>Studied research papers on sentiment analysis, time series lead-lag structures, and network analysis to generate novel models for CDX HY index constituents and mortgage prepayments against interest rates</li>
+					<li>Implemented and back-tested low frequency CDS trading strategies on time series and news analytics data sets in R</li>
+					<li>Demoed a process that successfully detected sets of companies in the same GICS sector as communities when given only a set of CDS points upfront time series; now adapted to discover unknown relationships in networks</li>
+					<li>Explained to traders a time series comparison algorithm I found that detects to what extent and how consistently one series leads or lags the other by matching peaks and troughs; now in the process of being applied to housing statistics</li>
 				</ul>
 			</div>
 
 			<div class="entry qfs">
 				<div class="contribution endline">
-					<p class="organization">Quantitative Finance Society</p>
+					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
 					<p class="role last">Analyst, Quant Portfolio Team</p>
 				</div>
 				<div class="spacetime">
@@ -126,7 +122,7 @@
 
 			<div class="entry">
 				<div class="contribution endline">
-					<p class="organization">Bad Rabbit Consulting</p>
+					<a href="http://www.badrabbitconsulting.com/" class="organization">Bad Rabbit Consulting</a>
 					<p class="role last">Software Engineer; System Administrator</p>
 				</div>
 				<div class="spacetime">
@@ -134,34 +130,26 @@
 					<p class="space">Hoboken, NJ</p>
 				</div>
 				<ul>
-					<li>
-						Developer and Huron-Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with research experts to implement best software solutions for their needs
-						<ul><li>Resolved <em>226 tickets</em> in <em>833.54 billable hours</em></li></ul>
-					</li>
-					<li>
-						Lead developer and designer of a web service to automate patching between development and QA systems
-						<ul><li>Liaised with admins to implement the full procedure; <em>saves clients ~10 billable hours per week</em></li></ul>
-					</li>
+					<li>Developer and Huron-Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to implement software solutions and resolve <em>226 tickets</em> in <em>833.54 billable hours</em></li>
+					<li>Led development and design work of a web service to automate patching between development and QA systems; liaised with admins to implement the full procedure that <em>saves each client ~10 billable hours per week</em></li>
 					<li>Led a team working on a file sync and version control tool that enables developer productivity off-RDP/VPN</li>
 				</ul>
 			</div>
 
 			<div class="entry">
 				<div class="contribution endline">
-					<p class="organization">ArgonMS</p>
+					<a href="https://github.com/Kevin-Jin/argonms-server" class="organization">ArgonMS</a>
 					<p class="role last">Project Maintainer</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">10/2008&ndash;5/2013</p>
 					<p class="space">Marlboro, NJ</p>
 				</div>
-				<ul><li>
-					Developed a MMORPG server emulator and launched a testing server
-					<ul>
-						<li><em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub-30ms latency</em>, and <em>sub 100mb memory usage</em></li>
-						<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
-					</ul>
-				</li></ul>
+				<ul>
+					<li>Developed a a massively multiplayer online game server emulator in Java and launched a testing server</li>
+					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub-30ms latency</em>, and <em>sub-100mb memory usage</em></li>
+					<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
+				</ul>
 			</div>
 		</div>
 		<div class="honors section">
@@ -169,7 +157,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">University of Chicago</span>
+					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago</a>
 				</span>
 				Midwest Trading Competition, Options market maker case
 				<div class="spacetime">
@@ -178,8 +166,18 @@
 			</div>
 			<div class="entry">
 				<span class="contribution">
+					<span class="role">2<sup>nd</sup> place</span>
+					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co.</a>
+				</span>
+				Code For Good Challenge, NYC 2015, Best technology
+				<div class="spacetime">
+					<p class="time">10/2015</p>
+				</div>
+			</div>
+			<div class="entry">
+				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">American Comp. Sci. League</span>
+					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization">American Comp. Sci. League</a>
 				</span>
 				Northern Division, 5 person Senior Division (regional) [x2]
 				<div class="spacetime">
@@ -189,7 +187,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">American Comp. Sci. League</span>
+					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization">American Comp. Sci. League</a>
 				</span>
 				All Star Competition, 5 person Senior Division (international)
 				<div class="spacetime">
@@ -199,7 +197,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">New Jersey Institute of Technology</span>
+					<a href="http://cs.njit.edu/news/programmingcontest/2011/index.php" class="organization">New Jersey Institute of Technology</a>
 				</span>
 				High School Programming Contest (regional) [x2]
 				<div class="spacetime">
@@ -211,7 +209,7 @@
 			<h2>Extracurricular Activities</h2>
 			<div class="entry qfs">
 				<div class="contribution endline">
-					<p class="organization">Quantitative Finance Society</p>
+					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
 					<p class="role last">Analyst, Quant Portfolio Team</p>
 				</div>
 				<div class="spacetime">
@@ -226,7 +224,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">University of Chicago Midwest Trading Competition</span>
+					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago Midwest Trading Competition</a>
 					<span class="role last">Options market maker case</span>
 				</span>
 				<div class="spacetime">
@@ -238,8 +236,8 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">2<sup>nd</sup> place</span>
-					<span class="organization">JPMorgan Chase & Co. Code For Good Challenge</span>
-					<span class="role last">NYC 2015, best technology</span>
+					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co. Code For Good Challenge</a>
+					<span class="role last">NYC 2015, Best technology</span>
 				</span>
 				<div class="spacetime">
 					<p class="space">New York, NY</p>
@@ -250,7 +248,7 @@
 			<div class="entry twin">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">American Computer Science League</span>
+					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization">American Computer Science League</a>
 					<span class="role last">All Star Competition, 5 person Senior Division (international, postseason)</span>
 				</span>
 				<div class="spacetime">
@@ -262,7 +260,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">American Computer Science League</span>
+					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization">American Computer Science League</a>
 					<span class="role last">Northern Division, 5 person Senior Division (regional, regular season) [x2]</span>
 				</span>
 				<div class="spacetime">
@@ -274,7 +272,7 @@
 			<div class="entry">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<span class="organization">New Jersey Institute of Technology High School Programming Contest</span>
+					<a href="http://cs.njit.edu/news/programmingcontest/2012/index.php" class="organization">New Jersey Institute of Technology High School Programming Contest</a>
 					<span class="role last">(regional) [x2]</span>
 				</span>
 				<div class="spacetime">

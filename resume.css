@@ -151,6 +151,8 @@
 .section .organization {
 	display: inline-block;
 	font-weight: bold;
+	text-decoration: none;
+	color: inherit;
 
 	float: left; /* workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=53166 */
 }
