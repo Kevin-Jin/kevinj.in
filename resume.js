@@ -4,6 +4,65 @@ function enhanceReadingOrder() {
 	// the bullet text when bullet text spans multiple lines. you can test this
 	// by opening the generated PDF in Adobe Reader -> Save As -> Text (Accessible).
 	$('.entry li:not(.placeholder):not(.endline):not(.leftalign2col):not(.rightalign2col)').filter(':visible').before($('<li style="display: inline"></li>'));
+
+	$.fn.insertAt = function($parent, i) {
+		var $target = $parent.children().eq(i);
+
+		if ($target.length)
+			this.insertBefore($target);
+		else
+			this.appendTo($parent);
+
+		return this;
+	};
+
+	// puts organization and space on the same line and contribution and time
+	// on the same line, for the sake of reading order
+	$(window).on('resize', function(e) {
+		if ($('.ordersides').css('display') == 'none') {
+			$('.firstline').each(function(i) {
+				var $firstline = $(this);
+				var $secondline = $firstline.siblings('.secondline');
+
+				var $contribution = $secondline.children('.contribution');
+				var $spacetime = $secondline.children('.spacetime');
+				$secondline.children().unwrap();
+				$contribution.children().css('order', '');
+
+				$firstline.children('.contribution').children().insertAt($contribution, $firstline.children('.contribution').data('takefrom'));
+				$firstline.children('.spacetime').children().insertAt($spacetime, $firstline.children('.spacetime').data('takefrom'));
+				$firstline.remove();
+			});
+		} else {
+			$('.contribution').each(function(i) {
+				var $roleparent = $(this);
+				var $timeparent = $roleparent.siblings('.spacetime');
+				var takeFrom;
+
+				takeFrom = $roleparent.children('.organization').index();
+				var $orgparent = $roleparent.clone();
+				$orgparent.children().not('.organization').remove();
+				$roleparent.children('.organization').remove();
+				$orgparent.insertBefore($roleparent);
+				$orgparent.data('takefrom', takeFrom);
+
+				takeFrom = $timeparent.children('.space').index();
+				var $spaceparent = $timeparent.clone();
+				$spaceparent.children().not('.space').remove();
+				$timeparent.children('.space').remove();
+				$spaceparent.insertAfter($orgparent);
+				$spaceparent.data('takefrom', takeFrom);
+
+				$orgparent.add($spaceparent).wrapAll('<div style="position: relative" class="firstline"></div>');
+				$roleparent.add($timeparent).wrapAll('<div style="position: relative" class="secondline"></div>');
+				$roleparent.children().css('order', '0');
+			});
+		}
+	}).trigger('resize'); //call resize on page load
+	window.matchMedia('print').addListener(function(mql) {
+		$(window).trigger('resize');
+	});
+
 	// TODO: figure out something that makes Chrome add blank lines to PDF text
 	//$('.section h2, .entry').before($('<pre>&nbsp;</pre><br />'));
 }

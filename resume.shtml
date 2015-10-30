@@ -99,8 +99,8 @@
 					<p class="space">Red Bank, NJ</p>
 				</div>
 				<ul>
-					<li>Studied research papers on sentiment analysis, time series lead-lag structures, and network analysis to generate novel models for CDX HY index constituents and mortgage prepayments against interest rates</li>
-					<li>Implemented and back-tested low frequency CDS trading strategies on time series and news analytics data sets in R</li>
+					<li>Studied research papers on sentiment analysis, time series lead&#8208;lag structures, and network analysis to generate novel models for CDX HY index constituents and mortgage prepayments against interest rates</li>
+					<li>Implemented and backtested low frequency CDS trading strategies on time series and news analytics data sets in R</li>
 					<li>Demoed a process that successfully detected sets of companies in the same GICS sector as communities when given only a set of CDS points upfront time series; now adapted to discover unknown relationships in networks</li>
 					<li>Explained to traders a time series comparison algorithm I found that detects to what extent and how consistently one series leads or lags the other by matching peaks and troughs; now in the process of being applied to housing statistics</li>
 				</ul>
@@ -130,9 +130,9 @@
 					<p class="space">Hoboken, NJ</p>
 				</div>
 				<ul>
-					<li>Developer and Huron-Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to implement software solutions and resolve <em>226 tickets</em> in <em>833.54 billable hours</em></li>
+					<li>Developer and Huron&#8208;Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to implement software solutions and resolve <em>226 tickets</em> in <em>833.54 billable hours</em></li>
 					<li>Led development and design work of a web service to automate patching between development and QA systems; liaised with admins to implement the full procedure that <em>saves each client ~10 billable hours per week</em></li>
-					<li>Led a team working on a file sync and version control tool that enables developer productivity off-RDP/VPN</li>
+					<li>Led a team working on a file sync and version control tool that enables developer productivity off&#8208;RDP/VPN</li>
 				</ul>
 			</div>
 
@@ -146,8 +146,8 @@
 					<p class="space">Marlboro, NJ</p>
 				</div>
 				<ul>
-					<li>Developed a a massively multiplayer online game server emulator in Java and launched a testing server</li>
-					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub-30ms latency</em>, and <em>sub-100mb memory usage</em></li>
+					<li>Redesigned and optimized a massively multiplayer online game server emulator in Java and launched a testing server</li>
+					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub&#8208;30ms latency</em>, and <em>sub&#8208;100mb memory usage</em></li>
 					<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
 				</ul>
 			</div>
