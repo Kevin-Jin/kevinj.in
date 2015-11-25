@@ -34,7 +34,7 @@ function enhanceReadingOrder() {
 				$firstline.remove();
 			});
 		} else {
-			$('.contribution').each(function(i) {
+			$('.entry').not('.oneline').children('.contribution').each(function(i) {
 				var $roleparent = $(this);
 				var $timeparent = $roleparent.siblings('.spacetime');
 				var takeFrom;
