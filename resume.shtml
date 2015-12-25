@@ -23,7 +23,7 @@
 				<span class="last"><a href="http://www.kevinj.in">www.kevinj.in</a></span>
 			</p><p class="externallinks">
 				<span><a href="https://www.linkedin.com/in/kevjin">www.linkedin.com/in/kevjin</a></span>
-				<span><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span>
+				<span class="last"><a href="https://github.com/Kevin-Jin">github.com/Kevin-Jin</a></span>
 			</p>
 		</div>
 		<!--<div class="summary entryless section">
@@ -113,13 +113,13 @@
 					<p class="space">Red Bank, NJ</p>
 				</div>
 				<ul>
-					<li>Independently did research on news sentiment analysis, time series lead&#8208;lag analysis, and network analysis to generate novel models for CDX HY index constituents; implemented and backtested low frequency trading strategies in R</li>
-					<li>Demoed a series of steps that successfully detected sets of companies in the same GICS sector as communities when given only a set of CDS points upfront time series; now adapted to discover unknown relationships in networks</li>
+					<li>Independently did research on news sentiment, time series lead&#8208;lag, and network analyses to generate novel models for CDX HY index constituents; implemented and backtested low frequency trading strategies in R</li>
+					<li>Presented an algorithm that clustered companies into communities coextensive with GICS sectors, using only a set of CDS points upfront time series as input; now adapted to discover unknown relationships in networks</li>
 					<li>Explained to traders a time series comparison algorithm I found that detects to what extent and how consistently one series leads or lags the other by matching peaks and troughs; now in the process of being applied to housing statistics</li>
 				</ul>
 			</div>
 
-			<div class="entry qfs">
+			<div class="entry nonprofessional">
 				<div class="contribution endline">
 					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
 					<p class="role last">Analyst, Quant Portfolio</p>
@@ -129,8 +129,9 @@
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using thinkorswim, Bloomberg APIs</li>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using Bloomberg API</li>
 					<!--<li>Provided and received feedback on trading ideas. Taught basic concepts to new members.</li>-->
+					<!--<li>Initiated development of infrastructure for backtesting and quasi live trading factor model strategies interfaced by R<!--, Python, SymPy--><!-- API<!-- and web tool--><!-- using data from Bloomberg to automatically execute conditional paper trades and update profit and loss</li>-->
 				</ul>
 			</div>
 
@@ -144,13 +145,13 @@
 					<p class="space">Hoboken, NJ</p>
 				</div>
 				<ul>
-					<li>Developer and Huron&#8208;Click&reg; Portal consultant for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to implement software solutions and resolve <em>226 tickets</em> in <em>833.54 billable hours</em></li>
-					<li>Led development and design work of a web service to automate patching between development and QA systems; liaised with admins to implement the full procedure that <em>saves each client ~10 billable hours per week</em></li>
+					<li>Provided Huron&#8208;Click&reg; Portal tech consulting for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to resolve <em>226 enhancement and bug fix tickets</em> in <em>834 billable hours</em></li>
+					<li>Led development and architecting work of a web service to automate patching between development and QA systems; liaised with admins to implement the full procedure that <em>saves each client ~10 billable hours per week</em></li>
 					<!--<li>Initiated development on a file sync and version control tool that enables developer productivity off&#8208;RDP/VPN</li>-->
 				</ul>
 			</div>
 
-			<div class="entry">
+			<div class="entry nonprofessional">
 				<div class="contribution endline">
 					<a href="https://github.com/Kevin-Jin/argonms-server" class="organization">ArgonMS</a>
 					<p class="role last">Project Maintainer</p>
@@ -160,7 +161,7 @@
 					<p class="space">Marlboro, NJ</p>
 				</div>
 				<ul>
-					<li>Redesigned and optimized a Java-based massively multiplayer online game server emulator; launched a testing server</li>
+					<li>Redesigned and optimized Java&#8208;based massively multiplayer online game server emulator; managed a testing server</li>
 					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub&#8208;30ms latency</em>, and <em>sub&#8208;100mb memory usage</em></li>
 					<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
 				</ul>
@@ -221,7 +222,7 @@
 		</div>
 		<div class="extracurriculars section hascsstitle">
 			<h2>Extracurricular Activities</h2>
-			<div class="entry qfs">
+			<div class="entry nonprofessional">
 				<div class="contribution endline">
 					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
 					<p class="role last">Analyst, Quant Portfolio</p>
@@ -231,8 +232,25 @@
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using thinkorswim, Bloomberg APIs</li>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using Bloomberg API</li>
+					<!--<li>Provided and received feedback on trading ideas. Taught basic concepts to new members.</li>-->
 					<!--<li>Initiated development of infrastructure for backtesting and quasi live trading factor model strategies interfaced by R<!--, Python, SymPy--><!-- API<!-- and web tool--><!-- using data from Bloomberg to automatically execute conditional paper trades and update profit and loss</li>-->
+				</ul>
+			</div>
+
+			<div class="entry nonprofessional">
+				<div class="contribution endline">
+					<a href="https://github.com/Kevin-Jin/argonms-server" class="organization">ArgonMS</a>
+					<p class="role last">Project Maintainer</p>
+				</div>
+				<div class="spacetime">
+					<p class="time">10/2008&ndash;5/2013</p>
+					<p class="space">Marlboro, NJ</p>
+				</div>
+				<ul>
+					<li>Redesigned and optimized Java&#8208;based massively multiplayer online game server emulator; managed a testing server</li>
+					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub&#8208;30ms latency</em>, and <em>sub&#8208;100mb memory usage</em></li>
+					<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
 				</ul>
 			</div>
 
@@ -359,11 +377,11 @@
 				<h2>Interests</h2>
 				<ul>
 					<li>Machine learning</li>
-					<li>Computational linguistics</li>
+					<li>Natural language processing</li>
 					<li>Distributed computing</li>
 					<li>Hackathons</li>
 					<!--<li>Aviation</li>-->
-					<li class="last">Bicycling</li>
+					<li class="last">Cycling</li>
 				</ul>
 			</div>
 		</div>

@@ -75,6 +75,25 @@
 		display: none;
 	}
 
+	.condensed .heading .externallinks {
+		position: static;
+		display: inline-block;
+	}
+
+	.condensed .heading .externallinks > span {
+		display: inline;
+	}
+
+	.condensed .heading .externallinks > span:after {
+		content: "\25CF";
+		display: initial;
+	}
+
+	.condensed .heading p > span.last:after {
+		content: "";
+		display: none;
+	}
+
 	.footer {
 		position: static;
 	}
@@ -308,7 +327,7 @@
 		margin-right: inherit;
 	}
 
-	.condensed .experience .qfs {
+	.condensed .experience .nonprofessional {
 		display: none;
 	}
 
