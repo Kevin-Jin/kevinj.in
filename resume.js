@@ -29,12 +29,15 @@ function enhanceReadingOrder() {
 				$secondline.children().unwrap();
 				$contribution.children().css('order', '');
 
-				$firstline.children('.contribution').children().insertAt($contribution, $firstline.children('.contribution').data('takefrom'));
-				$firstline.children('.spacetime').children().insertAt($spacetime, $firstline.children('.spacetime').data('takefrom'));
+				$firstline.children('.contribution').children().insertAt($contribution, $firstline.children('.contribution').data('takefrom')).after(' ');
+				$firstline.children('.spacetime').children().insertAt($spacetime, $firstline.children('.spacetime').data('takefrom')).after(' ');
 				$firstline.remove();
 			});
 		} else {
-			$('.entry').not('.oneline').children('.contribution').each(function(i) {
+			var $entries = $('.entry');
+			if (!$('#resume').hasClass('condensed'))
+				$entries = $entries.not('.oneline');
+			$entries.children('.contribution').each(function(i) {
 				var $roleparent = $(this);
 				var $timeparent = $roleparent.siblings('.spacetime');
 				var takeFrom;

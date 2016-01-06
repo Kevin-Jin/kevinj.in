@@ -177,9 +177,39 @@
 	float: none;
 }
 
+.honors .role:after {
+	content: ", ";
+}
+
+.honors .role.last:after {
+	content: "";
+	display: none;
+}
+
+.honors .spacetime .space {
+	display: none;
+}
+
 .honors .organization {
 	display: inherit;
 	float: none; /* workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=53166 */
+}
+
+.honors .organization:after {
+	content: ", ";
+}
+
+.honors .organization.last:after {
+	content: "";
+	display: none;
+}
+
+.section.extracurriculars .abbrev, .section.honors .abbrev {
+	display: initial;
+}
+
+.section.extracurriculars .expanded, .section.honors .expanded {
+	display: none;
 }
 
 li.rightalign2col {
@@ -293,12 +323,18 @@ li.leftalign2col {
 	width: 100%;
 }
 
-.section, .footer {
-	font-family: 'Calibri','Carlito',sans-serif;
+.section, .footer, .plain {
+	font-family: SimpleFont,sans-serif;
+}
+
+.section .entry .plain {
+	display: initial;
+	font-weight: normal;
+	font-style: normal;
 }
 
 .section h2, .hascsstitle:before, .section .spacetime, .section .contribution, .heading h1 {
-	font-family: 'Book Antiqua','URW Palladio L',serif;
+	font-family: FancyFont,serif;
 }
 
 .section h2, .hascsstitle:before {
@@ -335,6 +371,6 @@ li.endline:before {
 	display: none;
 }
 
-.condensed .coursework {
+.condensed .coursework, .condensed .highschool {
 	display: none;
 }

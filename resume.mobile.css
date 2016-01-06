@@ -111,6 +111,14 @@
 		margin: 0;
 	}
 
+	.condensed .section.extracurriculars .abbrev, .condensed .section.honors .abbrev {
+		display: none;
+	}
+
+	.condensed .section.extracurriculars .expanded, .condensed .section.honors .expanded {
+		display: initial;
+	}
+
 	.honors .entry {
 		padding-right: 1.1in;
 		box-sizing: border-box;
@@ -327,6 +335,12 @@
 		margin-right: inherit;
 	}
 
+	.condensed .section .entry .plain {
+		font-family: inherit;
+		font-weight: inherit;
+		font-style: inherit;
+	}
+
 	.condensed .experience .nonprofessional {
 		display: none;
 	}
@@ -346,6 +360,10 @@
 	.condensed .spacetime .space {
 		font-size: 11pt;
 		font-weight: bold;
+	}
+
+	.condensed .honors .spacetime .space {
+		display: inherit;
 	}
 
 	.condensed .spacetime .time {
@@ -370,7 +388,7 @@
 	}
 
 	.condensed .section, .condensed .footer {
-		font-family: 'Book Antiqua','URW Palladio L',serif;
+		font-family: FancyFont,serif;
 	}
 
 	.condensed .skillsandinterests {

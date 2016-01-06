@@ -70,7 +70,7 @@
 				</ul>
 			</div>
 
-			<div class="entry">
+			<div class="entry highschool">
 				<div class="contribution endline">
 					<p class="organization">Freehold High School</p>
 					<p class="role last">High School Diploma, Computer Science Academy</p>
@@ -137,67 +137,14 @@
 
 <!--#include virtual="resume/nonprofessional_activities.shtml" -->
 		</div>
-		<div class="honors section">
-			<h2>Honors</h2>
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago</a>
-				</span>
-				Midwest Trading Competition, Options market maker case
-				<div class="spacetime">
-					<p class="time">4/2015</p>
-				</div>
-			</div>
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">2<sup>nd</sup> place</span>
-					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co.</a>
-				</span>
-				Code For Good Challenge, NYC 2015, Best technology
-				<div class="spacetime">
-					<p class="time">10/2015</p>
-				</div>
-			</div>
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization">American Comp. Sci. League</a>
-				</span>
-				Northern Division, 5 person Senior Division (regional) [x2]
-				<div class="spacetime">
-					<p class="time">5/2013, 5/2012</p>
-				</div>
-			</div>
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization">American Comp. Sci. League</a>
-				</span>
-				All Star Competition, 5 person Senior Division (international)
-				<div class="spacetime">
-					<p class="time">5/2012</p>
-				</div>
-			</div>
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://cs.njit.edu/news/programmingcontest/2011/index.php" class="organization">New Jersey Institute of Technology</a>
-				</span>
-				High School Programming Contest (regional) [x2]
-				<div class="spacetime">
-					<p class="time">3/2012, 3/2011</p>
-				</div>
-			</div>
-		</div>
 		<div class="extracurriculars section hascsstitle">
 			<h2>Extracurricular Activities</h2>
 <!--#include virtual="resume/nonprofessional_activities.shtml" -->
-			<div class="entry">
+			<div class="entry oneline">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago Midwest Trading Competition</a>
-					<span class="role last">Options market maker case</span>
+					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago <span class="plain">Midwest Trading Competition</span></a>
+					<span class="role last"><span class="plain last">Options market maker case</span></span>
 				</span>
 				<div class="spacetime">
 					<p class="space">Chicago, IL</p>
@@ -205,11 +152,11 @@
 				</div>
 			</div>
 
-			<div class="entry">
+			<div class="entry oneline">
 				<span class="contribution">
 					<span class="role">2<sup>nd</sup> place</span>
-					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co. Code For Good Challenge</a>
-					<span class="role last">NYC 2015, Best technology</span>
+					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co. <span class="plain">Code For Good Challenge</span></a>
+					<span class="role last"><span class="plain last">NYC 2015, Best technology</span></span>
 				</span>
 				<div class="spacetime">
 					<p class="space">New York, NY</p>
@@ -217,11 +164,11 @@
 				</div>
 			</div>
 
-			<div class="entry twin">
+			<div class="entry oneline twin">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization">American Computer Science League</a>
-					<span class="role last">All Star Competition, 5 person Senior Division (international, postseason)</span>
+					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
+					<span class="role last"><span class="plain last">All Star Competition, 5 person Senior Division (international<span class="expanded last">, postseason</span>)</span></span>
 				</span>
 				<div class="spacetime">
 					<p class="space">Freehold, NJ</p>
@@ -229,11 +176,11 @@
 				</div>
 			</div>
 
-			<div class="entry">
+			<div class="entry oneline">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization">American Computer Science League</a>
-					<span class="role last">Northern Division, 5 person Senior Division (regional, regular season) [x2]</span>
+					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
+					<span class="role last"><span class="plain last">Northern Division, 5 person Senior Division (regional<span class="expanded last">, regular season</span>) [x2]</span></span>
 				</span>
 				<div class="spacetime">
 					<p class="space">Freehold, NJ</p>
@@ -241,11 +188,73 @@
 				</div>
 			</div>
 
-			<div class="entry">
+			<div class="entry oneline">
 				<span class="contribution">
 					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://cs.njit.edu/news/programmingcontest/2012/index.php" class="organization">New Jersey Institute of Technology High School Programming Contest</a>
-					<span class="role last">(regional) [x2]</span>
+					<a href="http://cs.njit.edu/news/programmingcontest/2011/index.php" class="organization">New Jersey Institute of Technology <span class="plain">High School Programming Contest</span></a>
+					<span class="role last"><span class="plain last">(regional) [x2]</span></span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Newark, NJ</p>
+					<p class="time">3/2012, 3/2011</p>
+				</div>
+			</div>
+		</div>
+		<div class="honors section">
+			<h2>Honors</h2>
+			<div class="entry oneline">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago <span class="plain">Midwest Trading Competition</span></a>
+					<span class="role last"><span class="plain last">Options market maker case</span></span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Chicago, IL</p>
+					<p class="time">4/2015</p>
+				</div>
+			</div>
+
+			<div class="entry oneline">
+				<span class="contribution">
+					<span class="role">2<sup>nd</sup> place</span>
+					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co. <span class="plain">Code For Good Challenge</span></a>
+					<span class="role last"><span class="plain last">NYC 2015, Best technology</span></span>
+				</span>
+				<div class="spacetime">
+					<p class="space">New York, NY</p>
+					<p class="time">10/2015</p>
+				</div>
+			</div>
+
+			<div class="entry oneline twin">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
+					<span class="role last"><span class="plain last">All Star Competition, 5 person Senior Division (international<span class="expanded last">, postseason</span>)</span></span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Freehold, NJ</p>
+					<p class="time">5/2012</p>
+				</div>
+			</div>
+
+			<div class="entry oneline">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
+					<span class="role last"><span class="plain last">Northern Division, 5 person Senior Division (regional<span class="expanded last">, regular season</span>) [x2]</span></span>
+				</span>
+				<div class="spacetime">
+					<p class="space">Freehold, NJ</p>
+					<p class="time">5/2013, 5/2012</p>
+				</div>
+			</div>
+
+			<div class="entry oneline">
+				<span class="contribution">
+					<span class="role">1<sup>st</sup> place</span>
+					<a href="http://cs.njit.edu/news/programmingcontest/2011/index.php" class="organization">New Jersey Institute of Technology <span class="plain">High School Programming Contest</span></a>
+					<span class="role last"><span class="plain last">(regional) [x2]</span></span>
 				</span>
 				<div class="spacetime">
 					<p class="space">Newark, NJ</p>

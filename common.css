@@ -1,51 +1,51 @@
 @font-face {
-	font-family: 'Carlito';
+	font-family: SimpleFont;
 	font-style: normal;
-	src: local('Carlito'), url('Carlito-Regular.ttf') format('truetype');
+	src: local('Calibri'), local('Carlito'), url('Carlito-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Carlito';
-	src: url('Carlito-Bold.ttf') format('truetype');
+	font-family: SimpleFont;
 	font-weight: bold;
+	src: local('Calibri'), url('Carlito-Bold.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Carlito';
-	src: url('Carlito-Italic.ttf') format('truetype');
+	font-family: SimpleFont;
 	font-style: italic;
+	src: local('Calibri'), url('Carlito-Italic.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Carlito';
-	src: url('Carlito-BoldItalic.ttf') format('truetype');
+	font-family: SimpleFont;
 	font-weight: bold;
 	font-style: italic;
+	src: local('Calibri'), url('Carlito-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'URW Palladio L';
+	font-family: FancyFont;
 	font-style: normal;
-	src: local('URW Palladio L'), url('URWPalladioL-Roma.ttf') format('truetype');
+	src: local('Book Antiqua'), local('URW Palladio L'), url('URWPalladioL-Roma.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'URW Palladio L';
-	src: url('URWPalladioL-Bold.ttf') format('truetype');
+	font-family: FancyFont;
 	font-weight: bold;
+	src: local('Book Antiqua'), url('URWPalladioL-Bold.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'URW Palladio L';
-	src: url('URWPalladioL-Ital.ttf') format('truetype');
+	font-family: FancyFont;
 	font-style: italic;
+	src: local('Book Antiqua'), url('URWPalladioL-Ital.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'URW Palladio L';
-	src: url('URWPalladioL-BoldItal.ttf') format('truetype');
+	font-family: FancyFont;
 	font-weight: bold;
 	font-style: italic;
+	src: local('Book Antiqua'), url('URWPalladioL-BoldItal.ttf') format('truetype');
 }
 
 html,body {
@@ -59,14 +59,14 @@ html {
 }
 
 body {
-	font: 12pt 'Calibri','Carlito',sans-serif;
+	font: 12pt SimpleFont,sans-serif;
 	position: relative;
 	min-height: 100%;
 }
 
 .signature {
 	text-transform: uppercase;
-	font-family: 'Book Antiqua','URW Palladio L',serif;
+	font-family: FancyFont,serif;
 	font-weight: bold;
 	font-style: normal;
 }
