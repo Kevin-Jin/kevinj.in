@@ -105,7 +105,7 @@
 	line-height: 13pt;
 }
 
-.section h2, .hascsstitle:before {
+.section h2 {
 	margin: 0;
 	font-size: 11pt;
 	line-height: 17pt;
@@ -113,7 +113,7 @@
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-	.section h2, .hascsstitle:before {
+	.section h2 {
 		font-size: 13pt;
 	}
 }
@@ -123,7 +123,7 @@
 	vertical-align: top;
 }
 
-.section h2, .hascsstitle:before {
+.section h2 {
 	position: relative;
 	display: block;
 }
@@ -333,11 +333,11 @@ li.leftalign2col {
 	font-style: normal;
 }
 
-.section h2, .hascsstitle:before, .section .spacetime, .section .contribution, .heading h1 {
+.section h2, .section .spacetime, .section .contribution, .heading h1 {
 	font-family: FancyFont,serif;
 }
 
-.section h2, .hascsstitle:before {
+.section h2 {
 	font-variant: small-caps;
 }
 
@@ -363,7 +363,12 @@ li.endline:before {
 	visibility: hidden;
 }
 
-.extracurriculars {
+.experience {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.extracurriculars h2 {
 	display: none;
 }
 
@@ -373,4 +378,35 @@ li.endline:before {
 
 .condensed .coursework, .condensed .highschool {
 	display: none;
+}
+
+.condensed .skills, .condensed .affiliations {
+	display: none;
+}
+
+.condensed .skillsandinterests {
+	display: block;
+}
+
+.condensed .skillsandinterests > h2 {
+	display: none;
+}
+
+.skillsandinterests .entryless li {
+	list-style-type: none;
+	position: relative;
+	display: inline;
+}
+
+.skillsandinterests .entryless li:before {
+	display: none;
+	content: "";
+}
+
+.skillsandinterests .entryless li:after {
+	content: ", ";
+}
+
+.skillsandinterests .entryless li.last:after {
+	content: "";
 }

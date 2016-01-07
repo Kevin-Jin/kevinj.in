@@ -9,7 +9,7 @@
 <div class="page">
 	<a class="print" href="resume/rendered.pdf">Print</a>
 	<!--#if expr="v('QUERY_STRING') =~ /condensed=1/" --><div class="endline condensed" id="resume"><!--#else --><div class="endline" id="resume"><!--#endif-->
-		<div class="heading entryless section">
+		<div class="heading entryless section last">
 			<h1>Kevin Jin</h1>
 			<!--#include virtual="resume/password.shtml" -->
 			<p>
@@ -134,70 +134,39 @@
 					<!--<li>Initiated development on a file sync and version control tool that enables developer productivity off&#8208;RDP/VPN</li>-->
 				</ul>
 			</div>
-
-<!--#include virtual="resume/nonprofessional_activities.shtml" -->
 		</div>
-		<div class="extracurriculars section hascsstitle">
+		<div class="extracurriculars section">
 			<h2>Extracurricular Activities</h2>
-<!--#include virtual="resume/nonprofessional_activities.shtml" -->
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="https://github.com/Kevin-Jin/2015UChicagoTradingCompetition" class="organization">University of Chicago <span class="plain">Midwest Trading Competition</span></a>
-					<span class="role last"><span class="plain last">Options market maker case</span></span>
-				</span>
-				<div class="spacetime">
-					<p class="space">Chicago, IL</p>
-					<p class="time">4/2015</p>
+			<div class="entry">
+				<div class="contribution endline">
+					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
+					<p class="role last">Analyst, Quant Portfolio</p>
 				</div>
-			</div>
-
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">2<sup>nd</sup> place</span>
-					<a href="https://github.com/NYC2015/team-17" class="organization">JPMorgan Chase & Co. <span class="plain">Code For Good Challenge</span></a>
-					<span class="role last"><span class="plain last">NYC 2015, Best technology</span></span>
-				</span>
 				<div class="spacetime">
+					<p class="time">3/2015&ndash;Present</p>
 					<p class="space">New York, NY</p>
-					<p class="time">10/2015</p>
 				</div>
+				<ul>
+					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using Bloomberg API</li>
+					<!--<li>Provided and received feedback on trading ideas. Taught basic concepts to new members.</li>-->
+					<!--<li>Initiated development of infrastructure for backtesting and quasi live trading factor model strategies interfaced by R<!--, Python, SymPy--><!-- API<!-- and web tool--><!-- using data from Bloomberg to automatically execute conditional paper trades and update profit and loss</li>-->
+				</ul>
 			</div>
 
-			<div class="entry oneline twin">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/results/2011-2012.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
-					<span class="role last"><span class="plain last">All Star Competition, 5 person Senior Division (international<span class="expanded last">, postseason</span>)</span></span>
-				</span>
-				<div class="spacetime">
-					<p class="space">Freehold, NJ</p>
-					<p class="time">5/2012</p>
+			<div class="entry">
+				<div class="contribution endline">
+					<a href="https://github.com/Kevin-Jin/argonms-server" class="organization">ArgonMS</a>
+					<p class="role last">Project Maintainer</p>
 				</div>
-			</div>
-
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://acsl.org/acsl/11-12/contest_4/SR%205%20IND%2011-12.htm" class="organization last">American <span class="expanded">Computer Science</span><span class="abbrev">Comp. Sci.</span> League</a>
-					<span class="role last"><span class="plain last">Northern Division, 5 person Senior Division (regional<span class="expanded last">, regular season</span>) [x2]</span></span>
-				</span>
 				<div class="spacetime">
-					<p class="space">Freehold, NJ</p>
-					<p class="time">5/2013, 5/2012</p>
+					<p class="time">10/2008&ndash;5/2013</p>
+					<p class="space">Marlboro, NJ</p>
 				</div>
-			</div>
-
-			<div class="entry oneline">
-				<span class="contribution">
-					<span class="role">1<sup>st</sup> place</span>
-					<a href="http://cs.njit.edu/news/programmingcontest/2011/index.php" class="organization">New Jersey Institute of Technology <span class="plain">High School Programming Contest</span></a>
-					<span class="role last"><span class="plain last">(regional) [x2]</span></span>
-				</span>
-				<div class="spacetime">
-					<p class="space">Newark, NJ</p>
-					<p class="time">3/2012, 3/2011</p>
-				</div>
+				<ul>
+					<li>Redesigned and optimized Java&#8208;based massively multiplayer online game server emulator; managed a testing server</li>
+					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub&#8208;30ms latency</em>, and <em>sub&#8208;100mb memory usage</em></li>
+					<li>Maintained and moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
+				</ul>
 			</div>
 		</div>
 		<div class="honors section">
@@ -264,14 +233,14 @@
 		</div>
 		<div class="affiliations entryless section endline first">
 			<h2>Interests &amp; affiliations</h2>
-				<ul>
-					<li class="leftalign3col">Association for Computing Machinery</li>
-					<li class="centeralign3col">Tech@NYU</li>
-					<li class="rightalign3col">Hackathon competitions</li>
-					<li class="leftalign3col">Quantitative Finance Society</li>
-					<li class="centeralign3col">Business Analytics Club</li>
-					<li class="rightalign3col last">Case competitions</li>
-				</ul>
+			<ul>
+				<li class="leftalign3col">Association for Computing Machinery</li>
+				<li class="centeralign3col">Tech@NYU</li>
+				<li class="rightalign3col">Hackathon competitions</li>
+				<li class="leftalign3col">Quantitative Finance Society</li>
+				<li class="centeralign3col">Business Analytics Club</li>
+				<li class="rightalign3col last">Case competitions</li>
+			</ul>
 		</div>
 		<div class="servertech skills entryless section leftalign3col">
 			<h2>Skills &ndash; server applications</h2>
@@ -321,7 +290,7 @@
 					<li class="last">Bloomberg Terminal</li>
 				</ul>
 			</div>
-			<div class="entryless">
+			<div class="entryless last">
 				<h2>Interests</h2>
 				<ul>
 					<li>Machine learning</li>

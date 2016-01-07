@@ -236,18 +236,22 @@
 		padding-bottom: 0;
 	}
 
-	.entryless.skills, .entryless.affiliations {
+	.entryless {
 		border-bottom: 0;
 		padding-bottom: 0;
 	}
 
-	.entryless.skills.last {
+	.entryless.last {
 		border-bottom: 1pt solid #000;
 	}
 
-	.honors, .section .entry, .entryless, .entryless.skills.last {
+	.honors, .section .entry, .entryless.last, .condensed .entryless {
 		margin-bottom: 0;
 		padding-bottom: 2pt;
+	}
+
+	.condensed .honors {
+		padding-bottom: 0;
 	}
 
 	.honors .entry {
@@ -255,6 +259,24 @@
 		font-size: 10pt;
 		line-height: 12pt;
 		clear: both;
+	}
+
+	.condensed .honors .entry {
+		font-size: inherit;
+		padding-right: 0;
+		padding-bottom: 2pt;
+	}
+
+	.condensed .honors .contribution {
+		margin-right: 1.1in;
+	}
+
+	.condensed .honors .role {
+		display: initial;
+	}
+
+	.condensed .honors .organization:after {
+		content: "";
 	}
 
 	.section .contribution, .section .spacetime {
@@ -269,7 +291,7 @@
 		font-size: 10pt;
 	}
 
-	.entryless h2, .entryless.hascsstitle:before {
+	.entryless h2 {
 		display: inline-block;
 		font-size: 11pt;
 		line-height: 13pt;
@@ -277,7 +299,7 @@
 		font-weight: bold;
 	}
 
-	.entryless h2:after, .entryless.hascsstitle:before:after {
+	.entryless h2:after {
 		content: ":";
 	}
 
@@ -341,20 +363,8 @@
 		font-style: inherit;
 	}
 
-	.condensed .experience .nonprofessional {
-		display: none;
-	}
-
-	.condensed .honors {
-		display: none;
-	}
-
-	.condensed .extracurriculars {
+	.condensed .extracurriculars h2 {
 		display: block;
-	}
-
-	.condensed .skills, .condensed .affiliations {
-		display: none;
 	}
 
 	.condensed .spacetime .space {
@@ -366,24 +376,28 @@
 		display: inherit;
 	}
 
+	.condensed .honors h2 {
+		display: none;
+	}
+
 	.condensed .spacetime .time {
 		font-size: 11pt;
 		font-style: italic;
 	}
 
-	.condensed .twin {
+	.condensed .entry.twin {
 		padding-bottom: 0;
 	}
 
-	.condensed .twin + .entry .contribution .organization, .condensed .twin + .entry .spacetime .space {
+	.condensed .entry.twin + .entry .contribution .organization, .condensed .entry.twin + .entry .spacetime .space {
 		display: none;
 	}
 
-	.condensed .section {
+	.condensed .section, .condensed .entryless {
 		border-bottom: none;
 	}
 
-	.condensed .section > h2, .condensed .hascsstitle:before {
+	.condensed .section > h2 {
 		border-bottom: 1pt solid #000;
 	}
 
@@ -391,7 +405,7 @@
 		font-family: FancyFont,serif;
 	}
 
-	.condensed .skillsandinterests {
+	.condensed .skillsandinterests > h2 {
 		display: block;
 	}
 }
