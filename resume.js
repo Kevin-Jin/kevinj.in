@@ -3,7 +3,10 @@ function enhanceReadingOrder() {
 	// in print to PDF on Chrome, this ensures bullet marks are placed before
 	// the bullet text when bullet text spans multiple lines. you can test this
 	// by opening the generated PDF in Adobe Reader -> Save As -> Text (Accessible).
-	$('.entry li:not(.placeholder):not(.endline):not(.leftalign2col):not(.rightalign2col)').filter(':visible').before($('<li style="display: inline"></li>'));
+	// Firefox initially renders "li:before" as "top: 0" rather than "top: auto"
+	// if we don't remind it that ".section ul li" is "position: relative". Also
+	// Firefox does the same to "li:before" if "li" is "display: inline".
+	$('.entry li:not(.placeholder):not(.endline):not(.leftalign2col):not(.rightalign2col)').filter(':visible').before($('<li style="position: relative"></li>'));
 
 	$.fn.insertAt = function($parent, i) {
 		var $target = $parent.children().eq(i);

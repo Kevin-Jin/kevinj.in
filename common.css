@@ -1,51 +1,51 @@
 @font-face {
 	font-family: SimpleFont;
 	font-style: normal;
-	src: local('Calibri'), local('Carlito'), url('Carlito-Regular.ttf') format('truetype');
+	src: local('Calibri-Regular'), local('Calibri'), local('Carlito-Regular'), local('Carlito'), url('Carlito-Regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: SimpleFont;
 	font-weight: bold;
-	src: local('Calibri'), url('Carlito-Bold.ttf') format('truetype');
+	src: local('Calibri-Bold'), local('Calibri'), local('Carlito-Bold'), local('Carlito'), url('Carlito-Bold.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: SimpleFont;
 	font-style: italic;
-	src: local('Calibri'), url('Carlito-Italic.ttf') format('truetype');
+	src: local('Calibri-Italic'), local('Calibri'), local('Carlito-Italic'), local('Carlito'), url('Carlito-Italic.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: SimpleFont;
 	font-weight: bold;
 	font-style: italic;
-	src: local('Calibri'), url('Carlito-BoldItalic.ttf') format('truetype');
+	src: local('Calibri-BoldItalic'), local('Calibri'), local('Carlito-BoldItalic'), local('Carlito'), url('Carlito-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: FancyFont;
 	font-style: normal;
-	src: local('Book Antiqua'), local('URW Palladio L'), url('URWPalladioL-Roma.ttf') format('truetype');
+	src: local('BookAntiqua-Regular'), local('Book Antiqua'), local('URWPalladioL-Regular'), local('URW Palladio L'), url('URWPalladioL-Roma.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: FancyFont;
 	font-weight: bold;
-	src: local('Book Antiqua'), url('URWPalladioL-Bold.ttf') format('truetype');
+	src: local('BookAntiqua-Bold'), local('Book Antiqua'), local('URWPalladioL-Bold'), local('URW Palladio L'), url('URWPalladioL-Bold.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: FancyFont;
 	font-style: italic;
-	src: local('Book Antiqua'), url('URWPalladioL-Ital.ttf') format('truetype');
+	src: local('BookAntiqua-Italic'), local('Book Antiqua'), local('URWPalladioL-Italic'), local('URW Palladio L'), url('URWPalladioL-Ital.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: FancyFont;
 	font-weight: bold;
 	font-style: italic;
-	src: local('Book Antiqua'), url('URWPalladioL-BoldItal.ttf') format('truetype');
+	src: local('BookAntiqua-BoldItalic'), local('Book Antiqua'), local('URWPalladio-BoldItalic'), local('URW Palladio L'), url('URWPalladioL-BoldItal.ttf') format('truetype');
 }
 
 html,body {

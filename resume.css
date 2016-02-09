@@ -205,7 +205,7 @@
 }
 
 .section.extracurriculars .abbrev, .section.honors .abbrev {
-	display: initial;
+	display: inline;
 }
 
 .section.extracurriculars .expanded, .section.honors .expanded {
@@ -328,7 +328,7 @@ li.leftalign2col {
 }
 
 .section .entry .plain {
-	display: initial;
+	display: inline;
 	font-weight: normal;
 	font-style: normal;
 }

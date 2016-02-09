@@ -86,7 +86,7 @@
 
 	.condensed .heading .externallinks > span:after {
 		content: "\25CF";
-		display: initial;
+		display: inline;
 	}
 
 	.condensed .heading p > span.last:after {
@@ -116,7 +116,7 @@
 	}
 
 	.condensed .section.extracurriculars .expanded, .condensed .section.honors .expanded {
-		display: initial;
+		display: inline;
 	}
 
 	.honors .entry {
@@ -272,7 +272,7 @@
 	}
 
 	.condensed .honors .role {
-		display: initial;
+		display: inline;
 	}
 
 	.condensed .honors .organization:after {
