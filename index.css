@@ -135,6 +135,7 @@ body {
 	height: 128px;
 	background: rgba(0, 0, 0, 0.25);
 	text-align: center;
+	text-align-last: center;
 	margin-top: 40px;
 }
 

@@ -81,10 +81,13 @@
 		height: 49px;
 		line-height: 49px;
 		text-align: left;
+		text-align-last: left;
 		white-space: nowrap;
 	}
 
 	.captioned .fa {
+		text-align: center;
+		text-align-last: center;
 		vertical-align: middle;
 		border-radius: 0;
 		width: 32px;
@@ -109,6 +112,7 @@
 		bottom: 0;
 		color: rgba(0, 0, 0, 0);
 		text-align: right;
+		text-align-last: right;
 	}
 
 	.captioned a:after {

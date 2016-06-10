@@ -22,7 +22,7 @@
 	}
 }
 
-@media (max-width: 639px) {
+@media print, (max-width: 639px) {
 	.heading {
 		text-align: center;
 	}
