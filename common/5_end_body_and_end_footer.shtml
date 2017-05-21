@@ -1,7 +1,7 @@
 </div>
 <div class="bottombun">
 <div class="content">
-<div class="boxedin"><a href="https://github.com/Kevin-Jin/kevinj.in">&copy;2015 Kevin Jin</a></div>
+<div class="boxedin"><a href="https://github.com/Kevin-Jin/kevinj.in">&copy;<!--#echo var="TIME_YEAR" --> Kevin Jin</a></div>
 </div>
 </div>
 </body>

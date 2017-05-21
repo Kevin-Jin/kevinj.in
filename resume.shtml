@@ -49,24 +49,11 @@
 				</div>
 				<br class="nextline" /><!-- workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=53166 -->
 				<ul>
-					<li class="leftalign2col">GPA: 3.70/4.0</li>
-					<li class="leftalign2col">3.94/4.0 in FINC, STAT, CSCI</li>
+					<li class="leftalign2col">GPA: 3.74/4.0</li>
+					<li class="leftalign2col">3.95/4.0 in FINC, STAT, CSCI</li>
 					<li class="endline"></li>
-					<li class="coursework">Courses taken, <em>taking</em>: Macroeconomics, Financial Accounting, Corporate Finance<!--, Debt, Equity, Futures and Options-->, <!--Computer Systems-->Operating Systems, Data Structures, Algorithms, Linear Algebra, Natural Language Processing, <em>Machine Learning</em><!--, Numerical Analysis-->, Theory of Probability<!--Stochastic Processes-->, <em>Statistical Inference</em><!--, Time Series, Partial Differential Equations--></li>
-				</ul>
-			</div>
-
-			<div class="entry">
-				<div class="contribution endline">
-					<p class="organization">NYU Shanghai</p>
-					<p class="role last">Study abroad program</p>
-				</div>
-				<div class="spacetime">
-					<p class="time">8/2014&ndash;12/2014</p>
-					<p class="space">Shanghai, CN</p>
-				</div>
-				<ul>
-					<li class="placeholder">&nbsp;</li>
+					<li class="coursework">Electives: Macroeconomics, Financial Accounting, Corporate Finance, Equity Valuation, Debt Instruments, Derivative Securities, Linear Algebra, Natural Language Processing, Machine Learning, Numerical Computing, Stochastic Calculus, Time Series, Statistical Inference and Regression Analysis, Operations Management</li>
+					<li>Studied one semester abroad in Shanghai, China from 8/2014&ndash;12/2014</li>
 				</ul>
 			</div>
 
@@ -99,7 +86,9 @@
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-				<li>Equities Electronic Market Making (EMM) Cash Trading Desk strat</li>
+					<li>Reproduced the output of two proprietary cross-sectional multi-factor risk models and tested the explanatory power of every factor return series with Python and R while on the Equities Electronic Market Making Cash Trading Strats desk</li>
+					<!--<li>Formulated systematic strategies from a top-down approach to find momentum and market dislocation alpha signals using equity, VIX, and risk factor returns while on the Equities Electronic Market Making Cash Trading Strats desk</li>-->
+					<li>Improved execution performance of <!--medium-term-horizon--> high-frequency trading infrastructure by designing features and implementing a linear classifer in C++ that <!--ranks a pool of exchange connections by latency--> decides which exchange connection in a pool has the lowest <!--expected--> latency while on the Equities Quantitative Volatility Trading Strats desk; tuned the weight vector without a ground truth by heuristically optimizing for a latent loss; picked appropriate lock-free primitives to minimize contention in highly concurrent routing routine</li>
 				</ul>
 			</div>
 
@@ -130,7 +119,7 @@
 				</div>
 				<ul>
 					<li>Provided Huron&#8208;Click&reg; Portal tech consulting for the Children's Hospital of Philadelphia in eResearch domains; liaised with medical research experts to resolve <em>226 enhancement and bug fix tickets</em> in <em>834 billable hours</em></li>
-					<li>Led development and architecting work of a web service to automate patching between development and QA systems; liaised with admins to implement the full procedure that <em>saves each client ~10 billable hours per week</em></li>
+					<li>Led development and architecting work of a web service to automate releases to QA and production systems; liaised with admins to implement the full <!--DevOps--> procedure that <em>saves each client ~10 billable hours per week</em></li>
 					<!--<li>Initiated development on a file sync and version control tool that enables developer productivity off&#8208;RDP/VPN</li>-->
 				</ul>
 			</div>
@@ -140,16 +129,16 @@
 			<div class="entry">
 				<div class="contribution endline">
 					<a href="http://www.quantfsnyu.com/team/" class="organization">Quantitative Finance Society</a>
-					<p class="role last">Assistant Portfolio Manager, Quant Portfolio</p>
+					<p class="role last">Analyst, Quant Portfolio</p>
 				</div>
 				<div class="spacetime">
 					<p class="time">3/2015&ndash;Present</p>
 					<p class="space">New York, NY</p>
 				</div>
 				<ul>
-					<li>Developed, backtested, pitched, and paper traded systematic trading strategies using Bloomberg API</li>
+					<li>Built a system in Node.js and Bloomberg API to backtest and paper trade systematic, factor-model-signaled strategies</li>
 					<!--<li>Provided and received feedback on trading ideas. Taught basic concepts to new members.</li>-->
-					<!--<li>Initiated development of infrastructure for backtesting and quasi live trading factor model strategies interfaced by R<!--, Python, SymPy--><!-- API<!-- and web tool--><!-- using data from Bloomberg to automatically execute conditional paper trades and update profit and loss</li>-->
+					<!--<li>Developed infrastructure using Node.js and Bloomberg API to backtest and track P&L of paper traded systematic strategies that allocate portfolios according to theoretical returns calculated by custom factor models defined in R</li>-->
 				</ul>
 			</div>
 
@@ -163,9 +152,9 @@
 					<p class="space">Marlboro, NJ</p>
 				</div>
 				<ul>
-					<li>Redesigned and optimized Java&#8208;based massively multiplayer online game server emulator; managed a testing server</li>
+					<li>Redesigned and optimized Java&#8208;based massively multiplayer online game server emulator; launched a testing server</li>
 					<li>Achieved <em>30 days of uptime</em> with <em>20 concurrent players</em>, <em>sub&#8208;30ms latency</em>, and <em>sub&#8208;100mb memory usage</em></li>
-					<li>Moderated an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
+					<li>Managed an enthusiastic community (<em>&gt;100 members</em>) that assisted in identifying bugs</li>
 				</ul>
 			</div>
 		</div>
@@ -263,9 +252,9 @@
 			</ul>
 		</div>
 		<div class="analytech skills entryless section rightalign3col last">
-			<h2>Skills &ndash; analytic &amp; presentational</h2>
+			<h2>Skills &ndash; analytic</h2>
 			<ul>
-				<li>Microsoft Office &amp; VBA macros (Expert)</li>
+				<li>VBA macros (Expert)</li>
 				<li>R platform (Strong)</li>
 				<li>Bloomberg Terminal (Working)</li>
 				<li>Distributed computing (Working)</li>
@@ -279,12 +268,14 @@
 				<ul>
 					<li>Java</li>
 					<li>C#</li>
-					<li>Unix shell</li>
+					<!--<li>C++</li>-->
+					<!--<li>Python</li>-->
+					<li>Bash shell</li>
 					<li>SQL</li>
-					<li>HTML</li>
+					<!--<li>PHP</li>-->
 					<li>JS</li>
+					<li>HTML</li>
 					<li>CSS</li>
-					<li>Microsoft Office</li>
 					<li>VBA macros</li>
 					<li>R</li>
 					<li class="last">Bloomberg Terminal</li>
@@ -303,6 +294,6 @@
 			</div>
 		</div>
 	</div>
-	<span class="footer">References available upon request.</span>
+	<!--<span class="footer">References available upon request.</span>-->
 </div>
 <!--#include virtual="common/5_end_body_and_end_footer.shtml" -->

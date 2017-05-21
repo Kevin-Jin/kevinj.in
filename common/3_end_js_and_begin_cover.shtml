@@ -34,7 +34,9 @@
 			<a href="resume.shtml" class="resume">Résumé</a>
 		</li><li>
 			<a href="https://www.linkedin.com/in/kevjin" class="linkedin">LinkedIn</a>
-		</li>
+		</li><!--<li>
+			<a href="transcript.shtml" class="resume">Transcript</a>
+		</li>-->
 	</ul>
 </li><li>
 	<a class="contact email" href="#">Contact</a>
