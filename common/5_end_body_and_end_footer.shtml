@@ -1,7 +1,7 @@
 </div>
 <div class="bottombun">
 <div class="content">
-<div class="boxedin"><a href="https://github.com/Kevin-Jin/kevinj.in">&copy;<!--#echo var="TIME_YEAR" --> Kevin Jin</a></div>
+<div class="boxedin"><a href="https://github.com/Kevin-Jin/kevinj.in">&copy;<!--#if expr="%{TIME_YEAR} =~ /(.+)/" --><!--#set var="TIME_YEAR" value="$0"--><!--#echo var="TIME_YEAR"--><!--#endif--> Kevin Jin</a></div>
 </div>
 </div>
 </body>
